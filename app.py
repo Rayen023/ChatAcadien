@@ -83,35 +83,74 @@ with st.sidebar:
 
 prompt = st.chat_input("Message ChatAcadien...")
 
+from langchain_community.chat_models import ChatOpenAI
+from langchain.chains import LLMChain
+from langchain.prompts import (
+    MessagesPlaceholder,
+    ChatPromptTemplate,
+)
+from langchain.memory import ConversationBufferMemory
+from langchain_community.chat_message_histories import StreamlitChatMessageHistory
 
-def query(payload):
-    response = requests.post(
-        url="https://openrouter.ai/api/v1/chat/completions",
-        headers={
-            "Authorization": f"Bearer {gemma_api_key}",
-            # "HTTP-Referer": f"{YOUR_SITE_URL}", # Optional, for including your app on openrouter.ai rankings.
-            # "X-Title": f"{YOUR_APP_NAME}", # Optional. Shows in rankings on openrouter.ai.
-        },
-        data=json.dumps(
-            {
-                "model": "google/gemma-7b-it:free",
-                # "model": "mistralai/mistral-7b-instruct:free",  # Optional
-                "messages": [{"role": "user", "content": payload}],
-                "top_p": 1,
-                "temperature": 0.75,
-                "frequency_penalty": 0.5,
-                "presence_penalty": 0.4,
-                "repetition_penalty": 1,
-                "top_k": 0,
-            }
-        ),
+msgs = StreamlitChatMessageHistory(key="chat_messages")
+
+
+class ChatOpenRouter(ChatOpenAI):
+    openai_api_base: str
+    openai_api_key: str
+    model_name: str
+
+    def __init__(
+        self,
+        model_name: str,
+        openai_api_key: str = gemma_api_key,
+        openai_api_base: str = "https://openrouter.ai/api/v1",
+        **kwargs,
+    ):
+        openai_api_key = openai_api_key
+        super().__init__(
+            openai_api_base=openai_api_base,
+            openai_api_key=openai_api_key,
+            model_name=model_name,
+            **kwargs,
+        )
+
+
+@st.cache_resource
+def conversational_chat(query):
+    llm = ChatOpenRouter(
+        model_name="google/gemma-7b-it:free",
+        temperature=temperature,
+        # max_tokens=max_length,
+        top_p=top_p,
     )
-    return response.json()
+    memory = ConversationBufferMemory(
+        memory_key="history", chat_memory=msgs, return_messages=True
+    )
+    chain = LLMChain(
+        llm=llm,
+        prompt=ChatPromptTemplate.from_messages(
+            [
+                ("system", "You are an AI chatbot having a conversation with a human."),
+                MessagesPlaceholder(variable_name="history"),
+                ("human", "{input}"),
+            ]
+        ),
+        memory=memory,
+        verbose=True,
+    )
+
+    result = chain({"input": query})
+    st.session_state["history"].append((query, result["text"]))
+    return result["text"]
+
+
+if "history" not in st.session_state:
+    st.session_state["history"] = []
 
 
 if "messages" not in st.session_state.keys():
     st.session_state.messages = [
-        # {"role": "assistant", "content": "How may I assist you today?"}
         {"role": "assistant", "content": "Comment puisse-je vous aidez?"}
     ]
 
@@ -121,41 +160,23 @@ for message in st.session_state.messages:
         st.write(message["content"])
 
 
-def clear_chat_history():
+def clear_chat_history():  # TODO
     st.session_state.messages = [
-        # {"role": "assistant", "content": "How may I assist you today?"}
         {"role": "assistant", "content": "Comment puisse-je vous aidez?"}
     ]
+    msgs.clear()
+    st.session_state["history"] = []
 
 
 st.sidebar.button("Clear Chat History", on_click=clear_chat_history)
 
 
+# @st.cache_resource()
 def generate_response(prompt_input):
-    # if language == "fr":
-    starting_string = "Vous êtes un assistant. Vous ne répondez pas en tant que 'Utilisateur' ou ne prétendez pas être 'Utilisateur'. Pour chaque identifie d'abord son language et repond dans le même language. Vous ne répondez qu'une seule fois en tant qu' 'Assistant'.\n\n"
-    # string_dialogue = "You are a helpful assistant. You do not respond as 'User' or pretend to be 'User'. You only respond once as 'Assistant'."
-    # if len(st.session_state.messages) > 2:
-    # string_dialogue = ""
-    string_dialogue = starting_string
-    for dict_message in st.session_state.messages:
-        if dict_message["role"] == "user":
-            string_dialogue += "User: " + dict_message["content"] + "\n\n"
-        else:
-            string_dialogue += "Assistant: " + dict_message["content"] + "\n\n"
-
-    history = string_dialogue + "\n"
-
-    prompt_text = history + "\n prompt : " + prompt_input
-
-    if len(prompt_text) > 8192:
-        prompt_text = starting_string + history[-2048:] + "\n prompt : " + prompt_input
-
-    st.write(history, len(history))
-    st.write(prompt_text)
-
-    output = query(prompt_text)
-    return output["choices"][0]["message"]["content"]
+    if not prompt_input:
+        return
+    output = conversational_chat(str(prompt_input))
+    return output
 
 
 if prompt:
@@ -163,16 +184,16 @@ if prompt:
     with st.chat_message("user"):
         st.write(prompt)
 
-# Generate a new response if last message is not from assistant
 if st.session_state.messages[-1]["role"] != "assistant":
     with st.chat_message("assistant"):
         with st.spinner(""):
             response = generate_response(prompt)
             placeholder = st.empty()
             full_response = ""
-            for item in response:
-                full_response += item
+            if response:
+                for item in response:
+                    full_response += item
+                    placeholder.markdown(full_response)
                 placeholder.markdown(full_response)
-            placeholder.markdown(full_response)
     message = {"role": "assistant", "content": full_response}
     st.session_state.messages.append(message)
