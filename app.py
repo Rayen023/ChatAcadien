@@ -91,6 +91,7 @@ from langchain.prompts import (
 )
 from langchain.memory import ConversationBufferMemory
 from langchain_community.chat_message_histories import StreamlitChatMessageHistory
+from langchain.chains.conversation.memory import ConversationBufferWindowMemory
 
 msgs = StreamlitChatMessageHistory(key="chat_messages")
 
@@ -116,14 +117,17 @@ class ChatOpenRouter(ChatOpenAI):
         )
 
 
-@st.cache_resource
+# @st.cache_resource(ttl=600, show_spinner=False)
 def conversational_chat(query):
     llm = ChatOpenRouter(
         model_name="google/gemma-7b-it:free",
         temperature=temperature,
-        # max_tokens=max_length,
-        top_p=top_p,
+        max_tokens=max_length,
+        model_kwargs={"top_p": 0.9},
     )
+    # use only the last 12 messages
+    msgs.messages = msgs.messages[-12:]
+
     memory = ConversationBufferMemory(
         memory_key="history", chat_memory=msgs, return_messages=True
     )
@@ -142,6 +146,7 @@ def conversational_chat(query):
 
     result = chain({"input": query})
     st.session_state["history"].append((query, result["text"]))
+
     return result["text"]
 
 
@@ -186,7 +191,7 @@ if prompt:
 
 if st.session_state.messages[-1]["role"] != "assistant":
     with st.chat_message("assistant"):
-        with st.spinner(""):
+        with st.spinner("Writing..."):
             response = generate_response(prompt)
             placeholder = st.empty()
             full_response = ""
