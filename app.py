@@ -10,7 +10,7 @@ gemma_api_key = (
 )
 
 # App title
-st.set_page_config(page_title="🦙💬 ChatAcadien")
+st.set_page_config(page_title="ChatAcadien", page_icon="💬")
 # st.set_page_config(page_title="My Streamlit App", page_icon=":moon:", layout="wide", initial_sidebar_state="auto", )
 
 
@@ -23,7 +23,7 @@ with st.sidebar:
             "refreshed": True,
             "light": {
                 "theme.base": "dark",
-                "theme.backgroundColor": "black",
+                # "theme.backgroundColor": "black",
                 # "theme.primaryColor": "#c98bdb",
                 # "theme.secondaryBackgroundColor": "#5591f5",
                 "theme.textColor": "white",
@@ -32,7 +32,7 @@ with st.sidebar:
             },
             "dark": {
                 "theme.base": "light",
-                "theme.backgroundColor": "white",
+                # "theme.backgroundColor": "white",
                 # "theme.primaryColor": "#5591f5",
                 # "theme.secondaryBackgroundColor": "#82E1D7",
                 "theme.textColor": "#0a1464",
@@ -69,17 +69,11 @@ with st.sidebar:
         st.rerun()
 
     st.title("ChatAcadien")
-    st.subheader("Models and parameters")
+    # st.subheader("Models and parameters")
 
-    temperature = st.sidebar.slider(
-        "temperature", min_value=0.01, max_value=5.0, value=0.1, step=0.01
-    )
-    top_p = st.sidebar.slider(
-        "top_p", min_value=0.01, max_value=1.0, value=0.9, step=0.01
-    )
-    max_length = st.sidebar.slider(
-        "max_length", min_value=64, max_value=4096, value=512, step=8
-    )
+    # temperature = st.sidebar.slider("temperature", min_value=0.0, max_value=5.0, value=0.1, step=0.01)
+    # top_p = st.sidebar.slider("top_p", min_value=0.01, max_value=1.0, value=0.9, step=0.01)
+    # max_length = st.sidebar.slider("max_length", min_value=64, max_value=4096, value=512, step=8)
 
 prompt = st.chat_input("Message ChatAcadien...")
 
@@ -121,9 +115,9 @@ class ChatOpenRouter(ChatOpenAI):
 def conversational_chat(query):
     llm = ChatOpenRouter(
         model_name="google/gemma-7b-it:free",
-        temperature=temperature,
-        max_tokens=max_length,
-        model_kwargs={"top_p": 0.9},
+        temperature=0.0,
+        # max_tokens=max_length,
+        # model_kwargs={"top_p": 0.9},
     )
     # use only the last 12 messages
     msgs.messages = msgs.messages[-12:]
