@@ -1,13 +1,4 @@
 import streamlit as st
-import requests
-import json
-
-OPENROUTER_API_KEY = (
-    "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"
-)
-gemma_api_key = (
-    "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"
-)
 
 # App title
 st.set_page_config(page_title="ChatAcadien", page_icon="💬")
@@ -83,11 +74,32 @@ from langchain.prompts import (
     MessagesPlaceholder,
     ChatPromptTemplate,
 )
-from langchain.memory import ConversationBufferMemory
 from langchain_community.chat_message_histories import StreamlitChatMessageHistory
-from langchain.chains.conversation.memory import ConversationBufferWindowMemory
 
-msgs = StreamlitChatMessageHistory(key="chat_messages")
+
+## Statefully manage chat history ###
+from langchain_core.chat_history import BaseChatMessageHistory
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
+from langchain_core.runnables.history import RunnableWithMessageHistory
+from langchain_core.prompts import PromptTemplate
+from langchain_core.output_parsers import StrOutputParser
+from langchain.globals import set_debug
+
+set_debug(True)
+
+store = {}
+session_id = "default"
+
+
+def get_session_history(session_id: str) -> BaseChatMessageHistory:
+    if session_id not in store:
+        store[session_id] = StreamlitChatMessageHistory(key="chat_messages")
+    return store[session_id]
+
+
+llama_api_key = (
+    "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"
+)
 
 
 class ChatOpenRouter(ChatOpenAI):
@@ -98,7 +110,7 @@ class ChatOpenRouter(ChatOpenAI):
     def __init__(
         self,
         model_name: str,
-        openai_api_key: str = gemma_api_key,
+        openai_api_key: str = llama_api_key,
         openai_api_base: str = "https://openrouter.ai/api/v1",
         **kwargs,
     ):
@@ -111,41 +123,39 @@ class ChatOpenRouter(ChatOpenAI):
         )
 
 
+llm = ChatOpenRouter(
+    model_name="meta-llama/llama-3-8b-instruct:free",
+    temperature=0.0,
+)
+
+qa_system_prompt = """You are an AI chatbot having a conversation with a human .\
+"""
+general_prompt = ChatPromptTemplate.from_messages(
+    [
+        ("system", qa_system_prompt),
+        MessagesPlaceholder("chat_history"),
+        ("human", "{input}"),
+    ]
+)
+
+general_chain = general_prompt | llm | StrOutputParser()
+
+conv_general_chain = RunnableWithMessageHistory(
+    general_chain,
+    get_session_history,
+    input_messages_key="input",
+    history_messages_key="chat_history",
+    # output_messages_key="answer",
+)
+
+
 # @st.cache_resource(ttl=600, show_spinner=False)
-def conversational_chat(query):
-    llm = ChatOpenRouter(
-        model_name="google/gemma-7b-it:free",
-        temperature=0.0,
-        # max_tokens=max_length,
-        # model_kwargs={"top_p": 0.9},
+def conversational_chat(query, session_id):
+    response = conv_general_chain.stream(
+        {"input": query},
+        config={"configurable": {"session_id": session_id}},
     )
-    # use only the last 12 messages
-    msgs.messages = msgs.messages[-12:]
-
-    memory = ConversationBufferMemory(
-        memory_key="history", chat_memory=msgs, return_messages=True
-    )
-    chain = LLMChain(
-        llm=llm,
-        prompt=ChatPromptTemplate.from_messages(
-            [
-                ("system", "You are an AI chatbot having a conversation with a human."),
-                MessagesPlaceholder(variable_name="history"),
-                ("human", "{input}"),
-            ]
-        ),
-        memory=memory,
-        verbose=True,
-    )
-
-    result = chain({"input": query})
-    st.session_state["history"].append((query, result["text"]))
-
-    return result["text"]
-
-
-if "history" not in st.session_state:
-    st.session_state["history"] = []
+    return response
 
 
 if "messages" not in st.session_state.keys():
@@ -163,8 +173,7 @@ def clear_chat_history():  # TODO
     st.session_state.messages = [
         {"role": "assistant", "content": "Comment puisse-je vous aidez?"}
     ]
-    msgs.clear()
-    st.session_state["history"] = []
+    store[session_id].clear()
 
 
 st.sidebar.button("Clear Chat History", on_click=clear_chat_history)
@@ -174,7 +183,7 @@ st.sidebar.button("Clear Chat History", on_click=clear_chat_history)
 def generate_response(prompt_input):
     if not prompt_input:
         return
-    output = conversational_chat(str(prompt_input))
+    output = conversational_chat(str(prompt_input), session_id=session_id)
     return output
 
 
@@ -185,14 +194,8 @@ if prompt:
 
 if st.session_state.messages[-1]["role"] != "assistant":
     with st.chat_message("assistant"):
-        with st.spinner("Writing..."):
-            response = generate_response(prompt)
-            placeholder = st.empty()
-            full_response = ""
-            if response:
-                for item in response:
-                    full_response += item
-                    placeholder.markdown(full_response)
-                placeholder.markdown(full_response)
-    message = {"role": "assistant", "content": full_response}
+        response = generate_response(prompt)
+        if response:
+            msg_ = st.write_stream(response)
+    message = {"role": "assistant", "content": msg_}
     st.session_state.messages.append(message)
