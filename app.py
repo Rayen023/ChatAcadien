@@ -1,8 +1,29 @@
 import streamlit as st
+from langchain_community.chat_models import ChatOpenAI
+from langchain.chains import LLMChain
+from langchain.prompts import (
+    MessagesPlaceholder,
+    ChatPromptTemplate,
+)
+from langchain_community.chat_message_histories import StreamlitChatMessageHistory
+
+
+## Statefully manage chat history ###
+from langchain_core.chat_history import BaseChatMessageHistory
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
+from langchain_core.runnables.history import RunnableWithMessageHistory
+from langchain_core.prompts import PromptTemplate
+from langchain_core.output_parsers import StrOutputParser
+from langchain.globals import set_debug
+
 
 # App title
 st.set_page_config(page_title="ChatAcadien", page_icon="💬")
 # st.set_page_config(page_title="My Streamlit App", page_icon=":moon:", layout="wide", initial_sidebar_state="auto", )
+
+free_api_key = (
+    "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"
+)
 
 
 with st.sidebar:
@@ -68,22 +89,6 @@ with st.sidebar:
 
 prompt = st.chat_input("Message ChatAcadien...")
 
-from langchain_community.chat_models import ChatOpenAI
-from langchain.chains import LLMChain
-from langchain.prompts import (
-    MessagesPlaceholder,
-    ChatPromptTemplate,
-)
-from langchain_community.chat_message_histories import StreamlitChatMessageHistory
-
-
-## Statefully manage chat history ###
-from langchain_core.chat_history import BaseChatMessageHistory
-from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
-from langchain_core.runnables.history import RunnableWithMessageHistory
-from langchain_core.prompts import PromptTemplate
-from langchain_core.output_parsers import StrOutputParser
-from langchain.globals import set_debug
 
 set_debug(True)
 
@@ -97,11 +102,6 @@ def get_session_history(session_id: str) -> BaseChatMessageHistory:
     return store[session_id]
 
 
-llama_api_key = (
-    "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"
-)
-
-
 class ChatOpenRouter(ChatOpenAI):
     openai_api_base: str
     openai_api_key: str
@@ -110,7 +110,7 @@ class ChatOpenRouter(ChatOpenAI):
     def __init__(
         self,
         model_name: str,
-        openai_api_key: str = llama_api_key,
+        openai_api_key: str = free_api_key,
         openai_api_base: str = "https://openrouter.ai/api/v1",
         **kwargs,
     ):
@@ -124,7 +124,8 @@ class ChatOpenRouter(ChatOpenAI):
 
 
 llm = ChatOpenRouter(
-    model_name="meta-llama/llama-3-8b-instruct:free",
+    # model_name="meta-llama/llama-3-8b-instruct:free",
+    model_name="google/gemma-7b-it:free",
     temperature=0.0,
 )
 
