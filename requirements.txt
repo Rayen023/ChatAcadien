@@ -1,4 +1,9 @@
 streamlit
 langchain
 langchain-community
+langchain-cohere
+chromadb
 openai
+langchain-openai
+#langgraph
+sentence-transformers
