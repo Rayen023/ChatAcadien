@@ -7,3 +7,4 @@ openai
 langchain-openai
 #langgraph
 sentence-transformers
+streamlit-extras

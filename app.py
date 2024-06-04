@@ -8,7 +8,7 @@ import tiktoken
 
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_community.chat_message_histories import ChatMessageHistory
-from langchain_community.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 from langchain_cohere import CohereEmbeddings
 from langchain_community.vectorstores import Chroma
 from langchain.tools.retriever import create_retriever_tool
@@ -17,7 +17,7 @@ from langchain.schema.runnable import RunnablePassthrough
 from langchain.agents.output_parsers import OpenAIFunctionsAgentOutputParser
 from langchain.agents import AgentExecutor
 from langchain.agents.format_scratchpad import format_to_openai_functions
-from langchain.tools.render import format_tool_to_openai_function
+from langchain_core.utils.function_calling import convert_to_openai_function
 from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
 
@@ -41,9 +41,13 @@ logger = logging.getLogger()
 logging.basicConfig(encoding="UTF-8", level=logging.INFO)
 
 
+p_icon = "👍"
+n_icon = "👎"
+
+
 def log_feedback(icon):
     # We display a nice toast
-    st.toast("Thanks for your feedback!", icon=":material/thumb_up:")
+    st.toast("Thanks for your feedback!", icon=":material/thumbs_up_down:")
 
     # We retrieve the last question and answer
     last_messages = json.dumps(st.session_state["messages"][-2:])
@@ -52,7 +56,7 @@ def log_feedback(icon):
     activity = datetime.now().strftime("%Y-%m-%d %H:%M:%S") + ": "
 
     # And include the messages
-    activity += "positive" if icon == "👍" else "negative"
+    activity += "positive" if icon == p_icon else "negative"
     activity += ": " + last_messages
 
     # And log everything
@@ -69,7 +73,7 @@ if os.path.exists("chromadb2"):
 
 retriever = vectorstore.as_retriever(
     search_type="similarity",
-    search_kwargs={"k": 5},
+    search_kwargs={"k": 7},
 )
 
 from langchain.retrievers import ContextualCompressionRetriever
@@ -77,7 +81,7 @@ from langchain.retrievers.document_compressors import CrossEncoderReranker
 from langchain_community.cross_encoders import HuggingFaceCrossEncoder
 
 model = HuggingFaceCrossEncoder(model_name="BAAI/bge-reranker-base")
-compressor = CrossEncoderReranker(model=model, top_n=1)
+compressor = CrossEncoderReranker(model=model, top_n=3)
 compression_retriever = ContextualCompressionRetriever(
     base_compressor=compressor, base_retriever=retriever
 )
@@ -85,7 +89,7 @@ compression_retriever = ContextualCompressionRetriever(
 retriever_tool = create_retriever_tool(
     compression_retriever,
     "computer_vision_and_defect_detection_search",
-    "If question is related to computer vision or defect detection, you must use this tool. When using this tool, for the query key, pass a detailed answer of 100 words to be used for better retrieval search. ",
+    "If the question is related to computer vision or defect detection, you must use this tool. When using this tool, for the query key, pass an initial detailed paragraph answer as to enhance this tool's retrieval search. ",
 )
 
 
@@ -102,7 +106,7 @@ if "messages" not in st.session_state.keys():
         {"role": "assistant", "content": "Comment puisse-je vous aidez?"}
     ]
 
-functions = [format_tool_to_openai_function(f) for f in tools]
+functions = [convert_to_openai_function(f) for f in tools]
 model = ChatOpenAI(
     model="gpt-3.5-turbo",
     api_key="sk-proj-tymuOuG4sXN4tDpj9GXGT3BlbkFJa66Eox35dIijdwkrHP9B",
@@ -197,23 +201,23 @@ if len(st.session_state["messages"]) > 1:
 
         # And the corresponding Download button
         st.download_button(
-            label="📥 Save chat!",
+            label="📥 Save chat",
             data=json_messages,
             file_name="chat_conversation.json",
             mime="application/json",
         )
 
     with col2:
-        st.button("Clear Chat 🧹", on_click=clear_chat_history)
+        st.button("🗑️ Clear Chat", on_click=clear_chat_history)
 
     with col3:
         st.button("🔁", on_click=rerun_last_question)
 
     with col4:
-        st.button("👍", on_click=lambda: log_feedback("👍"))
+        st.button(p_icon, on_click=lambda: log_feedback(p_icon))
 
     with col5:
-        st.button("👎", on_click=lambda: log_feedback("👎"))
+        st.button(n_icon, on_click=lambda: log_feedback(n_icon))
 
     with col6:
 
