@@ -21,6 +21,19 @@ from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
 from langchain_pinecone import PineconeVectorStore
 
+st.markdown(
+    """
+    <style>
+    .css-1jc7ptx, .e1ewe7hr3, .viewerBadge_container__1QSob,
+    .styles_viewerBadge__1yB5_, .viewerBadge_link__1S137,
+    .viewerBadge_text__1JaDK {
+        display: none;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
 
 st.logo(
     "Images/chat_logo.png",  # Icon (displayed in sidebar)
@@ -30,7 +43,11 @@ st.logo(
 
 
 # App title
-st.set_page_config(page_title="ChatAcadien", page_icon="Images/chat_logo.png")
+st.set_page_config(
+    page_title="ChatAcadien",
+    page_icon="Images/chat_logo.png",
+    initial_sidebar_state="collapsed",
+)
 # st.set_page_config(page_title="My Streamlit App", page_icon=":moon:", layout="wide", initial_sidebar_state="auto", )
 
 with st.sidebar:
