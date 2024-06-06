@@ -21,13 +21,6 @@ from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
 from langchain_pinecone import PineconeVectorStore
 
-print(st.secrets["cohere_api_key"])
-
-os.environ["cohere_api_key"] == st.secrets["cohere_api_key"]
-os.environ["PINECONE_API_KEY"] == st.secrets["PINECONE_API_KEY"]
-os.environ["TAVILY_API_KEY"] == st.secrets["TAVILY_API_KEY"]
-os.environ["OPENAI_API_KEY"] == st.secrets["OPENAI_API_KEY"]
-
 
 st.logo(
     "Images/chat_logo.png",  # Icon (displayed in sidebar)
