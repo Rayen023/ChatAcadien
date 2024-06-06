@@ -21,6 +21,14 @@ from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
 from langchain_pinecone import PineconeVectorStore
 
+print(st.secrets["cohere_api_key"])
+
+os.environ["cohere_api_key"] == st.secrets["cohere_api_key"]
+os.environ["PINECONE_API_KEY"] == st.secrets["PINECONE_API_KEY"]
+os.environ["TAVILY_API_KEY"] == st.secrets["TAVILY_API_KEY"]
+os.environ["OPENAI_API_KEY"] == st.secrets["OPENAI_API_KEY"]
+
+
 st.logo(
     "Images/chat_logo.png",  # Icon (displayed in sidebar)
     # link="https://streamlit.io/gallery",
@@ -31,11 +39,6 @@ st.logo(
 # App title
 st.set_page_config(page_title="ChatAcadien", page_icon="Images/chat_logo.png")
 # st.set_page_config(page_title="My Streamlit App", page_icon=":moon:", layout="wide", initial_sidebar_state="auto", )
-
-free_api_key = (
-    "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"
-)
-
 
 with st.sidebar:
 
@@ -69,14 +72,11 @@ def log_feedback(icon):
     logger.info(activity)
 
 
-cohere_api_key = "mLce2Wncyd6Cpv4WEsAVuJElVTnKQA3aGL776eAI"
 embeddings = CohereEmbeddings(
-    model="embed-multilingual-v3.0", cohere_api_key=cohere_api_key
+    model="embed-multilingual-v3.0",
 )
 
 index_name = "docs-quickstart-index"
-
-os.environ["PINECONE_API_KEY"] = "48cdec3d-76e5-4a8b-b931-6eeca75e076c"
 
 vectorstore = PineconeVectorStore(index_name=index_name, embedding=embeddings)
 
@@ -88,7 +88,7 @@ from langchain_cohere import CohereRerank
 from langchain.retrievers import ContextualCompressionRetriever
 
 compressor = CohereRerank(
-    model="rerank-multilingual-v3.0", cohere_api_key=cohere_api_key
+    model="rerank-multilingual-v3.0",
 )
 
 compression_retriever = ContextualCompressionRetriever(
@@ -101,9 +101,6 @@ retriever_tool = create_retriever_tool(
     "computer_vision_and_defect_detection_search",
     "If the question is related to computer vision or defect detection, you must use this tool. When using this tool, for the query key, pass an initial detailed paragraph answer as to enhance this tool's retrieval search. ",
 )
-
-
-os.environ["TAVILY_API_KEY"] = "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"
 
 search = TavilySearchResults(max_results=2)
 
@@ -119,7 +116,6 @@ if "messages" not in st.session_state.keys():
 functions = [convert_to_openai_function(f) for f in tools]
 model = ChatOpenAI(
     model="gpt-3.5-turbo",
-    api_key="sk-proj-tymuOuG4sXN4tDpj9GXGT3BlbkFJa66Eox35dIijdwkrHP9B",
     temperature=0,
     streaming=True,
 ).bind(functions=functions)
