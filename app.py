@@ -10,7 +10,6 @@ from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_community.chat_message_histories import ChatMessageHistory
 from langchain_openai import ChatOpenAI
 from langchain_cohere import CohereEmbeddings
-from langchain_community.vectorstores import Chroma
 from langchain.tools.retriever import create_retriever_tool
 from langchain.memory import ConversationBufferMemory
 from langchain.schema.runnable import RunnablePassthrough
@@ -20,10 +19,17 @@ from langchain.agents.format_scratchpad import format_to_openai_functions
 from langchain_core.utils.function_calling import convert_to_openai_function
 from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
+from langchain_pinecone import PineconeVectorStore
+
+st.logo(
+    "Images/chat_logo.png",  # Icon (displayed in sidebar)
+    # link="https://streamlit.io/gallery",
+    icon_image="Images/chat_logo.png",  # Alternate Icon if sidebar closed
+)
 
 
 # App title
-st.set_page_config(page_title="ChatAcadien", page_icon="💬")
+st.set_page_config(page_title="ChatAcadien", page_icon="Images/chat_logo.png")
 # st.set_page_config(page_title="My Streamlit App", page_icon=":moon:", layout="wide", initial_sidebar_state="auto", )
 
 free_api_key = (
@@ -65,26 +71,30 @@ def log_feedback(icon):
 
 cohere_api_key = "mLce2Wncyd6Cpv4WEsAVuJElVTnKQA3aGL776eAI"
 embeddings = CohereEmbeddings(
-    model="embed-english-light-v3.0", cohere_api_key=cohere_api_key
+    model="embed-multilingual-v3.0", cohere_api_key=cohere_api_key
 )
 
-if os.path.exists("chromadb2"):
-    vectorstore = Chroma(persist_directory="./chromadb2", embedding_function=embeddings)
+index_name = "docs-quickstart-index"
+
+os.environ["PINECONE_API_KEY"] = "48cdec3d-76e5-4a8b-b931-6eeca75e076c"
+
+vectorstore = PineconeVectorStore(index_name=index_name, embedding=embeddings)
 
 retriever = vectorstore.as_retriever(
     search_type="similarity",
     search_kwargs={"k": 7},
 )
-
+from langchain_cohere import CohereRerank
 from langchain.retrievers import ContextualCompressionRetriever
-from langchain.retrievers.document_compressors import CrossEncoderReranker
-from langchain_community.cross_encoders import HuggingFaceCrossEncoder
 
-model = HuggingFaceCrossEncoder(model_name="BAAI/bge-reranker-base")
-compressor = CrossEncoderReranker(model=model, top_n=3)
+compressor = CohereRerank(
+    model="rerank-multilingual-v3.0", cohere_api_key=cohere_api_key
+)
+
 compression_retriever = ContextualCompressionRetriever(
     base_compressor=compressor, base_retriever=retriever
 )
+
 
 retriever_tool = create_retriever_tool(
     compression_retriever,
@@ -157,10 +167,12 @@ agent_executor = AgentExecutor(
 )
 
 
+@st.experimental_fragment
 def rerun_last_question():
     st.session_state["messages"].pop(-1)
 
 
+@st.experimental_fragment
 def clear_chat_history():  # TODO
     st.session_state.messages = [
         {"role": "assistant", "content": "Comment puisse-je vous aidez?"}
@@ -173,7 +185,8 @@ if prompt:
         st.write(prompt)
 
 
-if st.session_state.messages[-1]["role"] != "assistant":
+@st.experimental_fragment
+def generate_response():
     st_callback = StreamlitCallbackHandler(
         st.chat_message("assistant"),
         expand_new_thoughts=True,
@@ -186,6 +199,10 @@ if st.session_state.messages[-1]["role"] != "assistant":
     )
     message = {"role": "assistant", "content": response["output"]}
     st.session_state.messages.append(message)
+
+
+if st.session_state.messages[-1]["role"] != "assistant":
+    generate_response()
 
 
 if len(st.session_state["messages"]) > 1:
