@@ -23,16 +23,16 @@ from langchain_pinecone import PineconeVectorStore
 
 
 st.logo(
-    "Images/chat_logo.png",  # Icon (displayed in sidebar)
+    "Images/avatarchat.png",  # Icon (displayed in sidebar)
     # link="https://streamlit.io/gallery",
-    icon_image="Images/chat_logo.png",  # Alternate Icon if sidebar closed
+    icon_image="Images/avatarchat.png",  # Alternate Icon if sidebar closed
 )
 
 
 # App title
 st.set_page_config(
     page_title="ChatAcadien",
-    page_icon="Images/chat_logo.png",
+    page_icon="Images/avatarchat.png",
     initial_sidebar_state="collapsed",
 )
 
@@ -133,7 +133,7 @@ if "messages" not in st.session_state.keys():
     ]
 
 for message in st.session_state.messages:
-    with st.chat_message(message["role"]):
+    with st.chat_message(message["role"], avatar="Images/avatarchat.png"):
         st.write(message["content"])
 
         if message["role"] == "user":
