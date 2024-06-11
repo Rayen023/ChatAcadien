@@ -20,7 +20,7 @@ from langchain_core.utils.function_calling import convert_to_openai_function
 from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
 from langchain_pinecone import PineconeVectorStore
-
+from sqlalchemy.sql import text
 
 st.logo(
     "Images/avatarchat.png",  # Icon (displayed in sidebar)
@@ -33,13 +33,87 @@ st.logo(
 st.set_page_config(
     page_title="ChatAcadien",
     page_icon="Images/avatarchat.png",
-    initial_sidebar_state="collapsed",
+    # initial_sidebar_state="collapsed",
 )
 
+# Define a dictionary to map subjects to emails
+subject_to_email = {
+    "Généalogie": "nadine.morin@umoncton.ca",
+    "Genealogy": "nadine.morin@umoncton.ca",
+    "Arbre de famille": "nadine.morin@umoncton.ca",
+    "Family tree": "nadine.morin@umoncton.ca",
+    "Numérisation": "nadine.morin@umoncton.ca",
+    "Scan": "nadine.morin@umoncton.ca",
+    "Scanning": "nadine.morin@umoncton.ca",
+    "Bibliothèque": "nadine.morin@umoncton.ca",
+    "Library": "nadine.morin@umoncton.ca",
+    "Livre": "nadine.morin@umoncton.ca",
+    "Book": "nadine.morin@umoncton.ca",
+    "Don de livre": "nadine.morin@umoncton.ca",
+    "Archives privées": "erika.basque@umoncton.ca",
+    "Archives institutionnelles": "erika.basque@umoncton.ca",
+    "Fonds": "erika.basque@umoncton.ca",
+    "Don": "erika.basque@umoncton.ca",
+    "Donation": "erika.basque@umoncton.ca",
+    "Subvention": "francois.j.leblanc@umoncton.ca",
+    "Folklore": "robert.richard@umoncton.ca",
+    "Ethnologie": "robert.richard@umoncton.ca",
+    "Conte": "robert.richard@umoncton.ca",
+    "Légende": "robert.richard@umoncton.ca",
+    "Musique": "robert.richard@umoncton.ca",
+    "Tradition": "robert.richard@umoncton.ca",
+    "Faits de folklore": "robert.richard@umoncton.ca",
+    "Facebook": "erika.basque@umoncton.ca",
+    "Médias sociaux": "erika.basque@umoncton.ca",
+    "Événements": "erika.basque@umoncton.ca",
+}
+
+
+# Get the list of subjects from the dictionary keys
+subjects = sorted(subject_to_email.keys())
+
+# Create a multiselect widget
+
+
+# Display the corresponding emails based on the selected options
 
 with st.sidebar:
 
-    st.title("Chat Acadien")
+    # st.title("Chat Acadien")
+
+    popover = st.popover(
+        "Pour plus d'informations, Contactez-nous :", use_container_width=True
+    )
+    with popover:
+        st.write(
+            "Généalogie, Arbre de Famille, Numérisation, Bibliothèque, Livre, Don de Livre : nadine.morin@umoncton.ca"
+        )
+        st.write(
+            "Archives Privées, Archives Institutionnelles, Fonds, Don : josee.theriault@umoncton.ca"
+        )
+        st.write("Subvention : francois.j.leblanc@umoncton.ca")
+        st.write(
+            "Folklore, Ethnologie, Conte, Légende, Musique, Tradition : robert.richard@umoncton.ca"
+        )
+        st.write("Facebook, Médias Sociaux, Événements : erika.basque@umoncton.ca")
+
+    @st.experimental_dialog("Pour plus d'informations, Contactez-nous :", width="large")
+    def contact():
+        option = st.selectbox(
+            "Choisir sujet de la demande",
+            subjects,
+            placeholder="Choisir sujet de la demande",
+            index=None,
+            label_visibility="collapsed",
+        )
+        if option:
+            st.write(
+                f"Pour le sujet de {option}, Veuillez contactez : {subject_to_email[option]}"
+            )
+
+    if st.button("Pour plus d'informations, Contactez-nous :"):
+        contact()
+
 
 prompt = st.chat_input("Message ChatAcadien...")
 
@@ -47,6 +121,20 @@ logger = logging.getLogger()
 logging.basicConfig(encoding="UTF-8", level=logging.INFO)
 
 
+def _get_session():
+    from streamlit.runtime import get_instance
+    from streamlit.runtime.scriptrunner import get_script_run_ctx
+
+    runtime = get_instance()
+    session_id = get_script_run_ctx().session_id
+    session_info = runtime._session_mgr.get_session_info(session_id)
+    if session_info is None:
+        raise RuntimeError("Couldn't get your Streamlit Session object.")
+    return session_info.session
+
+
+if "chat_id" not in st.session_state:
+    st.session_state["chat_id"] = str(_get_session().id)
 p_icon = "👍"
 n_icon = "👎"
 
@@ -133,13 +221,14 @@ if "messages" not in st.session_state.keys():
     ]
 
 for message in st.session_state.messages:
-    with st.chat_message(message["role"], avatar="Images/avatarchat.png"):
-        st.write(message["content"])
-
-        if message["role"] == "user":
-            history.add_user_message(message["content"])
-        else:
+    if message["role"] == "assistant":
+        with st.chat_message(message["role"], avatar="Images/avatarchat.png"):
+            st.write(message["content"])
             history.add_ai_message(message["content"])
+    elif message["role"] == "user":
+        with st.chat_message(message["role"]):
+            st.write(message["content"])
+            history.add_user_message(message["content"])
 
 
 memory = ConversationBufferMemory(
@@ -170,6 +259,7 @@ def clear_chat_history():  # TODO
     st.session_state.messages = [
         {"role": "assistant", "content": "Comment puisse-je vous aidez?"}
     ]
+    st.session_state["chat_id"] += "1"
 
 
 if prompt:
@@ -181,7 +271,7 @@ if prompt:
 @st.experimental_fragment
 def generate_response():
     st_callback = StreamlitCallbackHandler(
-        st.chat_message("assistant"),
+        st.chat_message("assistant", avatar="Images/avatarchat.png"),
         expand_new_thoughts=True,
         collapse_completed_thoughts=False,
         max_thought_containers=0,
@@ -198,26 +288,41 @@ if st.session_state.messages[-1]["role"] != "assistant":
     generate_response()
 
 
-if len(st.session_state["messages"]) > 1:
+def save_chat_logs():
+    # Create the SQL connection to chats_db as specified in your secrets file.
+    conn = st.connection("chats_db", type="sql")
 
+    # Insert some data with conn.session.
+    with conn.session as s:
+        # Create chat_logs table if it doesn't exist
+        s.execute(
+            text(
+                "CREATE TABLE IF NOT EXISTS chat_logs (id TEXT PRIMARY KEY, json_messages TEXT);"
+            )
+        )
+
+        # Capture chat messages
+        if "messages" in st.session_state:
+            json_messages = json.dumps(st.session_state["messages"])
+            chat_id = st.session_state["chat_id"]
+
+            # Insert or update chat log in chat_logs table
+            s.execute(
+                text(
+                    "INSERT OR REPLACE INTO chat_logs (id, json_messages) VALUES (:id, :json_messages);"
+                ),
+                params=dict(id=chat_id, json_messages=json_messages),
+            )
+
+        s.commit()
+
+
+if len(st.session_state["messages"]) > 1:
     # We set the space between the icons thanks to a share of 100
-    cols_dimensions = [7, 19.4, 19.3, 9, 8.6, 8.6, 28.1]
+    cols_dimensions = [1, 8, 19.4, 3, 3, 3, 1]
     col0, col1, col2, col3, col4, col5, col6 = st.columns(cols_dimensions)
 
     with col1:
-
-        # Converts the list of messages into a JSON Bytes format
-        json_messages = json.dumps(st.session_state["messages"]).encode("utf-8")
-
-        # And the corresponding Download button
-        st.download_button(
-            label="📥 Save chat",
-            data=json_messages,
-            file_name="chat_conversation.json",
-            mime="application/json",
-        )
-
-    with col2:
         st.button("🗑️ Clear Chat", on_click=clear_chat_history)
 
     with col3:
@@ -229,30 +334,19 @@ if len(st.session_state["messages"]) > 1:
     with col5:
         st.button(n_icon, on_click=lambda: log_feedback(n_icon))
 
-    with col6:
+    save_chat_logs()
 
-        # We initiate a tokenizer
-        enc = tiktoken.get_encoding("cl100k_base")
 
-        # We encode the messages
-        tokenized_full_text = enc.encode(
-            " ".join([item["content"] for item in st.session_state["messages"]])
-        )
+import time
 
-        # And display the corresponding number of tokens
-        label = f"💬 {len(tokenized_full_text)} tokens"
-        st.button(label)
-
-# else:
-
-#     # At the first run of a session, we temporarly display a message
-#     if "disclaimer" not in st.session_state:
-#         with st.empty():
-#             for seconds in range(3):
-#                 st.warning(
-#                     "‎ You can click on 👍 or 👎 to provide feedback regarding the quality of responses.",
-#                     icon="💡",
-#                 )
-#                 time.sleep(1)
-#             st.write("")
-#             st.session_state["disclaimer"] = True
+# TODO add fragment and put disclaimer at bottom and test if contact and this can work en parallele
+if ("disclaimer" not in st.session_state) and (len(st.session_state["messages"]) == 1):
+    st.session_state["disclaimer"] = True
+    with st.empty():
+        for seconds in range(10):
+            st.warning(
+                """‎ Cette conversation sera enregistrée afin d'améliorer davantage les capacités de ChatAcadien. Vous pouvez cliquer sur 👍 ou 👎 pour fournir des commentaires sur la qualité des réponses. Note : ChatAcadien peut faire des erreurs. Vérifiez en ligne pour des informations importantes ou contactez-nous.""",
+                icon="💡",
+            )
+            time.sleep(1)
+        st.write("")
