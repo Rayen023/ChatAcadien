@@ -5,6 +5,8 @@ import json
 
 import streamlit as st
 import tiktoken
+import re
+
 
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_community.chat_message_histories import ChatMessageHistory
@@ -21,6 +23,18 @@ from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
 from langchain_pinecone import PineconeVectorStore
 from sqlalchemy.sql import text
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
+
+logging.basicConfig(
+    filename="app.log",
+    encoding="UTF-8",
+    level=logging.INFO,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+)
+
+logger = logging.getLogger(__name__)
+
 
 st.logo(
     "Images/avatarchat.png",  # Icon (displayed in sidebar)
@@ -36,46 +50,18 @@ st.set_page_config(
     # initial_sidebar_state="collapsed",
 )
 
-# Define a dictionary to map subjects to emails
 subject_to_email = {
-    "Généalogie": "nadine.morin@umoncton.ca",
-    "Genealogy": "nadine.morin@umoncton.ca",
-    "Arbre de famille": "nadine.morin@umoncton.ca",
-    "Family tree": "nadine.morin@umoncton.ca",
-    "Numérisation": "nadine.morin@umoncton.ca",
-    "Scan": "nadine.morin@umoncton.ca",
-    "Scanning": "nadine.morin@umoncton.ca",
-    "Bibliothèque": "nadine.morin@umoncton.ca",
-    "Library": "nadine.morin@umoncton.ca",
-    "Livre": "nadine.morin@umoncton.ca",
-    "Book": "nadine.morin@umoncton.ca",
-    "Don de livre": "nadine.morin@umoncton.ca",
-    "Archives privées": "erika.basque@umoncton.ca",
-    "Archives institutionnelles": "erika.basque@umoncton.ca",
-    "Fonds": "erika.basque@umoncton.ca",
-    "Don": "erika.basque@umoncton.ca",
-    "Donation": "erika.basque@umoncton.ca",
+    "Généalogie, Genealogy, Arbre de famille, Family tree": "nadine.morin@umoncton.ca",
+    "Numérisation, Scan, Scanning, Bibliothèque, Library, Livre, Book, Don de livre": "nadine.morin@umoncton.ca",
+    "Archives privées, Archives institutionnelles": "josee.theriault@umoncton.ca ou francois.j.leblanc@umoncton.ca",
+    "Fonds, Don, Donation": "josee.theriault@umoncton.ca ou francois.j.leblanc@umoncton.ca",
     "Subvention": "francois.j.leblanc@umoncton.ca",
-    "Folklore": "robert.richard@umoncton.ca",
-    "Ethnologie": "robert.richard@umoncton.ca",
-    "Conte": "robert.richard@umoncton.ca",
-    "Légende": "robert.richard@umoncton.ca",
-    "Musique": "robert.richard@umoncton.ca",
-    "Tradition": "robert.richard@umoncton.ca",
-    "Faits de folklore": "robert.richard@umoncton.ca",
-    "Facebook": "erika.basque@umoncton.ca",
-    "Médias sociaux": "erika.basque@umoncton.ca",
-    "Événements": "erika.basque@umoncton.ca",
+    "Folklore, Ethnologie, Conte, Légende, Musique, Tradition, Faits de folklore": "robert.richard@umoncton.ca",
+    "Facebook, Médias sociaux, Événements": "erika.basque@umoncton.ca",
 }
 
 
-# Get the list of subjects from the dictionary keys
 subjects = sorted(subject_to_email.keys())
-
-# Create a multiselect widget
-
-
-# Display the corresponding emails based on the selected options
 
 with st.sidebar:
 
@@ -85,17 +71,8 @@ with st.sidebar:
         "Pour plus d'informations, Contactez-nous :", use_container_width=True
     )
     with popover:
-        st.write(
-            "Généalogie, Arbre de Famille, Numérisation, Bibliothèque, Livre, Don de Livre : nadine.morin@umoncton.ca"
-        )
-        st.write(
-            "Archives Privées, Archives Institutionnelles, Fonds, Don : josee.theriault@umoncton.ca"
-        )
-        st.write("Subvention : francois.j.leblanc@umoncton.ca")
-        st.write(
-            "Folklore, Ethnologie, Conte, Légende, Musique, Tradition : robert.richard@umoncton.ca"
-        )
-        st.write("Facebook, Médias Sociaux, Événements : erika.basque@umoncton.ca")
+        for key, value in subject_to_email.items():
+            st.write(f"Pour le sujet de {key}, Veuillez contactez : {value}")
 
     @st.experimental_dialog("Pour plus d'informations, Contactez-nous :", width="large")
     def contact():
@@ -114,11 +91,24 @@ with st.sidebar:
     if st.button("Pour plus d'informations, Contactez-nous :"):
         contact()
 
+    popover2 = st.popover(
+        "Pour plus d'informations, Contactez-nous :", use_container_width=True
+    )
+    with popover2:
+        option2 = popover2.selectbox(
+            "Choisir sujet de la demande",
+            subjects,
+            placeholder="Choisir sujet ...",
+            index=None,
+            label_visibility="collapsed",
+        )
+        if option2:
+            popover2.write(
+                f"Pour le sujet de {option2}, Veuillez contactez : {subject_to_email[option2]}"
+            )
+
 
 prompt = st.chat_input("Message ChatAcadien...")
-
-logger = logging.getLogger()
-logging.basicConfig(encoding="UTF-8", level=logging.INFO)
 
 
 def _get_session():
@@ -161,20 +151,18 @@ embeddings = CohereEmbeddings(
     model="embed-multilingual-v3.0",
 )
 
-index_name = "docs-quickstart-index"
+index_name = "ceaac-general-info-index"
 
 vectorstore = PineconeVectorStore(index_name=index_name, embedding=embeddings)
 
 retriever = vectorstore.as_retriever(
     search_type="similarity",
-    search_kwargs={"k": 7},
+    search_kwargs={"k": 4},
 )
 from langchain_cohere import CohereRerank
 from langchain.retrievers import ContextualCompressionRetriever
 
-compressor = CohereRerank(
-    model="rerank-multilingual-v3.0",
-)
+compressor = CohereRerank(model="rerank-multilingual-v3.0", top_n=2)
 
 compression_retriever = ContextualCompressionRetriever(
     base_compressor=compressor, base_retriever=retriever
@@ -183,8 +171,8 @@ compression_retriever = ContextualCompressionRetriever(
 
 retriever_tool = create_retriever_tool(
     compression_retriever,
-    "computer_vision_and_defect_detection_search",
-    "If the question is related to computer vision or defect detection, you must use this tool. When using this tool, for the query key, pass an initial detailed paragraph answer as to enhance this tool's retrieval search. ",
+    "ceaac_information_search",
+    "Pour les questions relatives à la ceaac, vous devez utiliser cet outil. Lors de l'utilisation de cet outil, pour la clé de requête, passez une réponse initiale détaillée sous forme de paragraphe pour améliorer la recherche de cet outil. ",
 )
 
 search = TavilySearchResults(max_results=2)
@@ -195,7 +183,7 @@ history = ChatMessageHistory()
 
 if "messages" not in st.session_state.keys():
     st.session_state.messages = [
-        {"role": "assistant", "content": "Comment puisse-je vous aidez?"}
+        {"role": "assistant", "content": "Comment puisse-je vous aidez ?"}
     ]
 
 functions = [convert_to_openai_function(f) for f in tools]
@@ -208,7 +196,10 @@ model = ChatOpenAI(
 
 prompt_template = ChatPromptTemplate.from_messages(
     [
-        ("system", "You are helpful assistant"),
+        (
+            "system",
+            "Vous êtes un assistant virtuel du Centre d'études acadiennes Anselme-Chiasson (CEAAC). Vous avez accès à des outils qui vous donnent accees a des informations spécifiques sur le centre. Si vous n'êtes pas encore en mesure de répondre à la demande de l'utilisateur, informez-le d'utiliser le bouton de contact situé à gauche de l'écran.",
+        ),
         MessagesPlaceholder(variable_name="chat_history"),
         ("user", "{input}"),
         MessagesPlaceholder(variable_name="agent_scratchpad"),
@@ -220,10 +211,18 @@ if "messages" not in st.session_state.keys():
         {"role": "assistant", "content": "Comment puisse-je vous aidez?"}
     ]
 
+
+def escape_dollar_signs(text):
+    return re.sub(r"(\d)\$", r"\1\\$", text)
+
+
 for message in st.session_state.messages:
     if message["role"] == "assistant":
+        # Check and modify the content if it has a number followed by a dollar sign
+        modified_content = escape_dollar_signs(message["content"])
+
         with st.chat_message(message["role"], avatar="Images/avatarchat.png"):
-            st.write(message["content"])
+            st.write(modified_content)
             history.add_ai_message(message["content"])
     elif message["role"] == "user":
         with st.chat_message(message["role"]):
@@ -276,11 +275,14 @@ def generate_response():
         collapse_completed_thoughts=False,
         max_thought_containers=0,
     )
+
     response = agent_executor.invoke(
         {"input": st.session_state.messages[-1]["content"]},
         {"callbacks": [st_callback]},
     )
-    message = {"role": "assistant", "content": response["output"]}
+    modified_content = escape_dollar_signs(response["output"])
+    message = {"role": "assistant", "content": modified_content}
+
     st.session_state.messages.append(message)
 
 
@@ -289,32 +291,24 @@ if st.session_state.messages[-1]["role"] != "assistant":
 
 
 def save_chat_logs():
-    # Create the SQL connection to chats_db as specified in your secrets file.
-    conn = st.connection("chats_db", type="sql")
+    try:
+        client = MongoClient(st.secrets["mongo"]["uri"], server_api=ServerApi("1"))
+        db = client["chatdb"]
+        collection = db["conversation_logs"]
 
-    # Insert some data with conn.session.
-    with conn.session as s:
-        # Create chat_logs table if it doesn't exist
-        s.execute(
-            text(
-                "CREATE TABLE IF NOT EXISTS chat_logs (id TEXT PRIMARY KEY, json_messages TEXT);"
-            )
-        )
-
-        # Capture chat messages
         if "messages" in st.session_state:
-            json_messages = json.dumps(st.session_state["messages"])
+            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             chat_id = st.session_state["chat_id"]
-
-            # Insert or update chat log in chat_logs table
-            s.execute(
-                text(
-                    "INSERT OR REPLACE INTO chat_logs (id, json_messages) VALUES (:id, :json_messages);"
-                ),
-                params=dict(id=chat_id, json_messages=json_messages),
+            collection.insert_one(
+                {
+                    "timestamp": timestamp,
+                    "conv_id": chat_id,
+                    "messages": st.session_state["messages"],
+                }
             )
 
-        s.commit()
+    except Exception as e:
+        logger.error("An error occurred while logging the conversation: %s", str(e))
 
 
 if len(st.session_state["messages"]) > 1:
@@ -343,7 +337,7 @@ import time
 if ("disclaimer" not in st.session_state) and (len(st.session_state["messages"]) == 1):
     st.session_state["disclaimer"] = True
     with st.empty():
-        for seconds in range(10):
+        for seconds in range(15):
             st.warning(
                 """‎ Cette conversation sera enregistrée afin d'améliorer davantage les capacités de ChatAcadien. Vous pouvez cliquer sur 👍 ou 👎 pour fournir des commentaires sur la qualité des réponses. Note : ChatAcadien peut faire des erreurs. Vérifiez en ligne pour des informations importantes ou contactez-nous.""",
                 icon="💡",
