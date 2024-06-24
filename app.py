@@ -1,30 +1,33 @@
-import os
-from datetime import datetime
-import logging
-import json
-
 import streamlit as st
-import tiktoken
-import re
+from streamlit_feedback import streamlit_feedback
+from streamlit.runtime import get_instance
+from streamlit.runtime.scriptrunner import get_script_run_ctx
 
-
-from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
-from langchain_community.chat_message_histories import ChatMessageHistory
-from langchain_openai import ChatOpenAI
-from langchain_cohere import CohereEmbeddings
-from langchain.tools.retriever import create_retriever_tool
-from langchain.memory import ConversationBufferMemory
-from langchain.schema.runnable import RunnablePassthrough
 from langchain.agents.output_parsers import OpenAIFunctionsAgentOutputParser
 from langchain.agents import AgentExecutor
 from langchain.agents.format_scratchpad import format_to_openai_functions
-from langchain_core.utils.function_calling import convert_to_openai_function
+from langchain_cohere import CohereRerank, CohereEmbeddings
+from langchain_community.chat_message_histories import ChatMessageHistory
 from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
+from langchain_core.utils.function_calling import convert_to_openai_function
+from langchain.memory import ConversationBufferMemory
+from langchain_openai import ChatOpenAI
 from langchain_pinecone import PineconeVectorStore
-from sqlalchemy.sql import text
+from langchain.retrievers import ContextualCompressionRetriever
+from langchain.schema.runnable import RunnablePassthrough
+from langchain.tools.retriever import create_retriever_tool
+
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
+
+from datetime import datetime
+import logging
+import json
+import time
+import re
+
 
 logging.basicConfig(
     filename="app.log",
@@ -49,6 +52,7 @@ st.set_page_config(
     page_icon="Images/avatarchat.png",
     # initial_sidebar_state="collapsed",
 )
+
 
 subject_to_email = {
     "Généalogie, Genealogy, Arbre de famille, Family tree": "nadine.morin@umoncton.ca",
@@ -112,9 +116,6 @@ prompt = st.chat_input("Message ChatAcadien...")
 
 
 def _get_session():
-    from streamlit.runtime import get_instance
-    from streamlit.runtime.scriptrunner import get_script_run_ctx
-
     runtime = get_instance()
     session_id = get_script_run_ctx().session_id
     session_info = runtime._session_mgr.get_session_info(session_id)
@@ -129,6 +130,42 @@ p_icon = "👍"
 n_icon = "👎"
 
 
+@st.experimental_fragment
+def rerun_last_question():
+    st.session_state["messages"].pop(-1)
+
+
+@st.experimental_fragment
+def clear_chat_history():  # TODO
+    st.session_state.messages = [
+        {"role": "assistant", "content": "Comment puisse-je vous aidez?"}
+    ]
+    st.session_state["chat_id"] += "1"
+
+
+@st.experimental_fragment
+def save_chat_logs():
+    try:
+        client = MongoClient(st.secrets["mongo"]["uri"], server_api=ServerApi("1"))
+        db = client["chatdb"]
+        collection = db["conversation_logs"]
+
+        if "messages" in st.session_state:
+            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            chat_id = st.session_state["chat_id"]
+            collection.insert_one(
+                {
+                    "timestamp": timestamp,
+                    "conv_id": chat_id,
+                    "messages": st.session_state["messages"],
+                }
+            )
+
+    except Exception as e:
+        logger.error("An error occurred while logging the conversation: %s", str(e))
+
+
+@st.experimental_fragment
 def log_feedback(icon):
     # We display a nice toast
     st.toast("Thanks for your feedback!", icon=":material/thumbs_up_down:")
@@ -147,6 +184,45 @@ def log_feedback(icon):
     logger.info(activity)
 
 
+@st.experimental_fragment
+def n_feedback():
+    instr = "Tell us more.. "
+
+    col1, col2 = st.columns([4, 2])
+    with col1:
+        prompt = st.text_input(instr, placeholder=instr, label_visibility="collapsed")
+    # Use the second column for the submit button
+    with col2:
+        submitted = st.button("Submit")
+
+    if prompt or submitted:
+        log_feedback(n_icon)
+
+
+def feedback():
+    # feedback = streamlit_feedback(
+    #     feedback_type="thumbs",
+    #     align="flex-end",
+    #     # optional_text_label="[Optional] Please provide an explanation",
+    #     on_submit=on_submit,
+    #     key="feedback",
+    # )
+    # copy lil chat messages w si feedback nappendi lfeedback w titsava l copy lmongo
+    # feedback
+    container = st.container(border=False)
+
+    cols_dimensions = [75, 9.5, 7, 7, 7]
+    col0, col1, col2, col3, col4 = container.columns(cols_dimensions)
+
+    col3.button("🗑️", on_click=clear_chat_history, key="clear_chat_history")
+    col2.button("🔁", on_click=rerun_last_question, key="rerun_last_question")
+    # col4.button(p_icon, on_click=lambda: log_feedback(p_icon))
+    with col1.popover(n_icon):
+        n_feedback()
+
+    save_chat_logs()
+
+
 embeddings = CohereEmbeddings(
     model="embed-multilingual-v3.0",
 )
@@ -159,8 +235,6 @@ retriever = vectorstore.as_retriever(
     search_type="similarity",
     search_kwargs={"k": 4},
 )
-from langchain_cohere import CohereRerank
-from langchain.retrievers import ContextualCompressionRetriever
 
 compressor = CohereRerank(model="rerank-multilingual-v3.0", top_n=2)
 
@@ -224,6 +298,7 @@ for message in st.session_state.messages:
         with st.chat_message(message["role"], avatar="Images/avatarchat.png"):
             st.write(modified_content)
             history.add_ai_message(message["content"])
+
     elif message["role"] == "user":
         with st.chat_message(message["role"]):
             st.write(message["content"])
@@ -248,19 +323,6 @@ agent_executor = AgentExecutor(
 )
 
 
-@st.experimental_fragment
-def rerun_last_question():
-    st.session_state["messages"].pop(-1)
-
-
-@st.experimental_fragment
-def clear_chat_history():  # TODO
-    st.session_state.messages = [
-        {"role": "assistant", "content": "Comment puisse-je vous aidez?"}
-    ]
-    st.session_state["chat_id"] += "1"
-
-
 if prompt:
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
@@ -282,56 +344,21 @@ def generate_response():
     )
     modified_content = escape_dollar_signs(response["output"])
     message = {"role": "assistant", "content": modified_content}
-
     st.session_state.messages.append(message)
 
 
-if st.session_state.messages[-1]["role"] != "assistant":
+@st.experimental_fragment
+def test_fn():
     generate_response()
+    placeholder = st.empty()
+    if len(st.session_state.messages) > 1:
+        with placeholder:
+            feedback()
 
 
-def save_chat_logs():
-    try:
-        client = MongoClient(st.secrets["mongo"]["uri"], server_api=ServerApi("1"))
-        db = client["chatdb"]
-        collection = db["conversation_logs"]
+if st.session_state.messages[-1]["role"] != "assistant":
+    test_fn()
 
-        if "messages" in st.session_state:
-            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            chat_id = st.session_state["chat_id"]
-            collection.insert_one(
-                {
-                    "timestamp": timestamp,
-                    "conv_id": chat_id,
-                    "messages": st.session_state["messages"],
-                }
-            )
-
-    except Exception as e:
-        logger.error("An error occurred while logging the conversation: %s", str(e))
-
-
-if len(st.session_state["messages"]) > 1:
-    # We set the space between the icons thanks to a share of 100
-    cols_dimensions = [1, 8, 19.4, 3, 3, 3, 1]
-    col0, col1, col2, col3, col4, col5, col6 = st.columns(cols_dimensions)
-
-    with col1:
-        st.button("🗑️ Clear Chat", on_click=clear_chat_history)
-
-    with col3:
-        st.button("🔁", on_click=rerun_last_question)
-
-    with col4:
-        st.button(p_icon, on_click=lambda: log_feedback(p_icon))
-
-    with col5:
-        st.button(n_icon, on_click=lambda: log_feedback(n_icon))
-
-    save_chat_logs()
-
-
-import time
 
 # TODO add fragment and put disclaimer at bottom and test if contact and this can work en parallele
 if ("disclaimer" not in st.session_state) and (len(st.session_state["messages"]) == 1):
