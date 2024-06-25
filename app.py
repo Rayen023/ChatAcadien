@@ -67,9 +67,20 @@ subject_to_email = {
 
 subjects = sorted(subject_to_email.keys())
 
+
+@st.experimental_fragment
+def clear_chat_history():  # TODO
+    st.session_state.messages = [
+        {"role": "assistant", "content": "Comment puisse-je vous aidez?"}
+    ]
+    st.session_state["chat_id"] += "1"
+
+
 with st.sidebar:
 
     # st.title("Chat Acadien")
+
+    st.button(":pencil2: New chat", on_click=clear_chat_history)
 
     popover = st.popover(
         "Pour plus d'informations, Contactez-nous :", use_container_width=True
@@ -133,14 +144,6 @@ n_icon = "👎"
 @st.experimental_fragment
 def rerun_last_question():
     st.session_state["messages"].pop(-1)
-
-
-@st.experimental_fragment
-def clear_chat_history():  # TODO
-    st.session_state.messages = [
-        {"role": "assistant", "content": "Comment puisse-je vous aidez?"}
-    ]
-    st.session_state["chat_id"] += "1"
 
 
 @st.experimental_fragment
@@ -211,13 +214,13 @@ def feedback():
     # feedback
     container = st.container(border=False)
 
-    cols_dimensions = [75, 9.5, 7, 7, 7]
-    col0, col1, col2, col3, col4 = container.columns(cols_dimensions)
+    cols_dimensions = [85, 7, 7, 3]
+    col0, col1, col2, col3 = container.columns(cols_dimensions)
 
-    col3.button("🗑️", on_click=clear_chat_history, key="clear_chat_history")
-    col2.button("🔁", on_click=rerun_last_question, key="rerun_last_question")
+    # col3.button("🗑️", on_click=clear_chat_history, key="clear_chat_history")
+    col1.button("🔁", on_click=rerun_last_question, key="rerun_last_question")
     # col4.button(p_icon, on_click=lambda: log_feedback(p_icon))
-    with col1.popover(n_icon):
+    with col2.popover(n_icon):
         n_feedback()
 
     save_chat_logs()
@@ -227,31 +230,49 @@ embeddings = CohereEmbeddings(
     model="embed-multilingual-v3.0",
 )
 
-index_name = "ceaac-general-info-index"
 
-vectorstore = PineconeVectorStore(index_name=index_name, embedding=embeddings)
+def create_custom_retriever_tool(index_name, k, top_n, description):
+    vectorstore = PineconeVectorStore(index_name=index_name, embedding=embeddings)
 
-retriever = vectorstore.as_retriever(
-    search_type="similarity",
-    search_kwargs={"k": 4},
+    retriever = vectorstore.as_retriever(
+        search_type="similarity",
+        search_kwargs={"k": k},
+    )
+
+    compressor = CohereRerank(model="rerank-multilingual-v3.0", top_n=top_n)
+
+    compression_retriever = ContextualCompressionRetriever(
+        base_compressor=compressor, base_retriever=retriever
+    )
+
+    retriever_tool = create_retriever_tool(
+        compression_retriever,
+        index_name,
+        description,
+    )
+
+    return retriever_tool
+
+
+# Utilisation pour CEAAC
+ceaac_retriever_tool = create_custom_retriever_tool(
+    index_name="ceaac-general-info-index",
+    k=7,
+    top_n=2,
+    description="Pour les questions relatives à la ceaac, vous devez utiliser cet outil. Lors de l'utilisation de cet outil, pour la clé de requête, passez une réponse initiale détaillée sous forme de paragraphe pour améliorer la recherche de cet outil.",
 )
 
-compressor = CohereRerank(model="rerank-multilingual-v3.0", top_n=2)
-
-compression_retriever = ContextualCompressionRetriever(
-    base_compressor=compressor, base_retriever=retriever
-)
-
-
-retriever_tool = create_retriever_tool(
-    compression_retriever,
-    "ceaac_information_search",
-    "Pour les questions relatives à la ceaac, vous devez utiliser cet outil. Lors de l'utilisation de cet outil, pour la clé de requête, passez une réponse initiale détaillée sous forme de paragraphe pour améliorer la recherche de cet outil. ",
+# Utilisation pour la généalogie
+genealogie_retriever_tool = create_custom_retriever_tool(
+    index_name="arbre-de-familles-acadiennes-index",
+    k=7,
+    top_n=1,
+    description="Pour les questions relatives à la généalogie et à l'arbre des familles acadiennes, vous devez utiliser cet outil.",
 )
 
 search = TavilySearchResults(max_results=2)
 
-tools = [search, retriever_tool]
+tools = [search, ceaac_retriever_tool, genealogie_retriever_tool]
 
 history = ChatMessageHistory()
 
