@@ -54,6 +54,19 @@ st.set_page_config(
 )
 
 
+def _get_session():
+    runtime = get_instance()
+    session_id = get_script_run_ctx().session_id
+    session_info = runtime._session_mgr.get_session_info(session_id)
+    if session_info is None:
+        raise RuntimeError("Couldn't get your Streamlit Session object.")
+    return session_info.session
+
+
+if "chat_id" not in st.session_state:
+    st.session_state["chat_id"] = str(_get_session().id)
+
+
 subject_to_email = {
     "Généalogie, Genealogy, Arbre de famille, Family tree": "nadine.morin@umoncton.ca",
     "Numérisation, Scan, Scanning, Bibliothèque, Library, Livre, Book, Don de livre": "nadine.morin@umoncton.ca",
@@ -90,6 +103,7 @@ with st.sidebar:
             st.write(f"Pour le sujet de {key}, Veuillez contactez : {value}")
 
     @st.experimental_dialog("Pour plus d'informations, Contactez-nous :", width="large")
+    @st.experimental_fragment
     def contact():
         option = st.selectbox(
             "Choisir sujet de la demande",
@@ -126,21 +140,6 @@ with st.sidebar:
 prompt = st.chat_input("Message ChatAcadien...")
 
 
-def _get_session():
-    runtime = get_instance()
-    session_id = get_script_run_ctx().session_id
-    session_info = runtime._session_mgr.get_session_info(session_id)
-    if session_info is None:
-        raise RuntimeError("Couldn't get your Streamlit Session object.")
-    return session_info.session
-
-
-if "chat_id" not in st.session_state:
-    st.session_state["chat_id"] = str(_get_session().id)
-p_icon = "👍"
-n_icon = "👎"
-
-
 @st.experimental_fragment
 def rerun_last_question():
     st.session_state["messages"].pop(-1)
@@ -156,12 +155,15 @@ def save_chat_logs():
         if "messages" in st.session_state:
             timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             chat_id = st.session_state["chat_id"]
-            collection.insert_one(
+            collection.update_one(
+                {"_id": chat_id},
                 {
-                    "timestamp": timestamp,
-                    "conv_id": chat_id,
-                    "messages": st.session_state["messages"],
-                }
+                    "$set": {
+                        "timestamp": timestamp,
+                        "messages": st.session_state["messages"],
+                    }
+                },
+                upsert=True,
             )
 
     except Exception as e:
@@ -169,22 +171,8 @@ def save_chat_logs():
 
 
 @st.experimental_fragment
-def log_feedback(icon):
-    # We display a nice toast
+def log_feedback():
     st.toast("Thanks for your feedback!", icon=":material/thumbs_up_down:")
-
-    # We retrieve the last question and answer
-    last_messages = json.dumps(st.session_state["messages"][-2:])
-
-    # We record the timestamp
-    activity = datetime.now().strftime("%Y-%m-%d %H:%M:%S") + ": "
-
-    # And include the messages
-    activity += "positive" if icon == p_icon else "negative"
-    activity += ": " + last_messages
-
-    # And log everything
-    logger.info(activity)
 
 
 @st.experimental_fragment
@@ -193,13 +181,34 @@ def n_feedback():
 
     col1, col2 = st.columns([4, 2])
     with col1:
-        prompt = st.text_input(instr, placeholder=instr, label_visibility="collapsed")
+        feedback_msg = st.text_input(
+            instr, placeholder=instr, label_visibility="collapsed"
+        )
     # Use the second column for the submit button
     with col2:
         submitted = st.button("Submit")
 
-    if prompt or submitted:
-        log_feedback(n_icon)
+    if feedback_msg or submitted:
+        log_feedback()
+        try:
+            client = MongoClient(st.secrets["mongo"]["uri"], server_api=ServerApi("1"))
+            db = client["chatdb"]
+            collection = db["feedback_logs"]
+
+            if "messages" in st.session_state:
+                timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                collection.insert_one(
+                    {
+                        "timestamp": timestamp,
+                        "messages": st.session_state["messages"][-2:],
+                        "feedback_msg": str(feedback_msg) if feedback_msg else "",
+                    },
+                )
+
+        except Exception as e:
+            logger.error("An error occurred while logging the conversation: %s", str(e))
+        rerun_last_question()
+        st.rerun()
 
 
 def feedback():
@@ -216,11 +225,8 @@ def feedback():
 
     cols_dimensions = [85, 7, 7, 3]
     col0, col1, col2, col3 = container.columns(cols_dimensions)
-
-    # col3.button("🗑️", on_click=clear_chat_history, key="clear_chat_history")
     col1.button("🔁", on_click=rerun_last_question, key="rerun_last_question")
-    # col4.button(p_icon, on_click=lambda: log_feedback(p_icon))
-    with col2.popover(n_icon):
+    with col2.popover("👎"):
         n_feedback()
 
     save_chat_logs()
@@ -257,7 +263,7 @@ def create_custom_retriever_tool(index_name, k, top_n, description):
 # Utilisation pour CEAAC
 ceaac_retriever_tool = create_custom_retriever_tool(
     index_name="ceaac-general-info-index",
-    k=7,
+    k=3,
     top_n=2,
     description="Pour les questions relatives à la ceaac, vous devez utiliser cet outil. Lors de l'utilisation de cet outil, pour la clé de requête, passez une réponse initiale détaillée sous forme de paragraphe pour améliorer la recherche de cet outil.",
 )
@@ -265,8 +271,8 @@ ceaac_retriever_tool = create_custom_retriever_tool(
 # Utilisation pour la généalogie
 genealogie_retriever_tool = create_custom_retriever_tool(
     index_name="arbre-de-familles-acadiennes-index",
-    k=7,
-    top_n=1,
+    k=100,
+    top_n=3,
     description="Pour les questions relatives à la généalogie et à l'arbre des familles acadiennes, vous devez utiliser cet outil.",
 )
 
@@ -283,7 +289,7 @@ if "messages" not in st.session_state.keys():
 
 functions = [convert_to_openai_function(f) for f in tools]
 model = ChatOpenAI(
-    model="gpt-3.5-turbo",
+    model="gpt-4o",
     temperature=0,
     streaming=True,
 ).bind(functions=functions)
