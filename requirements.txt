@@ -1,4 +1,4 @@
-streamlit==1.35.0
+streamlit==1.36.0
 langchain==0.2.1
 langchain-community==0.2.1
 langchain-cohere==0.1.5
@@ -6,4 +6,3 @@ openai==1.30.2
 langchain-openai==0.1.7
 langchain-pinecone
 pymongo[srv]
-streamlit-feedback

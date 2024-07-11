@@ -1,5 +1,4 @@
 import streamlit as st
-from streamlit_feedback import streamlit_feedback
 from streamlit.runtime import get_instance
 from streamlit.runtime.scriptrunner import get_script_run_ctx
 
@@ -84,7 +83,10 @@ subjects = sorted(subject_to_email.keys())
 @st.experimental_fragment
 def clear_chat_history():  # TODO
     st.session_state.messages = [
-        {"role": "assistant", "content": "Comment puisse-je vous aidez?"}
+        {
+            "role": "assistant",
+            "content": "Comment puis-je vous aider? | How can I help you? ",
+        }
     ]
     st.session_state["chat_id"] += "1"
 
@@ -184,31 +186,34 @@ def n_feedback():
         feedback_msg = st.text_input(
             instr, placeholder=instr, label_visibility="collapsed"
         )
-    # Use the second column for the submit button
     with col2:
-        submitted = st.button("Submit")
+        if st.button("Submit"):
+            log_feedback()
+            try:
+                client = MongoClient(
+                    st.secrets["mongo"]["uri"], server_api=ServerApi("1")
+                )
+                db = client["chatdb"]
+                collection = db["feedback_logs"]
 
-    if feedback_msg or submitted:
-        log_feedback()
-        try:
-            client = MongoClient(st.secrets["mongo"]["uri"], server_api=ServerApi("1"))
-            db = client["chatdb"]
-            collection = db["feedback_logs"]
+                if "messages" in st.session_state:
+                    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                    collection.insert_one(
+                        {
+                            "timestamp": timestamp,
+                            "messages": st.session_state["messages"][-2:],
+                            "feedback_msg": str(feedback_msg) if feedback_msg else "",
+                        },
+                    )
 
-            if "messages" in st.session_state:
-                timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                collection.insert_one(
-                    {
-                        "timestamp": timestamp,
-                        "messages": st.session_state["messages"][-2:],
-                        "feedback_msg": str(feedback_msg) if feedback_msg else "",
-                    },
+            except Exception as e:
+                logger.error(
+                    "An error occurred while logging the conversation: %s", str(e)
                 )
 
-        except Exception as e:
-            logger.error("An error occurred while logging the conversation: %s", str(e))
-        rerun_last_question()
-        st.rerun()
+            rerun_last_question()
+
+            st.rerun()
 
 
 def feedback():
@@ -273,7 +278,7 @@ genealogie_retriever_tool = create_custom_retriever_tool(
     index_name="arbre-de-familles-acadiennes-index",
     k=100,
     top_n=3,
-    description="Pour les questions relatives à la généalogie et à l'arbre des familles acadiennes, vous devez utiliser cet outil.",
+    description="Pour les questions relatives à la généalogie et à l'arbre des familles acadiennes, vous devez utiliser cet outil. Si plusieurs personnes aient des noms similaires comme (Charles Melanson et Anne Broussard) ou (Charles Melanson et Anne Léger), veuillez retounrer les differents familles comme options. Verifie aussi les familles qui n'ont pas eu d'enfants comme Charles Melanson et Anne Broussard",
 )
 
 search = TavilySearchResults(max_results=2)
@@ -284,7 +289,10 @@ history = ChatMessageHistory()
 
 if "messages" not in st.session_state.keys():
     st.session_state.messages = [
-        {"role": "assistant", "content": "Comment puisse-je vous aidez ?"}
+        {
+            "role": "assistant",
+            "content": "Comment puis-je vous aider? | How can I help you? ",
+        }
     ]
 
 functions = [convert_to_openai_function(f) for f in tools]
@@ -299,7 +307,7 @@ prompt_template = ChatPromptTemplate.from_messages(
     [
         (
             "system",
-            "Vous êtes un assistant virtuel du Centre d'études acadiennes Anselme-Chiasson (CEAAC). Vous avez accès à des outils qui vous donnent accees a des informations spécifiques sur le centre. Si vous n'êtes pas encore en mesure de répondre à la demande de l'utilisateur, informez-le d'utiliser le bouton de contact situé à gauche de l'écran.",
+            "Vous êtes un assistant virtuel du Centre d'études acadiennes Anselme-Chiasson (CEAAC). Respond in the same language as the user. If the user writes in English, respond in English. If the user writes in French, respond in French. Vous avez accès à des outils qui vous fournissent des informations spécifiques sur le centre. Si vous n'êtes pas en mesure de répondre à la demande de l'utilisateur, informez-le d'utiliser le bouton de contact situé à gauche de l'écran.",
         ),
         MessagesPlaceholder(variable_name="chat_history"),
         ("user", "{input}"),
@@ -309,7 +317,10 @@ prompt_template = ChatPromptTemplate.from_messages(
 
 if "messages" not in st.session_state.keys():
     st.session_state.messages = [
-        {"role": "assistant", "content": "Comment puisse-je vous aidez?"}
+        {
+            "role": "assistant",
+            "content": "Comment puis-je vous aider? | How can I help you?",
+        }
     ]
 
 
@@ -393,7 +404,7 @@ if ("disclaimer" not in st.session_state) and (len(st.session_state["messages"])
     with st.empty():
         for seconds in range(15):
             st.warning(
-                """‎ Cette conversation sera enregistrée afin d'améliorer davantage les capacités de ChatAcadien. Vous pouvez cliquer sur 👍 ou 👎 pour fournir des commentaires sur la qualité des réponses. Note : ChatAcadien peut faire des erreurs. Vérifiez en ligne pour des informations importantes ou contactez-nous.""",
+                """‎ Cette conversation sera enregistrée afin d'améliorer davantage les capacités de ChatAcadien. Vous pouvez cliquer sur 👎 pour fournir des commentaires sur la qualité des réponses. Note : ChatAcadien peut faire des erreurs. Vérifiez en ligne pour des informations importantes ou contactez-nous.""",
                 icon="💡",
             )
             time.sleep(1)
