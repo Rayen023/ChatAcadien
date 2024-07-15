@@ -29,7 +29,7 @@ import re
 
 
 logging.basicConfig(
-    filename="app.log",
+    filename="logs.log",
     encoding="UTF-8",
     level=logging.INFO,
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
