@@ -117,22 +117,22 @@ with st.sidebar:
     if st.button("Pour plus d'informations, Contactez-nous :"):
         contact()
 
-    # popover2 = st.popover(
-    #     "Pour plus d'informations, Contactez-nous :", use_container_width=True
-    # )
-    # with popover2:
-    #     option2 = popover2.selectbox(
-    #         "Choisir sujet de la demande",
-    #         subjects,
-    #         placeholder="Choisir sujet ...",
-    #         index=None,
-    #         label_visibility="collapsed",
-    #         key="option2",
-    #     )
-    #     if option2:
-    #         popover2.write(
-    #             f"Pour le sujet de {option2}, Veuillez contactez : {subject_to_email[option2]}"
-    #         )
+    popover2 = st.popover(
+        "Pour plus d'informations, Contactez-nous :", use_container_width=True
+    )
+    with popover2:
+        option2 = popover2.selectbox(
+            "Choisir sujet de la demande",
+            subjects,
+            placeholder="Choisir sujet ...",
+            index=None,
+            label_visibility="collapsed",
+            key="option2",
+        )
+        if option2:
+            popover2.write(
+                f"Pour le sujet de {option2}, Veuillez contactez : {subject_to_email[option2]}"
+            )
 
 
 prompt = st.chat_input("Message ChatAcadien...")
