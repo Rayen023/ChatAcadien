@@ -132,6 +132,7 @@ with st.sidebar:
             placeholder="Choisir sujet ...",
             index=None,
             label_visibility="collapsed",
+            key="option2",
         )
         if option2:
             popover2.write(
@@ -178,41 +179,40 @@ def log_feedback():
 
 
 @st.experimental_fragment
+def save_to_db(feedback_msg):
+    log_feedback()
+    try:
+        client = MongoClient(st.secrets["mongo"]["uri"], server_api=ServerApi("1"))
+        db = client["chatdb"]
+        collection = db["feedback_logs"]
+
+        if "messages" in st.session_state:
+            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            collection.insert_one(
+                {
+                    "timestamp": timestamp,
+                    "messages": st.session_state["messages"][-2:],
+                    "feedback_msg": str(feedback_msg) if feedback_msg else "",
+                },
+            )
+
+    except Exception as e:
+        logger.error("An error occurred while logging the conversation: %s", str(e))
+
+
+@st.experimental_fragment
 def n_feedback():
     instr = "Tell us more.. "
-
-    col1, col2 = st.columns([4, 2])
-    with col1:
+    with st.form("feedback", clear_on_submit=True, border=False):
         feedback_msg = st.text_input(
-            instr, placeholder=instr, label_visibility="collapsed"
+            instr,
+            placeholder=instr,
+            label_visibility="collapsed",
         )
-    with col2:
-        if st.button("Submit"):
-            log_feedback()
-            try:
-                client = MongoClient(
-                    st.secrets["mongo"]["uri"], server_api=ServerApi("1")
-                )
-                db = client["chatdb"]
-                collection = db["feedback_logs"]
 
-                if "messages" in st.session_state:
-                    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                    collection.insert_one(
-                        {
-                            "timestamp": timestamp,
-                            "messages": st.session_state["messages"][-2:],
-                            "feedback_msg": str(feedback_msg) if feedback_msg else "",
-                        },
-                    )
-
-            except Exception as e:
-                logger.error(
-                    "An error occurred while logging the conversation: %s", str(e)
-                )
-
+        if st.form_submit_button("Submit feedback", use_container_width=True):
+            save_to_db(feedback_msg)
             rerun_last_question()
-
             st.rerun()
 
 
