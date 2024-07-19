@@ -272,8 +272,8 @@ ceaac_retriever_tool = create_custom_retriever_tool(
 genealogie_retriever_tool = create_custom_retriever_tool(
     index_name="arbre-de-familles-acadiennes-index",
     k=100,
-    top_n=3,
-    description="Pour les questions relatives à la généalogie et à l'arbre des familles acadiennes, vous devez utiliser cet outil. Si plusieurs personnes aient des noms similaires comme (Charles Melanson et Anne Broussard) ou (Charles Melanson et Anne Léger), veuillez retounrer les differents familles comme options. Verifie aussi les familles qui n'ont pas eu d'enfants comme Charles Melanson et Anne Broussard",
+    top_n=4,
+    description="Pour les questions relatives à la généalogie et à l'arbre des familles acadiennes, vous devez utiliser cet outil. Ces informations sont tres sensibles et il ne faut retourner des informations erronees donc verifie l'existence des noms exactes et si tu les trouves pas alors retourne que tu es pas sur et demande les de contacter le ceaac. Si plusieurs personnes aient des noms similaires comme (Charles Melanson et Anne Broussard) ou (Charles Melanson et Anne Léger), veuillez retounrer les differents familles comme options. Verifie aussi les familles qui n'ont pas eu d'enfants comme Charles Melanson et Anne Broussard",
 )
 
 search = TavilySearchResults(max_results=2)
