@@ -80,8 +80,8 @@ subject_to_email = {
 subjects = sorted(subject_to_email.keys())
 
 
-@st.experimental_fragment
-def clear_chat_history():  # TODO
+@st.fragment
+def clear_chat_history():
     st.session_state.messages = [
         {
             "role": "assistant",
@@ -99,8 +99,8 @@ with st.sidebar:
 
     st.divider()
 
-    @st.experimental_dialog("Pour plus d'informations, Contactez-nous :", width="large")
-    @st.experimental_fragment
+    @st.dialog("Pour plus d'informations, Contactez-nous :", width="large")
+    @st.fragment
     def contact():
         option = st.selectbox(
             "Veuillez sélectionner le sujet de votre demande.",
@@ -138,12 +138,12 @@ with st.sidebar:
 prompt = st.chat_input("Message ChatAcadien...")
 
 
-@st.experimental_fragment
+@st.fragment
 def rerun_last_question():
     st.session_state["messages"].pop(-1)
 
 
-@st.experimental_fragment
+@st.fragment
 def save_chat_logs():
     try:
         client = MongoClient(st.secrets["mongo"]["uri"], server_api=ServerApi("1"))
@@ -168,12 +168,12 @@ def save_chat_logs():
         logger.error("An error occurred while logging the conversation: %s", str(e))
 
 
-@st.experimental_fragment
+@st.fragment
 def log_feedback():
     st.toast("Thanks for your feedback!", icon=":material/thumbs_up_down:")
 
 
-@st.experimental_fragment
+@st.fragment
 def save_to_db(feedback_msg):
     log_feedback()
     try:
@@ -195,7 +195,7 @@ def save_to_db(feedback_msg):
         logger.error("An error occurred while logging the conversation: %s", str(e))
 
 
-@st.experimental_fragment
+@st.fragment
 def n_feedback():
     instr = "Tell us more.. "
     with st.form("feedback", clear_on_submit=True, border=False):
@@ -263,9 +263,9 @@ def create_custom_retriever_tool(index_name, k, top_n, description):
 # Utilisation pour CEAAC
 ceaac_retriever_tool = create_custom_retriever_tool(
     index_name="ceaac-general-info-index",
-    k=3,
-    top_n=2,
-    description="Pour les questions relatives à la ceaac, vous devez utiliser cet outil. Lors de l'utilisation de cet outil, pour la clé de requête, passez une réponse initiale détaillée sous forme de paragraphe pour améliorer la recherche de cet outil.",
+    k=10,
+    top_n=3,
+    description="Pour les questions relatives à la ceaac (tarifs, Horaires, consultation des archives et des livres), vous devez utiliser cet outil.",
 )
 
 # Utilisation pour la généalogie
@@ -273,7 +273,13 @@ genealogie_retriever_tool = create_custom_retriever_tool(
     index_name="arbre-de-familles-acadiennes-index",
     k=100,
     top_n=4,
-    description="Pour les questions relatives à la généalogie et à l'arbre des familles acadiennes, vous devez utiliser cet outil. Ces informations sont tres sensibles et il ne faut retourner des informations erronees donc verifie l'existence des noms exactes et si tu les trouves pas alors retourne que tu es pas sur et demande les de contacter le ceaac. Si plusieurs personnes aient des noms similaires comme (Charles Melanson et Anne Broussard) ou (Charles Melanson et Anne Léger), veuillez retounrer les differents familles comme options. Verifie aussi les familles qui n'ont pas eu d'enfants comme Charles Melanson et Anne Broussard",
+    # description="Pour les questions relatives à la généalogie et à l'arbre des familles acadiennes, vous devez utiliser cet outil. Ces informations sont tres sensibles et il ne faut retourner des informations erronees donc verifie l'existence des noms exactes et si tu les trouves pas alors retourne que tu es pas sur et demande les de contacter le ceaac. Si plusieurs personnes aient des noms similaires comme (Charles Melanson et Anne Broussard) ou (Charles Melanson et Anne Léger), veuillez retounrer les differents familles comme options. Verifie aussi les familles qui n'ont pas eu d'enfants comme Charles Melanson et Anne Broussard",
+    # description="Pour les questions relatives à la généalogie et à l'arbre des familles acadiennes, vous devez utiliser cet outil. Mais ne reformulez pas une réponse.!! Vous devez lire les données et en extraire les informations que vous trouvez pertinentes. Vous devez extraire ces paragraphes sans reformulation !! tels qu'ils sont et les retourner à l'utilisateur. Tu dois retourner l'extrait et les parties de textes qui l'entourent (toute les section relatives depuis un numero alphabetique). Cela permet à l'utilisateur de faire lui-même les liaisons pour que l'information soit plus précise et authentique. !. POur que tu comprenne mieux les donnees il faut savvoir les parents se trouvent entre parenthese exemple Marguerite ROBICHAUD (Dominique & Geneviève) ou Jean LÉGER (Joseph & Anne Gaudet). et que les enfants sont sous Enfants : avec les numeros romains non alphabetique",
+    description="""Pour les questions concernant la généalogie et l'arbre des familles acadiennes, utilisez cet outil.
+Pour chaque nombre arabe, il s’agit d’un nouveau groupe familial. Les parents sont indiqués entre parenthèses, par exemple, Marguerite ROBICHAUD (Dominique & Geneviève), ce qui signifie que les parents de Marguerite ROBICHAUD sont Dominique et Geneviève. Les enfants sont listés sous "Enfants :" avec des numéros romains.
+Lisez les données et retournez des sections extraits sans les reformuler et sans modifications de ta part. Retourne tout le groupe familial lies a la question depuis son debut pas seulement une ligne, n'essaye pas de faire de conclusion toi. Laisse l'utilisateur faire les connexions nécessaires pour une information plus précise et authentique.
+Il faut savoir que les utilisateurs peuvent donner des informations ou des liaisons incorrectes, si l'information n'est pas citee clairement dans le texte, demande de contacter le centre.
+""",
 )
 
 search = TavilySearchResults(max_results=2)
@@ -302,12 +308,12 @@ prompt_template = ChatPromptTemplate.from_messages(
     [
         (
             "system",
-            "Vous êtes un assistant virtuel du Centre d'études acadiennes Anselme-Chiasson (CEAAC). Respond in the same language as the user. If the user writes in English, respond in English. If the user writes in French, respond in French. Vous avez accès à des outils qui vous fournissent des informations spécifiques sur le centre. Si vous n'êtes pas en mesure de répondre à la demande de l'utilisateur, informez-le d'utiliser le bouton de contact situé à gauche de l'écran.",
+            f"Vous êtes un assistant virtuel du Centre d'études acadiennes Anselme-Chiasson (CEAAC). Répondez dans la même langue que l'utilisateur. Si l'utilisateur écrit en anglais, répondez en anglais. Si l'utilisateur écrit en français, répondez en français. Vous avez accès à des outils qui vous fournissent des informations spécifiques sur le centre. Si vous n'êtes pas en mesure de répondre à la demande de l'utilisateur, orientez-le selon le sujet vers l'adresse e-mail appropriée en vous référant à ce dictionnaire {'; '.join(f'{key}: {value}' for key, value in subject_to_email.items())}.",
         ),
         MessagesPlaceholder(variable_name="chat_history"),
         ("user", "{input}"),
         MessagesPlaceholder(variable_name="agent_scratchpad"),
-    ]
+    ],
 )
 
 if "messages" not in st.session_state.keys():
@@ -341,7 +347,6 @@ for message in st.session_state.messages:
 memory = ConversationBufferMemory(
     return_messages=True, memory_key="chat_history", chat_memory=history
 )
-
 agent_chain = (
     RunnablePassthrough.assign(
         agent_scratchpad=lambda x: format_to_openai_functions(x["intermediate_steps"])
@@ -352,7 +357,10 @@ agent_chain = (
 )
 
 agent_executor = AgentExecutor(
-    agent=agent_chain, tools=tools, verbose=True, memory=memory
+    agent=agent_chain,
+    tools=tools,
+    verbose=True,
+    memory=memory,
 )
 
 
@@ -362,7 +370,7 @@ if prompt:
         st.write(prompt)
 
 
-@st.experimental_fragment
+@st.fragment
 def generate_response():
     st_callback = StreamlitCallbackHandler(
         st.chat_message("assistant", avatar="Images/avatarchat.png"),
@@ -380,7 +388,7 @@ def generate_response():
     st.session_state.messages.append(message)
 
 
-@st.experimental_fragment
+@st.fragment
 def test_fn():
     generate_response()
     placeholder = st.empty()
