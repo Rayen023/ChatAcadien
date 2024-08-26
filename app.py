@@ -232,13 +232,18 @@ def feedback():
     save_chat_logs()
 
 
-embeddings = CohereEmbeddings(
+cohere_embeddings = CohereEmbeddings(
     model="embed-multilingual-v3.0",
 )
 
+from langchain_voyageai import VoyageAIRerank
+from langchain_voyageai import VoyageAIEmbeddings
 
-def create_custom_retriever_tool(index_name, k, top_n, description):
-    vectorstore = PineconeVectorStore(index_name=index_name, embedding=embeddings)
+voyageai_embeddings = VoyageAIEmbeddings(model="voyage-multilingual-2")
+
+
+def create_custom_retriever_tool(index_name, k, top_n, description, embeddings_model):
+    vectorstore = PineconeVectorStore(index_name=index_name, embedding=embeddings_model)
 
     retriever = vectorstore.as_retriever(
         search_type="similarity",
@@ -246,6 +251,7 @@ def create_custom_retriever_tool(index_name, k, top_n, description):
     )
 
     compressor = CohereRerank(model="rerank-multilingual-v3.0", top_n=top_n)
+    # compressor = VoyageAIRerank(model="rerank-1", top_k=top_n)
 
     compression_retriever = ContextualCompressionRetriever(
         base_compressor=compressor, base_retriever=retriever
@@ -266,25 +272,35 @@ ceaac_retriever_tool = create_custom_retriever_tool(
     k=10,
     top_n=3,
     description="Pour les questions relatives à la ceaac (tarifs, Horaires, consultation des archives et des livres), vous devez utiliser cet outil.",
+    embeddings_model=cohere_embeddings,
 )
 
 # Utilisation pour la généalogie
 genealogie_retriever_tool = create_custom_retriever_tool(
-    index_name="arbre-de-familles-acadiennes-index",
-    k=100,
-    top_n=4,
+    index_name="genealogie-acadienne-index-cohere",
+    k=40,
+    top_n=8,
     # description="Pour les questions relatives à la généalogie et à l'arbre des familles acadiennes, vous devez utiliser cet outil. Ces informations sont tres sensibles et il ne faut retourner des informations erronees donc verifie l'existence des noms exactes et si tu les trouves pas alors retourne que tu es pas sur et demande les de contacter le ceaac. Si plusieurs personnes aient des noms similaires comme (Charles Melanson et Anne Broussard) ou (Charles Melanson et Anne Léger), veuillez retounrer les differents familles comme options. Verifie aussi les familles qui n'ont pas eu d'enfants comme Charles Melanson et Anne Broussard",
-    # description="Pour les questions relatives à la généalogie et à l'arbre des familles acadiennes, vous devez utiliser cet outil. Mais ne reformulez pas une réponse.!! Vous devez lire les données et en extraire les informations que vous trouvez pertinentes. Vous devez extraire ces paragraphes sans reformulation !! tels qu'ils sont et les retourner à l'utilisateur. Tu dois retourner l'extrait et les parties de textes qui l'entourent (toute les section relatives depuis un numero alphabetique). Cela permet à l'utilisateur de faire lui-même les liaisons pour que l'information soit plus précise et authentique. !. POur que tu comprenne mieux les donnees il faut savvoir les parents se trouvent entre parenthese exemple Marguerite ROBICHAUD (Dominique & Geneviève) ou Jean LÉGER (Joseph & Anne Gaudet). et que les enfants sont sous Enfants : avec les numeros romains non alphabetique",
-    description="""Pour les questions concernant la généalogie et l'arbre des familles acadiennes, utilisez cet outil.
-Pour chaque nombre arabe, il s’agit d’un nouveau groupe familial. Les parents sont indiqués entre parenthèses, par exemple, Marguerite ROBICHAUD (Dominique & Geneviève), ce qui signifie que les parents de Marguerite ROBICHAUD sont Dominique et Geneviève. Les enfants sont listés sous "Enfants :" avec des numéros romains.
-Lisez les données et retournez des sections extraits sans les reformuler et sans modifications de ta part. Retourne tout le groupe familial lies a la question depuis son debut pas seulement une ligne, n'essaye pas de faire de conclusion toi. Laisse l'utilisateur faire les connexions nécessaires pour une information plus précise et authentique.
-Il faut savoir que les utilisateurs peuvent donner des informations ou des liaisons incorrectes, si l'information n'est pas citee clairement dans le texte, demande de contacter le centre.
-""",
+    description="Pour les questions relatives à la généalogie et à l'arbre des familles acadiennes, vous devez utiliser cet outil. Mais ne reformulez pas une réponse.!! Vous devez lire les données et en extraire les informations que vous trouvez pertinentes. Vous devez extraire ces paragraphes sans reformulation !! tels qu'ils sont et les retourner à l'utilisateur. Tu dois retourner l'extrait et les parties de textes qui l'entourent (toute les section relatives depuis un numero alphabetique). Cela permet à l'utilisateur de faire lui-même les liaisons pour que l'information soit plus précise et authentique. !. POur que tu comprenne mieux les donnees il faut savvoir les parents se trouvent entre parenthese exemple Marguerite ROBICHAUD (Dominique & Geneviève) ou Jean LÉGER (Joseph & Anne Gaudet). et que les enfants sont sous Enfants : avec les numeros romains non alphabetique",
+    embeddings_model=cohere_embeddings,
+)
+
+patrimoine_retriever_tool = create_custom_retriever_tool(
+    index_name="patrimoine-acadien-index",
+    k=10,
+    top_n=3,
+    description="Pour les questions relatives au patrimoine acadien, vous devez utiliser cet outil.",
+    embeddings_model=voyageai_embeddings,
 )
 
 search = TavilySearchResults(max_results=2)
 
-tools = [search, ceaac_retriever_tool, genealogie_retriever_tool]
+tools = [
+    search,
+    patrimoine_retriever_tool,
+    ceaac_retriever_tool,
+    genealogie_retriever_tool,
+]
 
 history = ChatMessageHistory()
 
