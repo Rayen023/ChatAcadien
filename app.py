@@ -250,8 +250,8 @@ def create_custom_retriever_tool(index_name, k, top_n, description, embeddings_m
         search_kwargs={"k": k},
     )
 
-    compressor = CohereRerank(model="rerank-multilingual-v3.0", top_n=top_n)
-    # compressor = VoyageAIRerank(model="rerank-1", top_k=top_n)
+    # compressor = CohereRerank(model="rerank-multilingual-v3.0", top_n=top_n)
+    compressor = VoyageAIRerank(model="rerank-1", top_k=top_n)
 
     compression_retriever = ContextualCompressionRetriever(
         base_compressor=compressor, base_retriever=retriever
@@ -278,11 +278,18 @@ ceaac_retriever_tool = create_custom_retriever_tool(
 # Utilisation pour la généalogie
 genealogie_retriever_tool = create_custom_retriever_tool(
     index_name="genealogie-acadienne-index-cohere",
-    k=40,
-    top_n=8,
-    # description="Pour les questions relatives à la généalogie et à l'arbre des familles acadiennes, vous devez utiliser cet outil. Ces informations sont tres sensibles et il ne faut retourner des informations erronees donc verifie l'existence des noms exactes et si tu les trouves pas alors retourne que tu es pas sur et demande les de contacter le ceaac. Si plusieurs personnes aient des noms similaires comme (Charles Melanson et Anne Broussard) ou (Charles Melanson et Anne Léger), veuillez retounrer les differents familles comme options. Verifie aussi les familles qui n'ont pas eu d'enfants comme Charles Melanson et Anne Broussard",
-    description="Pour les questions relatives à la généalogie et à l'arbre des familles acadiennes, vous devez utiliser cet outil. Mais ne reformulez pas une réponse.!! Vous devez lire les données et en extraire les informations que vous trouvez pertinentes. Vous devez extraire ces paragraphes sans reformulation !! tels qu'ils sont et les retourner à l'utilisateur. Tu dois retourner l'extrait et les parties de textes qui l'entourent (toute les section relatives depuis un numero alphabetique). Cela permet à l'utilisateur de faire lui-même les liaisons pour que l'information soit plus précise et authentique. !. POur que tu comprenne mieux les donnees il faut savvoir les parents se trouvent entre parenthese exemple Marguerite ROBICHAUD (Dominique & Geneviève) ou Jean LÉGER (Joseph & Anne Gaudet). et que les enfants sont sous Enfants : avec les numeros romains non alphabetique",
+    k=30,
+    top_n=4,
+    description="Pour toute question liée à la généalogie et les familles acadiennes, assurez-vous d'utiliser systématiquement et conjointement les deux outils suivants : genealogie-acadienne-index-cohere et genealogie-acadienne-index. Pour les questions liées à la généalogie des familles acadiennes, utilisez cet outil avec précaution. Les informations sont sensibles; assurez-vous de vérifier l'exactitude des noms. Ne répondez pas sans justification. Votre réponse doit être formulée ainsi : J’ai trouvé cet extrait : ecris l'extrait, et retire de lui les informations sans en invente toi signifiant que…",
     embeddings_model=cohere_embeddings,
+)
+
+genealogie_retriever_tool_search = create_custom_retriever_tool(
+    index_name="genealogie-acadienne-index",
+    k=30,
+    top_n=4,
+    description="Pour toute question liée à la généalogie et les familles acadiennes, assurez-vous d'utiliser systématiquement et conjointement les deux outils suivants : genealogie-acadienne-index-cohere et genealogie-acadienne-index. Pour les questions liées à la généalogie des familles acadiennes, utilisez cet outil avec précaution. Les informations sont sensibles; assurez-vous de vérifier l'exactitude des noms. Ne répondez pas sans justification. Votre réponse doit être formulée ainsi : J’ai trouvé cet extrait : ecris l'extrait, et retire de lui les informations sans en invente toi signifiant que…",
+    embeddings_model=voyageai_embeddings,
 )
 
 patrimoine_retriever_tool = create_custom_retriever_tool(
@@ -300,6 +307,7 @@ tools = [
     patrimoine_retriever_tool,
     ceaac_retriever_tool,
     genealogie_retriever_tool,
+    genealogie_retriever_tool_search,
 ]
 
 history = ChatMessageHistory()
@@ -324,7 +332,7 @@ prompt_template = ChatPromptTemplate.from_messages(
     [
         (
             "system",
-            f"Vous êtes un assistant virtuel du Centre d'études acadiennes Anselme-Chiasson (CEAAC). Répondez dans la même langue que l'utilisateur. Si l'utilisateur écrit en anglais, répondez en anglais. Si l'utilisateur écrit en français, répondez en français. Vous avez accès à des outils qui vous fournissent des informations spécifiques sur le centre. Si vous n'êtes pas en mesure de répondre à la demande de l'utilisateur, orientez-le selon le sujet vers l'adresse e-mail appropriée en vous référant à ce dictionnaire {'; '.join(f'{key}: {value}' for key, value in subject_to_email.items())}.",
+            f"Vous êtes un assistant virtuel du Centre d'études acadiennes Anselme-Chiasson (CEAAC). Répondez dans la même langue que l'utilisateur. Si l'utilisateur écrit en anglais, répondez en anglais. Si l'utilisateur écrit en français, répondez en français. Vous avez accès à des outils qui vous fournissent des informations spécifiques sur le centre. Pour toute question liée à la généalogie et les familles acadiennes, assurez-vous d'utiliser systématiquement et conjointement les deux outils suivants : genealogie-acadienne-index-cohere et genealogie-acadienne-index, N'utilise pas un seul outil seul, fait appel aux deux!!! . Si vous n'êtes pas en mesure de répondre à la demande de l'utilisateur, orientez-le selon le sujet vers l'adresse e-mail appropriée en vous référant à ce dictionnaire {'; '.join(f'{key}: {value}' for key, value in subject_to_email.items())}.",
         ),
         MessagesPlaceholder(variable_name="chat_history"),
         ("user", "{input}"),
@@ -404,9 +412,21 @@ def generate_response():
     st.session_state.messages.append(message)
 
 
+def retry_until_success(func, max_retries=None, delay=1):
+    retries = 0
+    while True:
+        try:
+            return func()
+        except Exception as e:
+            retries += 1
+            if max_retries is not None and retries >= max_retries:
+                break
+            time.sleep(delay)
+
+
 @st.fragment
 def test_fn():
-    generate_response()
+    retry_until_success(generate_response, max_retries=5)
     placeholder = st.empty()
     if len(st.session_state.messages) > 1:
         with placeholder:
