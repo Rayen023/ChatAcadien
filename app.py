@@ -250,8 +250,8 @@ def create_custom_retriever_tool(index_name, k, top_n, description, embeddings_m
         search_kwargs={"k": k},
     )
 
-    compressor = CohereRerank(model="rerank-multilingual-v3.0", top_n=top_n)
-    #compressor = VoyageAIRerank(model="rerank-1", top_k=top_n)
+    #compressor = CohereRerank(model="rerank-multilingual-v3.0", top_n=top_n)
+    compressor = VoyageAIRerank(model="rerank-1", top_k=top_n)
 
     compression_retriever = ContextualCompressionRetriever(
         base_compressor=compressor, base_retriever=retriever
@@ -393,23 +393,41 @@ if prompt:
     with st.chat_message("user"):
         st.write(prompt)
 
+debugging = False
+if debugging:
+    @st.fragment
+    def generate_response():
+        st_callback = StreamlitCallbackHandler(
+            st.chat_message("assistant", avatar="Images/avatarchat.png"),
+            expand_new_thoughts=True,
+            collapse_completed_thoughts=False,
+            max_thought_containers=0,
+        )
 
-@st.fragment
-def generate_response():
-    st_callback = StreamlitCallbackHandler(
-        st.chat_message("assistant", avatar="Images/avatarchat.png"),
-        expand_new_thoughts=True,
-        collapse_completed_thoughts=False,
-        max_thought_containers=0,
-    )
+        response = agent_executor.invoke(
+            {"input": st.session_state.messages[-1]["content"]},
+            #{"callbacks": [st_callback]},
+        )
+        modified_content = escape_dollar_signs(response["output"])
+        message = {"role": "assistant", "content": modified_content}
+        st.session_state.messages.append(message)
+else : 
+    @st.fragment
+    def generate_response():
+        st_callback = StreamlitCallbackHandler(
+            st.chat_message("assistant", avatar="Images/avatarchat.png"),
+            expand_new_thoughts=True,
+            collapse_completed_thoughts=False,
+            max_thought_containers=0,
+        )
 
-    response = agent_executor.invoke(
-        {"input": st.session_state.messages[-1]["content"]},
-        {"callbacks": [st_callback]},
-    )
-    modified_content = escape_dollar_signs(response["output"])
-    message = {"role": "assistant", "content": modified_content}
-    st.session_state.messages.append(message)
+        response = agent_executor.invoke(
+            {"input": st.session_state.messages[-1]["content"]},
+            {"callbacks": [st_callback]},
+        )
+        modified_content = escape_dollar_signs(response["output"])
+        message = {"role": "assistant", "content": modified_content}
+        st.session_state.messages.append(message)
 
 
 def retry_until_success(func, max_retries=None, delay=1):
