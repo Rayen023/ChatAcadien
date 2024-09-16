@@ -419,6 +419,8 @@ else :
             #{"callbacks": [st_callback]},
         )
         modified_content = escape_dollar_signs(response["output"])
+        with st.chat_message("assistant", avatar="Images/avatarchat.png"), st.spinner("Thinking..."):
+            st.write(modified_content)
         message = {"role": "assistant", "content": modified_content}
         st.session_state.messages.append(message)
 
