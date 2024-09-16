@@ -18,6 +18,9 @@ from langchain.retrievers import ContextualCompressionRetriever
 from langchain.schema.runnable import RunnablePassthrough
 from langchain.tools.retriever import create_retriever_tool
 
+from langchain_voyageai import VoyageAIRerank
+from langchain_voyageai import VoyageAIEmbeddings
+
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 
@@ -236,9 +239,6 @@ cohere_embeddings = CohereEmbeddings(
     model="embed-multilingual-v3.0",
 )
 
-from langchain_voyageai import VoyageAIRerank
-from langchain_voyageai import VoyageAIEmbeddings
-
 voyageai_embeddings = VoyageAIEmbeddings(model="voyage-multilingual-2")
 
 
@@ -279,7 +279,7 @@ ceaac_retriever_tool = create_custom_retriever_tool(
 genealogie_retriever_tool = create_custom_retriever_tool(
     index_name="genealogie-acadienne-index-cohere",
     k=30,
-    top_n=4,
+    top_n=2,
     description="Pour toute question liée à la généalogie et les familles acadiennes, assurez-vous d'utiliser systématiquement et conjointement les deux outils suivants : genealogie-acadienne-index-cohere et genealogie-acadienne-index. Pour les questions liées à la généalogie des familles acadiennes, utilisez cet outil avec précaution. Les informations sont sensibles; assurez-vous de vérifier l'exactitude des noms. Ne répondez pas sans justification. Votre réponse doit être formulée ainsi : J’ai trouvé cet extrait : ecris l'extrait, et retire de lui les informations sans en invente toi signifiant que…",
     embeddings_model=cohere_embeddings,
 )
@@ -287,7 +287,7 @@ genealogie_retriever_tool = create_custom_retriever_tool(
 genealogie_retriever_tool_search = create_custom_retriever_tool(
     index_name="genealogie-acadienne-index",
     k=30,
-    top_n=4,
+    top_n=2,
     description="Pour toute question liée à la généalogie et les familles acadiennes, assurez-vous d'utiliser systématiquement et conjointement les deux outils suivants : genealogie-acadienne-index-cohere et genealogie-acadienne-index. Pour les questions liées à la généalogie des familles acadiennes, utilisez cet outil avec précaution. Les informations sont sensibles; assurez-vous de vérifier l'exactitude des noms. Ne répondez pas sans justification. Votre réponse doit être formulée ainsi : J’ai trouvé cet extrait : ecris l'extrait, et retire de lui les informations sans en invente toi signifiant que…",
     embeddings_model=voyageai_embeddings,
 )
