@@ -250,8 +250,8 @@ def create_custom_retriever_tool(index_name, k, top_n, description, embeddings_m
         search_kwargs={"k": k},
     )
 
-    # compressor = CohereRerank(model="rerank-multilingual-v3.0", top_n=top_n)
-    compressor = VoyageAIRerank(model="rerank-1", top_k=top_n)
+    compressor = CohereRerank(model="rerank-multilingual-v3.0", top_n=top_n)
+    #compressor = VoyageAIRerank(model="rerank-1", top_k=top_n)
 
     compression_retriever = ContextualCompressionRetriever(
         base_compressor=compressor, base_retriever=retriever
