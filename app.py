@@ -415,19 +415,17 @@ if debugging:
 else : 
     @st.fragment
     def generate_response():
-        st_callback = StreamlitCallbackHandler(
-            st.chat_message("assistant", avatar="Images/avatarchat.png"),
-            expand_new_thoughts=False,
-            collapse_completed_thoughts=True,
-            max_thought_containers=0,
-        )
         response = agent_executor.invoke(
             {"input": st.session_state.messages[-1]["content"]},
             {"callbacks": [st_callback]},
         )
+        
         modified_content = escape_dollar_signs(response["output"])
         message = {"role": "assistant", "content": modified_content}
         st.session_state.messages.append(message)
+        st.write("aaaaaaaaaaaaaaaaaa")
+        with st.chat_message("assistant", avatar="Images/avatarchat.png") :
+            st.write(modified_content)
 
 
 def retry_until_success(func, max_retries=None, delay=1):
@@ -443,7 +441,7 @@ def retry_until_success(func, max_retries=None, delay=1):
 
 
 @st.fragment
-def test_fn():
+def generate_response_and_layout_feedback():
     retry_until_success(generate_response, max_retries=5)
     placeholder = st.empty()
     if len(st.session_state.messages) > 1:
@@ -452,7 +450,7 @@ def test_fn():
 
 
 if st.session_state.messages[-1]["role"] != "assistant":
-    test_fn()
+    generate_response_and_layout_feedback()
 
 
 # TODO add fragment and put disclaimer at bottom and test if contact and this can work en parallele
