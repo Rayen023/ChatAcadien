@@ -393,20 +393,20 @@ if prompt:
     with st.chat_message("user"):
         st.write(prompt)
 
-debugging = False
-if debugging:
-    @st.fragment
-    def generate_response():
-        st_callback = StreamlitCallbackHandler(
+st_callback = StreamlitCallbackHandler(
             st.chat_message("assistant", avatar="Images/avatarchat.png"),
             expand_new_thoughts=True,
             collapse_completed_thoughts=False,
             max_thought_containers=0,
         )
 
+debugging = False
+if debugging:
+    @st.fragment
+    def generate_response():
         response = agent_executor.invoke(
             {"input": st.session_state.messages[-1]["content"]},
-            #{"callbacks": [st_callback]},
+            {"callbacks": [st_callback]},
         )
         modified_content = escape_dollar_signs(response["output"])
         message = {"role": "assistant", "content": modified_content}
@@ -414,16 +414,9 @@ if debugging:
 else : 
     @st.fragment
     def generate_response():
-        st_callback = StreamlitCallbackHandler(
-            st.chat_message("assistant", avatar="Images/avatarchat.png"),
-            expand_new_thoughts=True,
-            collapse_completed_thoughts=False,
-            max_thought_containers=0,
-        )
-
         response = agent_executor.invoke(
             {"input": st.session_state.messages[-1]["content"]},
-            {"callbacks": [st_callback]},
+            #{"callbacks": [st_callback]},
         )
         modified_content = escape_dollar_signs(response["output"])
         message = {"role": "assistant", "content": modified_content}
