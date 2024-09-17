@@ -88,7 +88,7 @@ def clear_chat_history():
     st.session_state.messages = [
         {
             "role": "assistant",
-            "content": "Comment puis-je vous aider? | How can I help you? ",
+            "content": "Comment puis-je vous aider ? | How can I help you ? ",
         }
     ]
     st.session_state["chat_id"] += "1"
@@ -210,27 +210,19 @@ def n_feedback():
 
         if st.form_submit_button("Submit feedback", use_container_width=True):
             save_to_db(feedback_msg)
-            rerun_last_question()
-            st.rerun()
 
 
 def feedback():
-    # feedback = streamlit_feedback(
-    #     feedback_type="thumbs",
-    #     align="flex-end",
-    #     # optional_text_label="[Optional] Please provide an explanation",
-    #     on_submit=on_submit,
-    #     key="feedback",
-    # )
-    # copy lil chat messages w si feedback nappendi lfeedback w titsava l copy lmongo
-    # feedback
-    container = st.container(border=False)
+    st.session_state["container"] = st.container(border=False)
+    container = st.empty()
+    with container:
 
-    cols_dimensions = [85, 7, 7, 3]
-    col0, col1, col2, col3 = container.columns(cols_dimensions)
-    col1.button("🔁", on_click=rerun_last_question, key="rerun_last_question")
-    with col2.popover("👎"):
-        n_feedback()
+        cols_dimensions = [85, 7, 7, 3]
+        col0, col1, col2, col3 = st.session_state["container"].columns(cols_dimensions)
+        col1.button("🔁", on_click=rerun_last_question, key="rerun_last_question")
+        with col2.popover("👎"):
+            n_feedback()
+    container.empty()
 
     save_chat_logs()
 
@@ -250,7 +242,7 @@ def create_custom_retriever_tool(index_name, k, top_n, description, embeddings_m
         search_kwargs={"k": k},
     )
 
-    #compressor = CohereRerank(model="rerank-multilingual-v3.0", top_n=top_n)
+    # compressor = CohereRerank(model="rerank-multilingual-v3.0", top_n=top_n)
     compressor = VoyageAIRerank(model="rerank-1", top_k=top_n)
 
     compression_retriever = ContextualCompressionRetriever(
@@ -316,7 +308,7 @@ if "messages" not in st.session_state.keys():
     st.session_state.messages = [
         {
             "role": "assistant",
-            "content": "Comment puis-je vous aider? | How can I help you? ",
+            "content": "Comment puis-je vous aider ? | How can I help you ?",
         }
     ]
 
@@ -394,9 +386,9 @@ if prompt:
         st.write(prompt)
 
 
-
 debugging = False
 if debugging:
+
     @st.fragment
     def generate_response():
         st_callback = StreamlitCallbackHandler(
@@ -412,20 +404,30 @@ if debugging:
         modified_content = escape_dollar_signs(response["output"])
         message = {"role": "assistant", "content": modified_content}
         st.session_state.messages.append(message)
-else : 
+
+else:
+
     @st.fragment
     def generate_response():
-        response = agent_executor.invoke(
-            {"input": st.session_state.messages[-1]["content"]},
-            {"callbacks": [st_callback]},
-        )
-        
+        with st.spinner("Thinking..."):
+            response = agent_executor.invoke(
+                {"input": st.session_state.messages[-1]["content"]},
+                # {"callbacks": [st_callback]},
+            )
+
         modified_content = escape_dollar_signs(response["output"])
         message = {"role": "assistant", "content": modified_content}
         st.session_state.messages.append(message)
-        st.write("aaaaaaaaaaaaaaaaaa")
-        with st.chat_message("assistant", avatar="Images/avatarchat.png") :
-            st.write(modified_content)
+        with st.chat_message("assistant", avatar="Images/avatarchat.png"):
+            message_placeholder = st.empty()
+            full_response = ""
+
+        for chunk in modified_content.split(" "):
+            full_response += chunk + " "
+            time.sleep(0.01)
+            # Add a blinking cursor to simulate typing
+            message_placeholder.markdown(full_response + "▌")
+            message_placeholder.markdown(full_response)
 
 
 def retry_until_success(func, max_retries=None, delay=1):
@@ -443,14 +445,18 @@ def retry_until_success(func, max_retries=None, delay=1):
 @st.fragment
 def generate_response_and_layout_feedback():
     retry_until_success(generate_response, max_retries=5)
-    placeholder = st.empty()
-    if len(st.session_state.messages) > 1:
-        with placeholder:
-            feedback()
 
 
 if st.session_state.messages[-1]["role"] != "assistant":
     generate_response_and_layout_feedback()
+
+if (
+    len(st.session_state.messages) > 1
+    and st.session_state.messages[-1]["role"] == "assistant"
+):
+    feedback()
+else:
+    st.session_state["container"] = st.empty()
 
 
 # TODO add fragment and put disclaimer at bottom and test if contact and this can work en parallele
