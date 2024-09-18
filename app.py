@@ -3,7 +3,6 @@ from streamlit.runtime import get_instance
 from streamlit.runtime.scriptrunner import get_script_run_ctx
 
 from langchain.agents import AgentExecutor
-from langchain_cohere import CohereRerank, CohereEmbeddings
 from langchain_community.chat_message_histories import ChatMessageHistory
 from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
@@ -226,16 +225,10 @@ def feedback():
     save_chat_logs()
 
 
-cohere_embeddings = CohereEmbeddings(
-    model="embed-multilingual-v3.0",
-)
-
 voyageai_embeddings = VoyageAIEmbeddings(model="voyage-3")
 
 
-def create_custom_retriever_tool(
-    index_name, k, top_n, description, embeddings_model, rerank_model="cohere"
-):
+def create_custom_retriever_tool(index_name, k, top_n, description, embeddings_model):
     vectorstore = PineconeVectorStore(index_name=index_name, embedding=embeddings_model)
 
     retriever = vectorstore.as_retriever(
@@ -243,10 +236,7 @@ def create_custom_retriever_tool(
         search_kwargs={"k": k},
     )
 
-    if rerank_model == "cohere":
-        compressor = CohereRerank(model="rerank-multilingual-v3.0", top_n=top_n)
-    else:
-        compressor = VoyageAIRerank(model="rerank-1", top_k=top_n)
+    compressor = VoyageAIRerank(model="rerank-1", top_k=top_n)
 
     compression_retriever = ContextualCompressionRetriever(
         base_compressor=compressor, base_retriever=retriever
@@ -275,7 +265,7 @@ ceaac_faq_tool = create_custom_retriever_tool(
     index_name="ceaac-questions-frequemment-posees-index",
     k=12,
     top_n=3,
-    description="Pour les questions relatives à la ceaac (tarifs, Horaires, consultation des archives et des livres), vous devez utiliser cet outil.",
+    description="Cet outil contient certaines FAQ (questions fréquemment posées) avec les réponses suggérées par le centre CEAAC. Utilise cet outil en parallèle avec les autres outils si besoin.",
     embeddings_model=voyageai_embeddings,
 )
 
@@ -284,25 +274,25 @@ genealogie_retriever_tool = create_custom_retriever_tool(
     index_name="genealogie-acadienne-index",
     k=10,
     top_n=2,
-    description="Pour toute question liée à la généalogie et les familles acadiennes, assurez-vous d'utiliser systématiquement et conjointement les deux outils suivants : genealogie-acadienne-index-cohere et genealogie-acadienne-index. Pour les questions liées à la généalogie des familles acadiennes, utilisez cet outil avec précaution. Les informations sont sensibles; assurez-vous de vérifier l'exactitude des noms. Ne répondez pas sans justification. Votre réponse doit être formulée ainsi : J’ai trouvé cet extrait : ecris l'extrait, et retire de lui les informations sans en invente toi signifiant que…",
+    # description="Pour toute question liée à la généalogie et les familles acadiennes, assurez-vous d'utiliser systématiquement et conjointement les deux outils suivants : genealogie-acadienne-index-cohere et genealogie-acadienne-index. Pour les questions liées à la généalogie des familles acadiennes, utilisez cet outil avec précaution. Les informations sont sensibles; assurez-vous de vérifier l'exactitude des noms. Ne répondez pas sans justification. Votre réponse doit être formulée ainsi : J’ai trouvé cet extrait : ecris l'extrait, et retire de lui les informations sans en invente toi signifiant que…",
+    description="Pour les questions relatives à la généalogie et aux familles acadiennes, vous devez utiliser cet outil. Les informations étant sensibles, assurez-vous de vérifier l'exactitude des noms, sachant que différentes personnes peuvent avoir le même nom. Demandez, si nécessaire, la possibilité d'obtenir plus d'informations. Ne répondez pas sans justification. Votre réponse doit être formulée ainsi : 'J’ai trouvé cet extrait : [écris l'extrait]', et retirez de celui-ci les informations sans en inventer vous-même.",
     embeddings_model=voyageai_embeddings,
-    rerank_model="voyageai",
 )
 
-patrimoine_retriever_tool = create_custom_retriever_tool(
-    index_name="patrimoine-acadien-index",
-    k=10,
-    top_n=3,
-    description="Pour les questions relatives au patrimoine acadien, vous devez utiliser cet outil.",
-    embeddings_model=voyageai_embeddings,
-)
+# patrimoine_retriever_tool = create_custom_retriever_tool(
+#     index_name="patrimoine-acadien-index",
+#     k=10,
+#     top_n=3,
+#     description="Pour les questions relatives au patrimoine acadien, vous devez utiliser cet outil.",
+#     embeddings_model=voyageai_embeddings,
+# )
 
 search = TavilySearchResults(max_results=2)
 
 tools = [
     search,
     ceaac_faq_tool,
-    patrimoine_retriever_tool,
+    # patrimoine_retriever_tool,
     ceaac_retriever_tool,
     genealogie_retriever_tool,
 ]
@@ -338,7 +328,7 @@ prompt_template = ChatPromptTemplate.from_messages(
     [
         (
             "system",
-            f"Vous êtes un assistant virtuel du Centre d'études acadiennes Anselme-Chiasson (CEAAC). Répondez dans la même langue que l'utilisateur. Si l'utilisateur écrit en anglais, répondez en anglais. Si l'utilisateur écrit en français, répondez en français. Vous avez accès à des outils qui vous fournissent des informations spécifiques sur le centre. Pour toute question liée à la généalogie et les familles acadiennes, assurez-vous d'utiliser systématiquement et conjointement les deux outils suivants : genealogie-acadienne-index-cohere et genealogie-acadienne-index, N'utilise pas un seul outil seul, fait appel aux deux!!! . Si vous n'êtes pas en mesure de répondre à la demande de l'utilisateur, orientez-le selon le sujet vers l'adresse e-mail appropriée en vous référant à ce dictionnaire {'; '.join(f'{key}: {value}' for key, value in subject_to_email.items())}. Utilisez l'outil Travily Search pour les questions generales ou d'evenement de temps reel. ",
+            f"Vous êtes un assistant virtuel du Centre d'études acadiennes Anselme-Chiasson (CEAAC). Répondez dans la même langue que l'utilisateur. Si l'utilisateur écrit en anglais, répondez en anglais. Si l'utilisateur écrit en français, répondez en français. Vous avez accès à des outils qui vous fournissent des informations spécifiques sur le centre. Si vous n'êtes pas en mesure de répondre à la demande de l'utilisateur, orientez-le selon le sujet vers l'adresse e-mail appropriée en vous référant à ce dictionnaire : {'; '.join(f'{key}: {value}' for key, value in subject_to_email.items())}. Utilisez l'outil Travily Search pour les questions générales ou les événements en temps réel, ainsi que pour les questions liées au patrimoine acadien (telles que des recettes, la cuisine ou la musique acadienne).",
         ),
         MessagesPlaceholder(variable_name="chat_history"),
         ("user", "{input}"),
