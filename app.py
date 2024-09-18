@@ -8,7 +8,6 @@ from langchain_community.chat_message_histories import ChatMessageHistory
 from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
-from langchain_core.utils.function_calling import convert_to_openai_function
 from langchain.memory import ConversationBufferMemory
 from langchain_openai import ChatOpenAI
 from langchain_pinecone import PineconeVectorStore
@@ -231,7 +230,7 @@ cohere_embeddings = CohereEmbeddings(
     model="embed-multilingual-v3.0",
 )
 
-voyageai_embeddings = VoyageAIEmbeddings(model="voyage-multilingual-2")
+voyageai_embeddings = VoyageAIEmbeddings(model="voyage-3")
 
 
 def create_custom_retriever_tool(
@@ -268,19 +267,20 @@ ceaac_retriever_tool = create_custom_retriever_tool(
     k=10,
     top_n=3,
     description="Pour les questions relatives à la ceaac (tarifs, Horaires, consultation des archives et des livres), vous devez utiliser cet outil.",
-    embeddings_model=cohere_embeddings,
+    embeddings_model=voyageai_embeddings,
 )
 
-# Utilisation pour la généalogie
+
+ceaac_faq_tool = create_custom_retriever_tool(
+    index_name="ceaac-questions-frequemment-posees-index",
+    k=12,
+    top_n=3,
+    description="Pour les questions relatives à la ceaac (tarifs, Horaires, consultation des archives et des livres), vous devez utiliser cet outil.",
+    embeddings_model=voyageai_embeddings,
+)
+
+
 genealogie_retriever_tool = create_custom_retriever_tool(
-    index_name="genealogie-acadienne-index-cohere",
-    k=10,
-    top_n=2,
-    description="Pour toute question liée à la généalogie et les familles acadiennes, assurez-vous d'utiliser systématiquement et conjointement les deux outils suivants : genealogie-acadienne-index-cohere et genealogie-acadienne-index. Pour les questions liées à la généalogie des familles acadiennes, utilisez cet outil avec précaution. Les informations sont sensibles; assurez-vous de vérifier l'exactitude des noms. Ne répondez pas sans justification. Votre réponse doit être formulée ainsi : J’ai trouvé cet extrait : ecris l'extrait, et retire de lui les informations sans en invente toi signifiant que…",
-    embeddings_model=cohere_embeddings,
-)
-
-genealogie_retriever_tool_search = create_custom_retriever_tool(
     index_name="genealogie-acadienne-index",
     k=10,
     top_n=2,
@@ -301,10 +301,10 @@ search = TavilySearchResults(max_results=2)
 
 tools = [
     search,
+    ceaac_faq_tool,
     patrimoine_retriever_tool,
     ceaac_retriever_tool,
     genealogie_retriever_tool,
-    genealogie_retriever_tool_search,
 ]
 
 history = ChatMessageHistory()
