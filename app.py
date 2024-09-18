@@ -2,9 +2,7 @@ import streamlit as st
 from streamlit.runtime import get_instance
 from streamlit.runtime.scriptrunner import get_script_run_ctx
 
-from langchain.agents.output_parsers import OpenAIFunctionsAgentOutputParser
 from langchain.agents import AgentExecutor
-from langchain.agents.format_scratchpad import format_to_openai_functions
 from langchain_cohere import CohereRerank, CohereEmbeddings
 from langchain_community.chat_message_histories import ChatMessageHistory
 from langchain_community.tools.tavily_search import TavilySearchResults
@@ -15,9 +13,11 @@ from langchain.memory import ConversationBufferMemory
 from langchain_openai import ChatOpenAI
 from langchain_pinecone import PineconeVectorStore
 from langchain.retrievers import ContextualCompressionRetriever
-from langchain.schema.runnable import RunnablePassthrough
-
 from langchain.tools.retriever import create_retriever_tool
+from langchain_anthropic import ChatAnthropic
+from langchain.agents import AgentExecutor, create_tool_calling_agent
+from langchain_core.prompts import ChatPromptTemplate
+
 
 from langchain_voyageai import VoyageAIRerank
 from langchain_voyageai import VoyageAIEmbeddings
@@ -27,7 +27,6 @@ from pymongo.server_api import ServerApi
 
 from datetime import datetime
 import logging
-import json
 import time
 import re
 
@@ -318,25 +317,35 @@ if "messages" not in st.session_state.keys():
         }
     ]
 
-functions = [convert_to_openai_function(f) for f in tools]
-model = ChatOpenAI(
-    model="gpt-4o",
+
+# model = ChatOpenAI(
+#     model="gpt-4o",
+#     temperature=0,
+#     streaming=True,
+# )
+
+
+model = ChatAnthropic(
+    model="claude-3-5-sonnet-20240620",
     temperature=0,
-    streaming=True,
-).bind(functions=functions)
+    max_tokens=8096,
+    timeout=None,
+    max_retries=2,
+)
 
 
 prompt_template = ChatPromptTemplate.from_messages(
     [
         (
             "system",
-            f"Vous êtes un assistant virtuel du Centre d'études acadiennes Anselme-Chiasson (CEAAC). Répondez dans la même langue que l'utilisateur. Si l'utilisateur écrit en anglais, répondez en anglais. Si l'utilisateur écrit en français, répondez en français. Vous avez accès à des outils qui vous fournissent des informations spécifiques sur le centre. Pour toute question liée à la généalogie et les familles acadiennes, assurez-vous d'utiliser systématiquement et conjointement les deux outils suivants : genealogie-acadienne-index-cohere et genealogie-acadienne-index, N'utilise pas un seul outil seul, fait appel aux deux!!! . Si vous n'êtes pas en mesure de répondre à la demande de l'utilisateur, orientez-le selon le sujet vers l'adresse e-mail appropriée en vous référant à ce dictionnaire {'; '.join(f'{key}: {value}' for key, value in subject_to_email.items())}.",
+            f"Vous êtes un assistant virtuel du Centre d'études acadiennes Anselme-Chiasson (CEAAC). Répondez dans la même langue que l'utilisateur. Si l'utilisateur écrit en anglais, répondez en anglais. Si l'utilisateur écrit en français, répondez en français. Vous avez accès à des outils qui vous fournissent des informations spécifiques sur le centre. Pour toute question liée à la généalogie et les familles acadiennes, assurez-vous d'utiliser systématiquement et conjointement les deux outils suivants : genealogie-acadienne-index-cohere et genealogie-acadienne-index, N'utilise pas un seul outil seul, fait appel aux deux!!! . Si vous n'êtes pas en mesure de répondre à la demande de l'utilisateur, orientez-le selon le sujet vers l'adresse e-mail appropriée en vous référant à ce dictionnaire {'; '.join(f'{key}: {value}' for key, value in subject_to_email.items())}. Utilisez l'outil Travily Search pour les questions generales ou d'evenement de temps reel. ",
         ),
         MessagesPlaceholder(variable_name="chat_history"),
         ("user", "{input}"),
         MessagesPlaceholder(variable_name="agent_scratchpad"),
-    ],
+    ]
 )
+
 
 if "messages" not in st.session_state.keys():
     st.session_state.messages = [
@@ -358,7 +367,7 @@ for message in st.session_state.messages:
 
         with st.chat_message(message["role"], avatar="Images/avatarchat.png"):
             st.write(modified_content)
-            history.add_ai_message(message["content"])
+            history.add_user_message("AI : " + message["content"])
 
     elif message["role"] == "user":
         with st.chat_message(message["role"]):
@@ -369,30 +378,16 @@ for message in st.session_state.messages:
 memory = ConversationBufferMemory(
     return_messages=True, memory_key="chat_history", chat_memory=history
 )
-agent_chain = (
-    RunnablePassthrough.assign(
-        agent_scratchpad=lambda x: format_to_openai_functions(x["intermediate_steps"])
-    )
-    | prompt_template
-    | model
-    | OpenAIFunctionsAgentOutputParser()
-)
 
-agent_executor = AgentExecutor(
-    agent=agent_chain,
-    tools=tools,
-    verbose=True,
-    memory=memory,
-)
-
+agent = create_tool_calling_agent(model, tools, prompt_template)
+agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True, memory=memory)
 
 if prompt:
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.write(prompt)
 
-
-debugging = True
+debugging = False
 if debugging:
 
     @st.fragment
@@ -401,27 +396,34 @@ if debugging:
             st.chat_message("assistant", avatar="Images/avatarchat.png"),
             expand_new_thoughts=True,
             collapse_completed_thoughts=False,
-            max_thought_containers=0,
+            max_thought_containers=4,
         )
         response = agent_executor.invoke(
             {"input": st.session_state.messages[-1]["content"]},
-            {"callbacks": [st_callback]},
+            {
+                "callbacks": [st_callback],
+            },
         )
-        modified_content = escape_dollar_signs(response["output"])
+        try:
+            modified_content = escape_dollar_signs(response["output"][0]["text"])
+        except:
+            modified_content = escape_dollar_signs(response["output"])
+        st.write(modified_content)
         message = {"role": "assistant", "content": modified_content}
         st.session_state.messages.append(message)
 
 else:
-
+    # TODO add try excepts
     @st.fragment
     def generate_response():
         with st.spinner("Thinking..."):
             response = agent_executor.invoke(
                 {"input": st.session_state.messages[-1]["content"]},
-                # {"callbacks": [st_callback]},
             )
-
-        modified_content = escape_dollar_signs(response["output"])
+        try:
+            modified_content = escape_dollar_signs(response["output"][0]["text"])
+        except:
+            modified_content = escape_dollar_signs(response["output"])
         message = {"role": "assistant", "content": modified_content}
         st.session_state.messages.append(message)
         with st.chat_message("assistant", avatar="Images/avatarchat.png"):
@@ -450,7 +452,7 @@ def retry_until_success(func, max_retries=None, delay=1):
 
 @st.fragment
 def generate_response_and_layout_feedback():
-    retry_until_success(generate_response, max_retries=5)
+    retry_until_success(generate_response, max_retries=2)
 
 
 if st.session_state.messages[-1]["role"] != "assistant":
