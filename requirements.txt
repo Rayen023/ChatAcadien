@@ -1,17 +1,10 @@
-streamlit==1.37.1
+streamlit==1.38
 langchain==0.2.1
 langchain-community==0.2.1
 langchain-cohere==0.1.5
 openai==1.30.2
 langchain-openai==0.1.7
-<<<<<<< HEAD
 langchain-pinecone==0.1.3
 langchain-voyageai==0.1.1
 pymongo[srv]==4.8.0
-#langchain-anthropic==0.1.23
-=======
-langchain-pinecone
-langchain-voyageai
 langchain-anthropic==0.1.23
-pymongo[srv]
->>>>>>> 33b4d47 (migrate to anthropic claude)
