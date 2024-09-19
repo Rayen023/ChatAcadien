@@ -272,8 +272,8 @@ ceaac_faq_tool = create_custom_retriever_tool(
 
 genealogie_retriever_tool = create_custom_retriever_tool(
     index_name="genealogie-acadienne-index",
-    k=10,
-    top_n=2,
+    k=12,
+    top_n=3,
     # description="Pour toute question liée à la généalogie et les familles acadiennes, assurez-vous d'utiliser systématiquement et conjointement les deux outils suivants : genealogie-acadienne-index-cohere et genealogie-acadienne-index. Pour les questions liées à la généalogie des familles acadiennes, utilisez cet outil avec précaution. Les informations sont sensibles; assurez-vous de vérifier l'exactitude des noms. Ne répondez pas sans justification. Votre réponse doit être formulée ainsi : J’ai trouvé cet extrait : ecris l'extrait, et retire de lui les informations sans en invente toi signifiant que…",
     description="Pour les questions relatives à la généalogie et aux familles acadiennes, vous devez utiliser cet outil. Les informations étant sensibles, assurez-vous de vérifier l'exactitude des noms, sachant que différentes personnes peuvent avoir le même nom. Demandez, si nécessaire, la possibilité d'obtenir plus d'informations. Ne répondez pas sans justification. Votre réponse doit être formulée ainsi : 'J’ai trouvé cet extrait : [écris l'extrait]', et retirez de celui-ci les informations sans en inventer vous-même.",
     embeddings_model=voyageai_embeddings,
@@ -328,7 +328,7 @@ prompt_template = ChatPromptTemplate.from_messages(
     [
         (
             "system",
-            f"Vous êtes un assistant virtuel du Centre d'études acadiennes Anselme-Chiasson (CEAAC). Répondez dans la même langue que l'utilisateur. Si l'utilisateur écrit en anglais, répondez en anglais. Si l'utilisateur écrit en français, répondez en français. Vous avez accès à des outils qui vous fournissent des informations spécifiques sur le centre. Si vous n'êtes pas en mesure de répondre à la demande de l'utilisateur, orientez-le selon le sujet vers l'adresse e-mail appropriée en vous référant à ce dictionnaire : {'; '.join(f'{key}: {value}' for key, value in subject_to_email.items())}. Utilisez l'outil Travily Search pour les questions générales ou les événements en temps réel, ainsi que pour les questions liées au patrimoine acadien (telles que des recettes, la cuisine ou la musique acadienne).",
+            f"Vous êtes un assistant virtuel du Centre d'études acadiennes Anselme-Chiasson (CEAAC). Répondez dans la même langue que l'utilisateur. Si l'utilisateur écrit en anglais, répondez en anglais. Si l'utilisateur écrit en français, répondez en français. Vous avez accès à des outils qui vous fournissent des informations spécifiques sur le centre. Si vous n'êtes pas en mesure de répondre à la demande de l'utilisateur, orientez-le selon le sujet vers l'adresse e-mail appropriée en vous référant à ce dictionnaire : {'; '.join(f'{key}: {value}' for key, value in subject_to_email.items())}. Utilisez l'outil TavilySearch pour les questions générales ou les événements en temps réel, ainsi que pour les questions liées au patrimoine acadien (telles que l'histoire de l'acadie, des recettes, la cuisine ou la musique acadienne).",
         ),
         MessagesPlaceholder(variable_name="chat_history"),
         ("user", "{input}"),
