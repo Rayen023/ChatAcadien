@@ -67,18 +67,24 @@ if "chat_id" not in st.session_state:
     st.session_state["chat_id"] = str(_get_session().id)
 
 
-subject_to_email = {
-    "Généalogie, Genealogy, Arbre de famille, Family tree": "nadine.morin@umoncton.ca",
-    "Numérisation, Scan, Scanning, Bibliothèque, Library, Livre, Book, Don de livre": "nadine.morin@umoncton.ca",
+subject_to_email_french = {
+    "Généalogie, Arbre de famille": "nadine.morin@umoncton.ca",
+    "Numérisation, Bibliothèque, Livre, Don de livre": "nadine.morin@umoncton.ca",
     "Archives privées, Archives institutionnelles": "josee.theriault@umoncton.ca ou francois.j.leblanc@umoncton.ca",
-    "Fonds, Don, Donation": "josee.theriault@umoncton.ca ou francois.j.leblanc@umoncton.ca",
+    "Fonds, Don": "josee.theriault@umoncton.ca ou francois.j.leblanc@umoncton.ca",
     "Subvention": "francois.j.leblanc@umoncton.ca",
     "Folklore, Ethnologie, Conte, Légende, Musique, Tradition, Faits de folklore": "robert.richard@umoncton.ca",
     "Facebook, Médias sociaux, Événements": "erika.basque@umoncton.ca",
 }
-
-
-subjects = sorted(subject_to_email.keys())
+subject_to_email_english = {
+    "Genealogy, Family tree": "nadine.morin@umoncton.ca",
+    "Scan, Scanning, Library, Book, Donation of book": "nadine.morin@umoncton.ca",
+    "Private archives, Institutional archives": "josee.theriault@umoncton.ca ou francois.j.leblanc@umoncton.ca",
+    "Funds, Donation": "josee.theriault@umoncton.ca ou francois.j.leblanc@umoncton.ca",
+    "Grant": "francois.j.leblanc@umoncton.ca",
+    "Folklore, Ethnology, Tale, Legend, Music, Tradition, Folklore facts": "robert.richard@umoncton.ca",
+    "Facebook, Social media, Events": "erika.basque@umoncton.ca",
+}
 
 
 @st.fragment
@@ -92,48 +98,79 @@ def clear_chat_history():
     st.session_state["chat_id"] += "1"
 
 
+english_strings = {
+    "new_chat": ":pencil2: New chat",
+    "contact": "For more information, Contact us :",
+    "subject": "Please select the subject of your request.",
+    "contact_options": "For the subject of {option}, Please contact : {subject_to_email}",
+    "retrieval": "Retrieving relevant documents...",
+    "writing": "Writing the response...",
+    "completed": "Completed",
+    "thinking": "Thinking...",
+    "feedback": "Thanks for your feedback!",
+    "submit_feedback": "Submit feedback",
+    "feedback_placeholder": "Tell us more...",
+}
+french_strings = {
+    "new_chat": ":pencil2: Nouveau chat",
+    "contact": "Pour plus d'informations, Contactez-nous :",
+    "subject": "Veuillez sélectionner le sujet de votre demande.",
+    "contact_options": "Pour le sujet de {option}, Veuillez contactez : {subject_to_email}",
+    "retrieval": "Récupération des documents pertinents...",
+    "writing": "Rédaction de la réponse...",
+    "completed": "Terminé",
+    "thinking": "Réflexion en cours...",
+    "feedback": "Merci pour votre retour!",
+    "submit_feedback": "Soumettre le retour",
+    "feedback_placeholder": "Dites-nous en plus...",
+}
+
+if "language" not in st.session_state:
+    st.session_state["language"] = "Français"
+
+if st.session_state["language"] != "Français":
+    subject_to_email = subject_to_email_english
+    shown_strings = english_strings
+else:
+    shown_strings = french_strings
+    subject_to_email = subject_to_email_french
+
+subjects = sorted(subject_to_email.keys())
+
+
 with st.sidebar:
 
     # st.title("Chat Acadien")
 
-    st.button(":pencil2: New chat", on_click=clear_chat_history)
+    st.button(shown_strings["new_chat"], on_click=clear_chat_history)
 
     st.divider()
+    language = st.selectbox(
+        label="language",
+        options=("Français", "Anglais"),
+        key="language",
+        label_visibility="collapsed",
+    )
 
-    @st.dialog("Pour plus d'informations, Contactez-nous :", width="large")
+    @st.dialog(shown_strings["contact"], width="large")
     @st.fragment
     def contact():
         option = st.selectbox(
-            "Veuillez sélectionner le sujet de votre demande.",
+            shown_strings["subject"],
             subjects,
-            placeholder="Veuillez sélectionner le sujet de votre demande.",
+            placeholder=shown_strings["subject"],
             index=None,
             label_visibility="collapsed",
         )
         if option:
             st.write(
-                f"Pour le sujet de {option}, Veuillez contactez : {subject_to_email[option]}"
+                shown_strings["contact_options"].format(
+                    option=option, subject_to_email=subject_to_email[option]
+                )
             )
 
-    if st.button("Pour plus d'informations, Contactez-nous :"):
+    if st.button(shown_strings["contact"]):
         contact()
-
-    popover2 = st.popover(
-        "Pour plus d'informations, Contactez-nous :", use_container_width=True
-    )
-    with popover2:
-        option2 = popover2.selectbox(
-            "Choisir sujet de la demande",
-            subjects,
-            placeholder="Choisir sujet ...",
-            index=None,
-            label_visibility="collapsed",
-            key="option2",
-        )
-        if option2:
-            popover2.write(
-                f"Pour le sujet de {option2}, Veuillez contactez : {subject_to_email[option2]}"
-            )
 
 
 prompt = st.chat_input("Message ChatAcadien...")
@@ -171,7 +208,7 @@ def save_chat_logs():
 
 @st.fragment
 def log_feedback():
-    st.toast("Thanks for your feedback!", icon=":material/thumbs_up_down:")
+    st.toast(shown_strings["feedback"], icon=":material/thumbs_up_down:")
 
 
 @st.fragment
@@ -198,7 +235,7 @@ def save_to_db(feedback_msg):
 
 @st.fragment
 def n_feedback():
-    instr = "Tell us more.. "
+    instr = shown_strings["feedback_placeholder"]
     with st.form("feedback", clear_on_submit=True, border=False):
         feedback_msg = st.text_input(
             instr,
@@ -206,7 +243,9 @@ def n_feedback():
             label_visibility="collapsed",
         )
 
-        if st.form_submit_button("Submit feedback", use_container_width=True):
+        if st.form_submit_button(
+            shown_strings["submit_feedback"], use_container_width=True
+        ):
             save_to_db(feedback_msg)
 
 
@@ -406,10 +445,16 @@ else:
     # TODO add try excepts
     @st.fragment
     def generate_response():
-        with st.spinner("Thinking..."):
+        with st.status(shown_strings["thinking"], expanded=False) as status:
+            st.write(shown_strings["retrieval"])
+            st.write(shown_strings["writing"])
             response = agent_executor.invoke(
                 {"input": st.session_state.messages[-1]["content"]},
             )
+            status.update(
+                label=shown_strings["completed"], state="complete", expanded=False
+            )
+
         try:
             modified_content = escape_dollar_signs(response["output"][0]["text"])
         except:
@@ -463,7 +508,8 @@ if ("disclaimer" not in st.session_state) and (len(st.session_state["messages"])
     with st.empty():
         for seconds in range(15):
             st.warning(
-                """‎ Cette conversation sera enregistrée afin d'améliorer davantage les capacités de ChatAcadien. Vous pouvez cliquer sur 👎 pour fournir des commentaires sur la qualité des réponses. Note : ChatAcadien peut faire des erreurs. Vérifiez en ligne pour des informations importantes ou contactez-nous.""",
+                """‎ **Français :** Cette conversation sera enregistrée afin d'améliorer davantage les capacités de ChatAcadien. Vous pouvez cliquer sur 👎 pour fournir des commentaires sur la qualité des réponses. Note : ChatAcadien peut faire des erreurs. Vérifiez en ligne pour des informations importantes ou contactez-nous.\n\n"""
+                + """‎ **Anglais :** This conversation will be recorded in order to further improve ChatAcadien's capabilities. You can click 👎 to provide feedback on the quality of the responses. Note: ChatAcadien may make mistakes. Check online for important information or contact us.""",
                 icon="💡",
             )
             time.sleep(1)
