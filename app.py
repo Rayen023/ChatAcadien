@@ -87,7 +87,6 @@ subject_to_email_english = {
 }
 
 
-@st.fragment
 def clear_chat_history():
     st.session_state.messages = [
         {
@@ -176,7 +175,7 @@ with st.sidebar:
 prompt = st.chat_input("Message ChatAcadien...")
 
 
-@st.fragment
+# @st.fragment
 def rerun_last_question():
     st.session_state["messages"].pop(-1)
 
@@ -254,10 +253,12 @@ def feedback():
     container = st.empty()
     with container:
 
-        cols_dimensions = [85, 7, 7, 3]
-        col0, col1, col2, col3 = st.session_state["container"].columns(cols_dimensions)
-        col1.button("🔁", on_click=rerun_last_question, key="rerun_last_question")
-        with col2.popover("👎"):
+        cols_dimensions = [7, 7, 100]
+        col0, col1, col2 = st.session_state["container"].columns(
+            cols_dimensions, gap="medium"
+        )
+        col0.button("🔁", on_click=rerun_last_question, key="rerun_last_question")
+        with col1.popover("👎"):
             n_feedback()
     container.empty()
 
@@ -416,7 +417,7 @@ if prompt:
     with st.chat_message("user", avatar="Images/avataruser.png"):
         st.write(prompt)
 
-debugging = True
+debugging = False
 if debugging:
 
     @st.fragment
@@ -445,7 +446,11 @@ else:
     # TODO add try excepts
     @st.fragment
     def generate_response():
-        with st.status(shown_strings["thinking"], expanded=False) as status:
+        placeholder = st.empty()
+
+        status = placeholder.status(shown_strings["thinking"], expanded=False)
+
+        with status:
             st.write(shown_strings["retrieval"])
             st.write(shown_strings["writing"])
             response = agent_executor.invoke(
@@ -454,6 +459,7 @@ else:
             status.update(
                 label=shown_strings["completed"], state="complete", expanded=False
             )
+        placeholder.empty()
 
         try:
             modified_content = escape_dollar_signs(response["output"][0]["text"])
