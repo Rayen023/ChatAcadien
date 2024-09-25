@@ -8163,3 +8163,719 @@
 2024-09-22 23:26:09,549 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
 2024-09-22 23:26:09,551 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
 2024-09-22 23:26:09,551 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:19:15,038 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:19:15,040 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:19:15,105 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:19:15,862 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:19:15,862 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:19:15,862 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:19:16,553 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:19:16,553 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:19:16,553 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:20:57,524 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:20:57,524 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:20:57,524 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:20:57,524 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:20:57,524 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:20:57,524 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:20:57,534 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:20:57,534 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:20:57,534 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:20:59,969 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-09-24 12:21:05,477 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-09-24 12:23:52,663 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:23:52,663 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:23:52,663 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:23:52,663 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:23:52,674 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:23:52,674 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:23:52,676 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:23:52,676 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:23:52,676 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:24:00,161 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:24:00,161 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:24:00,161 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:24:00,161 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:24:00,169 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:24:00,169 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:24:00,169 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:24:00,169 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:24:00,169 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:24:02,240 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-09-24 12:24:02,240 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:02,240 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:02,240 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:02,240 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:02,240 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:02,335 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:02,337 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:02,362 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:02,385 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:02,522 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:02,526 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:02,526 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:02,541 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:02,694 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:02,694 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:02,701 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:02,710 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:02,813 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:02,828 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:02,844 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:02,859 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:03,131 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:03,131 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:04,013 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:04,013 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:04,013 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:04,021 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:04,021 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:04,021 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:04,021 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:04,021 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:04,021 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:04,021 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:04,021 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:04,021 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:04,021 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:04,021 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:04,037 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:04,037 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:04,037 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:04,037 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:04,037 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:04,037 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:04,037 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:04,037 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:04,037 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:04,052 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:04,052 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:04,052 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:04,052 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:07,256 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-09-24 12:24:07,256 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:07,256 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:07,256 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:07,256 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:07,256 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:07,382 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:07,398 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:07,426 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:07,448 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:07,557 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:07,573 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:07,590 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:07,606 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:07,724 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:07,733 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:07,749 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:07,781 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:07,880 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:07,883 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:07,893 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:07,941 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:08,037 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:08,072 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:08,072 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:08,085 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:08,213 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:08,229 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:08,229 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:08,257 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:08,373 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:08,389 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:08,389 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:08,405 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:08,526 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:08,533 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:08,549 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:08,567 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:08,682 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:08,682 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:08,711 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:08,711 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:08,827 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:08,850 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:08,859 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:08,874 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:08,985 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:08,985 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:09,018 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:09,028 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:09,160 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:09,175 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:09,175 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:09,201 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:09,328 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:09,334 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:09,350 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:09,350 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:09,484 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:09,495 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:09,510 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:09,524 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:09,651 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:09,664 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:09,674 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:09,691 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:09,801 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:09,819 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:09,833 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:09,833 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:10,008 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:10,008 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:10,031 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:10,040 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:10,151 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:10,183 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:10,183 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:10,183 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:10,311 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:10,333 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:10,342 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:10,358 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:10,480 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:10,501 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:10,501 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:10,517 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:10,644 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:10,644 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:10,659 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:10,675 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:10,819 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:10,819 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:10,835 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:10,869 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:10,964 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:10,978 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:10,996 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:10,996 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:11,124 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:11,134 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:11,160 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:11,217 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:11,287 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:11,296 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:11,312 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:11,312 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:11,443 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:11,447 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:11,454 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:11,470 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:11,587 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:11,587 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:11,597 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:11,735 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:11,746 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:11,770 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:11,774 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:11,901 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:11,924 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:11,924 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:11,938 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:12,040 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:12,056 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:12,072 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:12,072 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:12,216 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:12,236 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:12,246 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:12,280 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:24:12,372 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-09-24 12:30:38,314 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:30:38,316 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:30:38,316 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:30:38,316 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:30:38,316 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:30:38,316 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:30:38,316 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:30:38,316 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:30:38,316 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:31:03,181 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:31:03,181 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:31:03,181 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:31:03,181 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:31:03,189 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:31:03,190 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:31:03,193 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:31:03,193 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:31:03,193 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:32:23,184 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:32:23,186 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:32:23,186 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:32:23,188 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:32:23,188 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:32:23,188 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:32:23,190 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:32:23,191 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:32:23,191 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:32:26,640 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:32:26,640 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:32:26,640 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:32:26,640 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:32:26,640 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:32:26,640 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:32:26,656 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:32:26,656 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:32:26,656 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:32:29,049 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-24 12:32:32,225 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-24 12:33:02,413 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:33:02,413 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:33:02,413 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:33:02,419 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:33:02,419 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:33:02,419 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:33:02,419 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:33:02,419 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:33:02,421 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:33:04,705 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-24 12:33:07,545 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-24 12:39:24,839 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:39:24,839 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:39:24,839 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:39:24,839 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:39:24,839 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:39:24,839 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:39:24,839 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:39:24,839 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:39:24,849 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:40:47,063 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:40:47,070 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:40:47,070 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:40:47,073 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:40:47,073 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:40:47,073 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:40:47,073 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:40:47,073 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:40:47,073 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:42:48,995 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:42:48,997 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:42:48,997 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:42:48,997 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:42:48,997 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:42:48,997 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:42:48,997 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:42:48,997 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:42:48,997 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:42:51,779 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:42:51,789 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:42:51,789 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:42:51,793 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:42:51,793 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:42:51,793 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:42:51,795 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 12:42:51,795 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 12:42:51,795 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 12:42:53,828 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-24 12:42:56,323 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-24 13:13:13,109 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 13:13:13,113 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 13:13:13,113 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 13:13:13,113 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 13:13:13,116 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 13:13:13,116 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 13:13:13,119 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 13:13:13,119 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 13:13:13,119 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 13:25:05,163 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 13:25:05,163 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 13:25:05,163 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 13:25:05,163 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 13:25:05,163 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 13:25:05,163 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 13:25:05,169 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 13:25:05,169 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 13:25:05,169 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 13:25:07,336 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 13:25:07,344 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 13:25:07,344 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 13:25:07,344 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 13:25:07,344 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 13:25:07,344 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 13:25:07,344 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 13:25:07,344 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 13:25:07,344 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 13:25:09,437 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-24 13:25:13,742 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-24 13:28:40,651 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 13:28:40,653 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 13:28:40,655 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 13:28:40,657 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 13:28:40,657 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 13:28:40,659 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 13:28:40,659 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 13:28:40,659 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 13:28:40,659 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 13:30:04,580 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 13:30:04,580 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 13:30:04,580 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 13:30:04,580 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 13:30:04,592 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 13:30:04,592 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 13:30:04,594 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 13:30:04,594 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 13:30:04,594 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 13:30:19,875 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 13:30:19,877 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 13:30:19,877 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 13:30:19,878 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 13:30:19,880 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 13:30:19,880 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 13:30:19,882 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 13:30:19,882 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 13:30:19,882 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 13:30:26,666 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 13:30:26,669 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 13:30:26,669 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 13:30:26,671 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 13:30:26,671 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 13:30:26,671 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 13:30:26,671 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 13:30:26,671 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 13:30:26,671 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 13:30:28,978 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-24 13:30:31,612 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-24 14:28:08,185 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 14:28:08,187 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 14:28:08,187 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 14:28:08,210 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 14:28:08,214 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 14:28:08,214 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 14:28:08,220 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 14:28:08,222 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 14:28:08,224 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 14:28:08,253 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 14:28:08,257 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 14:28:08,257 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 14:28:08,263 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 14:28:08,267 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 14:28:08,267 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 14:28:08,274 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 14:28:08,277 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 14:28:08,279 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 14:28:08,297 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 14:28:08,299 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 14:28:08,299 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 14:28:08,303 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 14:28:08,305 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 14:28:08,305 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 14:28:08,310 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 14:28:08,312 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 14:28:08,312 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 14:28:10,112 - __main__ - ERROR - An error occurred while logging the conversation: All nameservers failed to answer the query _mongodb._tcp.cluster1.mkpggfx.mongodb.net. IN SRV: Server Do53:10.162.8.10@53 answered [WinError 10051] A socket operation was attempted to an unreachable network; Server Do53:10.162.8.11@53 answered [WinError 10051] A socket operation was attempted to an unreachable network
+2024-09-24 14:29:11,498 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 14:29:11,500 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 14:29:11,511 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 14:29:11,513 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 14:29:11,515 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 14:29:11,515 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 14:29:11,515 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 14:29:11,515 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 14:29:11,521 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 14:29:11,525 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 14:29:11,525 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 14:29:11,531 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 14:29:11,531 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 14:29:11,531 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 14:29:11,531 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 14:29:11,531 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 14:29:11,544 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 14:29:11,544 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 14:29:11,544 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 14:29:11,544 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 14:29:11,551 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 14:29:11,553 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 14:29:11,555 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 14:29:11,555 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 14:29:11,555 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 14:29:11,558 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 14:29:11,558 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 14:39:01,624 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 14:39:01,624 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 14:39:01,624 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 14:39:01,624 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 14:39:01,624 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 14:39:01,624 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 14:39:01,631 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 14:39:01,633 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 14:39:01,635 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 14:39:01,635 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 14:39:01,636 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 14:39:01,637 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 14:39:01,637 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 14:39:01,641 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 14:39:01,641 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 14:39:01,641 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 14:39:01,647 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 14:39:01,649 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 14:39:01,661 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 14:39:01,663 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 14:39:01,663 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 14:39:01,665 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 14:39:01,665 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 14:39:01,665 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 14:39:01,669 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 14:39:01,672 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 14:39:01,672 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 15:16:47,597 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 15:16:47,599 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 15:16:47,601 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 15:16:47,605 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 15:16:47,609 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 15:16:47,609 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 15:16:47,614 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 15:16:47,617 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 15:16:47,619 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 15:16:47,634 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 15:16:47,638 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 15:16:47,638 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 15:16:47,640 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 15:16:47,642 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 15:16:47,644 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 15:16:47,650 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 15:16:47,654 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 15:16:47,654 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 15:16:47,670 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 15:16:47,673 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 15:16:47,673 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 15:16:47,677 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 15:16:47,677 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 15:16:47,679 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 15:16:47,682 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 15:16:47,684 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 15:16:47,684 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 15:36:27,838 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 15:36:27,841 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 15:36:27,842 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 15:36:27,846 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 15:36:27,848 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 15:36:27,848 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 15:36:27,851 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 15:36:27,853 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 15:36:27,853 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 15:36:28,403 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 15:36:28,403 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 15:36:28,405 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 15:36:28,406 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 15:36:28,409 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 15:36:28,409 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 15:36:28,410 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 15:36:28,413 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 15:36:28,413 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 15:36:28,423 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 15:36:28,425 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 15:36:28,425 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 15:36:28,427 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 15:36:28,428 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 15:36:28,428 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 15:36:28,428 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 15:36:28,430 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 15:36:28,430 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 17:25:28,739 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 17:25:28,739 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 17:25:28,739 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 17:25:28,754 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 17:25:28,779 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 17:25:28,779 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 17:25:28,781 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 17:25:28,785 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 17:25:28,786 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 17:25:28,788 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 17:25:28,792 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 17:25:28,796 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 17:25:28,796 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 17:25:28,798 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 17:25:28,800 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 17:25:28,802 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 17:25:28,802 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 17:25:28,804 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 17:25:28,806 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 17:25:28,806 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 17:25:28,866 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 17:25:28,872 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 17:25:28,881 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 17:25:28,881 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 17:25:28,883 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 17:25:28,883 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 17:25:28,883 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 17:41:32,654 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 17:41:32,656 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 17:41:32,656 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 17:41:32,660 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 17:41:32,660 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 17:41:32,660 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 17:41:32,664 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 17:41:32,666 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 17:41:32,666 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 17:41:33,202 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 17:41:33,204 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 17:41:33,204 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 17:41:33,206 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 17:41:33,206 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 17:41:33,206 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 17:41:33,208 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 17:41:33,210 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 17:41:33,210 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 17:41:33,334 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 17:41:33,334 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 17:41:33,336 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 17:41:33,338 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 17:41:33,338 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 17:41:33,338 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 17:41:33,340 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 17:41:33,342 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 17:41:33,342 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 18:08:20,635 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 18:08:20,635 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 18:08:20,635 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 18:08:20,643 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 18:08:20,643 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 18:08:20,643 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 18:08:20,645 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 18:08:20,645 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 18:08:20,645 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 18:08:20,663 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 18:08:20,663 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 18:08:20,663 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 18:08:20,663 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 18:08:20,671 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 18:08:20,673 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 18:08:20,673 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 18:08:20,673 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 18:08:20,673 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 18:08:20,676 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 18:08:20,678 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 18:08:20,678 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 18:08:20,678 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 18:08:20,680 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 18:08:20,680 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 18:08:20,680 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 18:08:20,682 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 18:08:20,682 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 18:59:56,699 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 18:59:56,701 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 18:59:56,701 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 18:59:56,703 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 18:59:56,705 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 18:59:56,705 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 18:59:56,707 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 18:59:56,709 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 18:59:56,709 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 18:59:56,767 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 18:59:56,767 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 18:59:56,767 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 18:59:56,769 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 18:59:56,773 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 18:59:56,773 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 18:59:56,777 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 18:59:56,777 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 18:59:56,777 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 18:59:56,796 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 18:59:56,797 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 18:59:56,798 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 18:59:56,800 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 18:59:56,800 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 18:59:56,800 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 18:59:56,802 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 18:59:56,804 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 18:59:56,804 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 19:39:12,109 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 19:39:12,117 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 19:39:12,117 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 19:39:12,130 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 19:39:12,136 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 19:39:12,137 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 19:39:12,140 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 19:39:12,149 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 19:39:12,151 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 19:39:12,152 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 19:39:12,169 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 19:39:12,171 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 19:39:12,171 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 19:39:12,174 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 19:39:12,175 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 19:39:12,176 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 19:39:12,176 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 19:39:12,176 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 19:39:12,179 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 19:39:12,181 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 19:39:12,183 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 19:39:12,184 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 19:39:12,184 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 19:39:12,184 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 19:39:12,191 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 19:39:12,193 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 19:39:12,193 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 19:40:24,461 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 19:40:24,463 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 19:40:24,463 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 19:40:24,465 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 19:40:24,469 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 19:40:24,469 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 19:40:24,473 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 19:40:24,473 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 19:40:24,473 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 20:01:53,599 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 20:01:53,603 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 20:01:53,603 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 20:01:53,611 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 20:01:53,613 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 20:01:53,615 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 20:01:53,617 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 20:01:53,619 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 20:01:53,619 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 20:01:53,642 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 20:01:53,642 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 20:01:53,642 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 20:01:53,647 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 20:01:53,649 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 20:01:53,649 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 20:01:53,651 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 20:01:53,651 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 20:01:53,653 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 21:10:44,883 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 21:10:44,903 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 21:10:44,905 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 21:10:44,959 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 21:10:44,961 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 21:10:44,961 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 21:10:44,967 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 21:10:44,968 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 21:10:44,968 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 21:10:45,342 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 21:10:45,344 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 21:10:45,344 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 21:10:45,348 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 21:10:45,349 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 21:10:45,349 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 21:10:45,353 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 21:10:45,354 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 21:10:45,354 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 21:56:33,117 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 21:56:33,117 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 21:56:33,117 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 21:56:33,121 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 21:56:33,122 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 21:56:33,122 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 21:56:33,122 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 21:56:33,122 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 21:56:33,122 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 21:58:16,990 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 21:58:16,991 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 21:58:16,991 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 21:58:16,994 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 21:58:16,995 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 21:58:16,995 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 21:58:16,998 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 21:58:16,999 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 21:58:17,000 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 22:28:33,390 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 22:28:33,393 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 22:28:33,393 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 22:28:33,393 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 22:28:33,395 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 22:28:33,395 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-09-24 22:28:33,395 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-09-24 22:28:33,395 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-09-24 22:28:33,395 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
