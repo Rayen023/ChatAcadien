@@ -399,7 +399,7 @@ for message in st.session_state.messages:
             history.add_user_message("AI : " + message["content"])
 
     elif message["role"] == "user":
-        with st.chat_message(message["role"]):
+        with st.chat_message(message["role"], avatar="Images/avataruser.png"):
             st.write(message["content"])
             history.add_user_message(message["content"])
 
@@ -413,7 +413,7 @@ agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True, memory=me
 
 if prompt:
     st.session_state.messages.append({"role": "user", "content": prompt})
-    with st.chat_message("user"):
+    with st.chat_message("user", avatar="Images/avataruser.png"):
         st.write(prompt)
 
 debugging = True
