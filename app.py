@@ -312,10 +312,9 @@ ceaac_faq_tool = create_custom_retriever_tool(
 
 genealogie_retriever_tool = create_custom_retriever_tool(
     index_name="genealogie-acadienne-index",
-    k=20,
-    top_n=4,
-    # description="Pour toute question liée à la généalogie et les familles acadiennes, assurez-vous d'utiliser systématiquement et conjointement les deux outils suivants : genealogie-acadienne-index-cohere et genealogie-acadienne-index. Pour les questions liées à la généalogie des familles acadiennes, utilisez cet outil avec précaution. Les informations sont sensibles; assurez-vous de vérifier l'exactitude des noms. Ne répondez pas sans justification. Votre réponse doit être formulée ainsi : J’ai trouvé cet extrait : ecris l'extrait, et retire de lui les informations sans en invente toi signifiant que…",
-    description="Pour les questions relatives à la généalogie et aux familles acadiennes, vous devez utiliser cet outil. Les informations étant sensibles, assurez-vous de vérifier l'exactitude des noms, sachant que différentes personnes peuvent avoir le même nom. Demandez, si nécessaire, la possibilité d'obtenir plus d'informations. Ne répondez pas sans justification. Votre réponse doit être formulée ainsi : 'J’ai trouvé cet extrait : [écris l'extrait]', et retirez de celui-ci les informations sans en inventer vous-même.",
+    k=30,
+    top_n=5,
+    description="Pour les questions relatives à la généalogie et aux familles acadiennes, vous devez utiliser cet outil. Les informations étant sensibles, assurez-vous de vérifier l'exactitude des noms, sachant que différentes personnes peuvent avoir le même nom. Demandez, si nécessaire, la possibilité d'obtenir plus d'informations. Ne répondez pas sans justification.",
     embeddings_model=voyageai_embeddings,
 )
 
@@ -348,20 +347,21 @@ if "messages" not in st.session_state.keys():
     ]
 
 
-model = ChatOpenAI(
-    model="gpt-4o",
+# model = ChatOpenAI(
+#     model="gpt-4o",
+#     temperature=0,
+#     streaming=True,
+# )
+
+
+model = ChatAnthropic(
+    model="claude-3-5-sonnet-20240620",
     temperature=0,
+    max_tokens=8096,
+    timeout=None,
+    max_retries=2,
     streaming=True,
 )
-
-
-# model = ChatAnthropic(
-#     model="claude-3-5-sonnet-20240620",
-#     temperature=0,
-#     max_tokens=8096,
-#     timeout=None,
-#     max_retries=2,
-# )
 
 
 prompt_template = ChatPromptTemplate.from_messages(
@@ -417,7 +417,7 @@ if prompt:
     with st.chat_message("user", avatar="Images/avataruser.png"):
         st.write(prompt)
 
-debugging = False
+debugging = True
 if debugging:
 
     @st.fragment
