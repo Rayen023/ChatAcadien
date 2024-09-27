@@ -16,7 +16,7 @@ from langchain_anthropic import ChatAnthropic
 from langchain.agents import AgentExecutor, create_tool_calling_agent
 from langchain_core.prompts import ChatPromptTemplate
 
-
+from langchain_cohere import CohereRerank
 from langchain_voyageai import VoyageAIRerank
 from langchain_voyageai import VoyageAIEmbeddings
 
@@ -276,7 +276,8 @@ def create_custom_retriever_tool(index_name, k, top_n, description, embeddings_m
         search_kwargs={"k": k},
     )
 
-    compressor = VoyageAIRerank(model="rerank-1", top_k=top_n)
+    # compressor = VoyageAIRerank(model="rerank-2", top_k=top_n)
+    compressor = CohereRerank(model="rerank-multilingual-v3.0", top_n=top_n)
 
     compression_retriever = ContextualCompressionRetriever(
         base_compressor=compressor, base_retriever=retriever
@@ -312,7 +313,7 @@ ceaac_faq_tool = create_custom_retriever_tool(
 
 genealogie_retriever_tool = create_custom_retriever_tool(
     index_name="genealogie-acadienne-index",
-    k=30,
+    k=20,
     top_n=5,
     description="Pour les questions relatives à la généalogie et aux familles acadiennes, vous devez utiliser cet outil. Les informations étant sensibles, assurez-vous de vérifier l'exactitude des noms, sachant que différentes personnes peuvent avoir le même nom. Demandez, si nécessaire, la possibilité d'obtenir plus d'informations. Ne répondez pas sans justification.",
     embeddings_model=voyageai_embeddings,
