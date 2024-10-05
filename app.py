@@ -29,6 +29,7 @@ import logging
 import time
 import re
 
+from os import environ
 
 logging.basicConfig(
     filename="logs.log",
@@ -54,6 +55,16 @@ st.set_page_config(
     page_icon="Images/avatarchat.png",
     # initial_sidebar_state="collapsed",
 )
+
+
+def get_env_variable(var_name):
+    try:
+        if var_name in environ:
+            return environ[var_name]
+        if var_name in st.secrets:
+            return st.secrets[var_name]
+    except Exception as e:
+        logger.error("An error occurred while logging the conversation: %s", str(e))
 
 
 def _get_session():
@@ -193,7 +204,7 @@ def rerun_last_question():
 @st.fragment
 def save_chat_logs():
     try:
-        client = MongoClient(st.secrets["MONGO_URI"], server_api=ServerApi("1"))
+        client = MongoClient(get_env_variable("MONGO_URI"), server_api=ServerApi("1"))
         db = client["chatdb"]
         collection = db["conversation_logs"]
 
@@ -224,7 +235,7 @@ def log_feedback():
 def save_to_db(feedback_msg):
     log_feedback()
     try:
-        client = MongoClient(st.secrets["MONGO_URI"], server_api=ServerApi("1"))
+        client = MongoClient(get_env_variable("MONGO_URI"), server_api=ServerApi("1"))
         db = client["chatdb"]
         collection = db["feedback_logs"]
 
