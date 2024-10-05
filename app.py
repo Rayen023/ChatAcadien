@@ -8,7 +8,8 @@ from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.memory import ConversationBufferMemory
-from langchain_openai import ChatOpenAI
+
+# from langchain_openai import ChatOpenAI
 from langchain_pinecone import PineconeVectorStore
 from langchain.retrievers import ContextualCompressionRetriever
 from langchain.tools.retriever import create_retriever_tool
@@ -16,7 +17,7 @@ from langchain_anthropic import ChatAnthropic
 from langchain.agents import AgentExecutor, create_tool_calling_agent
 from langchain_core.prompts import ChatPromptTemplate
 
-from langchain_cohere import CohereRerank
+# from langchain_cohere import CohereRerank
 from langchain_voyageai import VoyageAIRerank
 from langchain_voyageai import VoyageAIEmbeddings
 
@@ -43,6 +44,7 @@ st.logo(
     "Images/avatarchat.png",  # Icon (displayed in sidebar)
     # link="https://streamlit.io/gallery",
     icon_image="Images/avatarchat.png",  # Alternate Icon if sidebar closed
+    size="large",
 )
 
 
@@ -98,7 +100,7 @@ def clear_chat_history():
 
 
 english_strings = {
-    "new_chat": ":pencil2: New chat",
+    "new_chat": "New chat",
     "contact": "For more information, Contact us :",
     "subject": "Please select the subject of your request.",
     "contact_options": "For the subject of {option}, Please contact : {subject_to_email}",
@@ -111,7 +113,7 @@ english_strings = {
     "feedback_placeholder": "Tell us more...",
 }
 french_strings = {
-    "new_chat": ":pencil2: Nouveau chat",
+    "new_chat": "Nouveau chat ",
     "contact": "Pour plus d'informations, Contactez-nous :",
     "subject": "Veuillez sélectionner le sujet de votre demande.",
     "contact_options": "Pour le sujet de {option}, Veuillez contactez : {subject_to_email}",
@@ -141,7 +143,11 @@ with st.sidebar:
 
     # st.title("Chat Acadien")
 
-    st.button(shown_strings["new_chat"], on_click=clear_chat_history)
+    st.button(
+        shown_strings["new_chat"],
+        on_click=clear_chat_history,
+        icon=":material/edit_square:",
+    )
 
     st.divider()
     language = st.selectbox(
@@ -168,7 +174,11 @@ with st.sidebar:
                 )
             )
 
-    if st.button(shown_strings["contact"]):
+    if st.button(
+        shown_strings["contact"],
+        use_container_width=True,
+        icon=":material/forward_to_inbox:",
+    ):
         contact()
 
 
@@ -183,7 +193,7 @@ def rerun_last_question():
 @st.fragment
 def save_chat_logs():
     try:
-        client = MongoClient(st.secrets["mongo"]["uri"], server_api=ServerApi("1"))
+        client = MongoClient(st.secrets["MONGO_URI"], server_api=ServerApi("1"))
         db = client["chatdb"]
         collection = db["conversation_logs"]
 
@@ -214,7 +224,7 @@ def log_feedback():
 def save_to_db(feedback_msg):
     log_feedback()
     try:
-        client = MongoClient(st.secrets["mongo"]["uri"], server_api=ServerApi("1"))
+        client = MongoClient(st.secrets["MONGO_URI"], server_api=ServerApi("1"))
         db = client["chatdb"]
         collection = db["feedback_logs"]
 
@@ -257,8 +267,12 @@ def feedback():
         col0, col1, col2 = st.session_state["container"].columns(
             cols_dimensions, gap="medium"
         )
-        col0.button("🔁", on_click=rerun_last_question, key="rerun_last_question")
-        with col1.popover("👎"):
+        col0.button(
+            ":material/autorenew:",
+            on_click=rerun_last_question,
+            key="rerun_last_question",
+        )
+        with col1.popover(":material/thumb_down:"):
             n_feedback()
     container.empty()
 
@@ -276,8 +290,8 @@ def create_custom_retriever_tool(index_name, k, top_n, description, embeddings_m
         search_kwargs={"k": k},
     )
 
-    # compressor = VoyageAIRerank(model="rerank-2", top_k=top_n)
-    compressor = CohereRerank(model="rerank-multilingual-v3.0", top_n=top_n)
+    compressor = VoyageAIRerank(model="rerank-2", top_k=top_n)
+    # compressor = CohereRerank(model="rerank-multilingual-v3.0", top_n=top_n)
 
     compression_retriever = ContextualCompressionRetriever(
         base_compressor=compressor, base_retriever=retriever
@@ -312,9 +326,9 @@ ceaac_faq_tool = create_custom_retriever_tool(
 
 
 genealogie_retriever_tool = create_custom_retriever_tool(
-    index_name="genealogie-acadienne-index",
-    k=20,
-    top_n=5,
+    index_name="genealogie-acadienne-index-1",
+    k=10,
+    top_n=1,
     description="Pour les questions relatives à la généalogie et aux familles acadiennes, vous devez utiliser cet outil. Les informations étant sensibles, assurez-vous de vérifier l'exactitude des noms, sachant que différentes personnes peuvent avoir le même nom. Demandez, si nécessaire, la possibilité d'obtenir plus d'informations. Ne répondez pas sans justification.",
     embeddings_model=voyageai_embeddings,
 )
@@ -418,7 +432,7 @@ if prompt:
     with st.chat_message("user", avatar="Images/avataruser.png"):
         st.write(prompt)
 
-debugging = True
+debugging = False
 if debugging:
 
     @st.fragment
