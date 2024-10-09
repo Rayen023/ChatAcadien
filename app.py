@@ -337,9 +337,9 @@ ceaac_faq_tool = create_custom_retriever_tool(
 
 
 genealogie_retriever_tool = create_custom_retriever_tool(
-    index_name="genealogie-acadienne-index-1",
-    k=10,
-    top_n=1,
+    index_name="genealogie-acadienne-index",
+    k=24,
+    top_n=4,
     description="Pour les questions relatives à la généalogie et aux familles acadiennes, vous devez utiliser cet outil. Les informations étant sensibles, assurez-vous de vérifier l'exactitude des noms, sachant que différentes personnes peuvent avoir le même nom. Demandez, si nécessaire, la possibilité d'obtenir plus d'informations. Ne répondez pas sans justification.",
     embeddings_model=voyageai_embeddings,
 )
