@@ -2,7 +2,6 @@ import streamlit as st
 from streamlit.runtime import get_instance
 from streamlit.runtime.scriptrunner import get_script_run_ctx
 
-from langchain.agents import AgentExecutor
 from langchain_community.chat_message_histories import ChatMessageHistory
 from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
@@ -394,7 +393,7 @@ prompt_template = ChatPromptTemplate.from_messages(
     [
         (
             "system",
-            f"Vous êtes un assistant virtuel du Centre d'études acadiennes Anselme-Chiasson (CEAAC). Répondez dans la même langue que l'utilisateur. Si l'utilisateur écrit en anglais, répondez en anglais. Si l'utilisateur écrit en français, répondez en français. Vous avez accès à des outils qui vous fournissent des informations spécifiques sur le centre. Si vous n'êtes pas en mesure de répondre à la demande de l'utilisateur, orientez-le selon le sujet vers l'adresse e-mail appropriée en vous référant à ce dictionnaire : {'; '.join(f'{key}: {value}' for key, value in subject_to_email.items())}. Utilisez l'outil TavilySearch pour les questions générales ou les événements en temps réel, ainsi que pour les questions liées au patrimoine acadien (telles que l'histoire de l'acadie, des recettes, la cuisine ou la musique acadienne).",
+            f"Vous êtes un assistant virtuel du Centre d'études acadiennes Anselme-Chiasson (CEAAC). Répondez dans la même langue que l'utilisateur. Si l'utilisateur écrit en anglais, répondez en anglais. Si l'utilisateur écrit en français, répondez en français. Vous avez accès à des outils qui vous fournissent des informations spécifiques sur le centre. Ne mentionne pas quel outil tu utilise. Si vous n'êtes pas en mesure de répondre à la demande de l'utilisateur, orientez-le selon le sujet vers l'adresse e-mail appropriée en vous référant à ce dictionnaire : {'; '.join(f'{key}: {value}' for key, value in subject_to_email.items())}. Utilisez l'outil TavilySearch pour les questions générales ou les événements en temps réel, ainsi que pour les questions liées au patrimoine acadien (telles que l'histoire de l'acadie, des recettes, la cuisine ou la musique acadienne).",
         ),
         MessagesPlaceholder(variable_name="chat_history"),
         ("user", "{input}"),
@@ -412,8 +411,9 @@ if "messages" not in st.session_state.keys():
     ]
 
 
-def escape_dollar_signs(text):
-    return re.sub(r"(\d)\$", r"\1\\$", text)
+@st.fragment
+def escape_dollar_signs(input_text):
+    return re.sub(r"(?<!\\)\$", r"\\$", input_text)
 
 
 for message in st.session_state.messages:
@@ -436,12 +436,64 @@ memory = ConversationBufferMemory(
 )
 
 agent = create_tool_calling_agent(model, tools, prompt_template)
-agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True, memory=memory)
+agent_executor = AgentExecutor(
+    agent=agent,
+    tools=tools,
+    verbose=True,
+    memory=memory,
+    return_intermediate_steps=False,
+)
 
 if prompt:
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user", avatar="Images/avataruser.png"):
         st.write(prompt)
+
+import asyncio
+
+
+@st.fragment
+async def process_events():
+    accumulated_text = ""
+    placeholder = st.empty()
+    async for event in agent_executor.astream_events(
+        {"input": st.session_state.messages[-1]["content"]}, version="v2"
+    ):
+        # st.write(event)
+        if event["event"] == "on_chat_model_stream":
+            content = event["data"]["chunk"].content
+            if content:
+                text = content[0].get("text", "")
+                if text:
+                    accumulated_text += escape_dollar_signs(text)
+                    message_placeholder.empty()
+                    message_placeholder.write(accumulated_text)
+                    st.session_state["accumulated_text"] = escape_dollar_signs(
+                        accumulated_text
+                    )
+        if event["event"] == "on_tool_end":
+            st.session_state["accumulated_text"] = ""
+            accumulated_text = ""
+            message_placeholder.empty()
+
+
+@st.fragment
+async def generate_response():
+    max_retries = 2
+    retry_count = 0
+
+    while retry_count < max_retries:
+        try:
+            await process_events()
+            break  # Exit loop if successful
+        except Exception as e:
+            retry_count += 1
+            print(f"Error: {e}. Retrying {retry_count}/{max_retries}...")
+            await asyncio.sleep(1)  # Optional delay between retries
+
+    if retry_count == max_retries:
+        print("Max retries reached. Could not complete the task.")
+
 
 debugging = False
 if debugging:
@@ -468,62 +520,17 @@ if debugging:
         message = {"role": "assistant", "content": modified_content}
         st.session_state.messages.append(message)
 
-else:
-    # TODO add try excepts
-    @st.fragment
-    def generate_response():
-        placeholder = st.empty()
-
-        status = placeholder.status(shown_strings["thinking"], expanded=False)
-
-        with status:
-            st.write(shown_strings["retrieval"])
-            st.write(shown_strings["writing"])
-            response = agent_executor.invoke(
-                {"input": st.session_state.messages[-1]["content"]},
-            )
-            status.update(
-                label=shown_strings["completed"], state="complete", expanded=False
-            )
-        placeholder.empty()
-
-        try:
-            modified_content = escape_dollar_signs(response["output"][0]["text"])
-        except:
-            modified_content = escape_dollar_signs(response["output"])
-        message = {"role": "assistant", "content": modified_content}
-        st.session_state.messages.append(message)
+    if st.session_state.messages[-1]["role"] != "assistant":
         with st.chat_message("assistant", avatar="Images/avatarchat.png"):
             message_placeholder = st.empty()
-            full_response = ""
 
-        for chunk in modified_content.split(" "):
-            full_response += chunk + " "
-            time.sleep(0.01)
-            # Add a blinking cursor to simulate typing
-            message_placeholder.markdown(full_response + "▌")
-            message_placeholder.markdown(full_response)
-
-
-def retry_until_success(func, max_retries=None, delay=1):
-    retries = 0
-    while True:
-        try:
-            return func()
-        except Exception as e:
-            retries += 1
-            if max_retries is not None and retries >= max_retries:
-                break
-            time.sleep(delay)
-
-
-@st.fragment
-def generate_response_and_layout_feedback():
-    retry_until_success(generate_response, max_retries=2)
-
-
-if st.session_state.messages[-1]["role"] != "assistant":
-    generate_response_and_layout_feedback()
+else:
+    if st.session_state.messages[-1]["role"] != "assistant":
+        with st.chat_message("assistant", avatar="Images/avatarchat.png"):
+            message_placeholder = st.empty()
+        asyncio.run(generate_response())
+        message = {"role": "assistant", "content": st.session_state["accumulated_text"]}
+        st.session_state.messages.append(message)
 
 if (
     len(st.session_state.messages) > 1
@@ -534,7 +541,6 @@ else:
     st.session_state["container"] = st.empty()
 
 
-# TODO add fragment and put disclaimer at bottom and test if contact and this can work en parallele
 if ("disclaimer" not in st.session_state) and (len(st.session_state["messages"]) == 1):
     st.session_state["disclaimer"] = True
     with st.empty():
