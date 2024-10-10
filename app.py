@@ -330,7 +330,7 @@ ceaac_faq_tool = create_custom_retriever_tool(
     index_name="ceaac-questions-frequemment-posees-index",
     k=12,
     top_n=3,
-    description="Cet outil contient certaines FAQ (questions fréquemment posées) avec les réponses suggérées par le centre CEAAC. Utilise cet outil en parallèle avec les autres outils si besoin.",
+    description="Cet outil contient certaines FAQ (questions fréquemment posées) avec les réponses suggérées par le centre CEAAC. Utilise cet outil en parallèle avec les autres outils toujours. Donc effectue pour chaque question qui necessite un appel a outil, une recherche en paralleke avec cet outil.",
     embeddings_model=voyageai_embeddings,
 )
 
@@ -351,10 +351,30 @@ genealogie_retriever_tool = create_custom_retriever_tool(
 #     embeddings_model=voyageai_embeddings,
 # )
 
-search = TavilySearchResults(max_results=2)
+search = TavilySearchResults(max_results=3)
+from exa_py import Exa
+from langchain_core.tools import tool
+
+exa = Exa(api_key=get_env_variable("EXA_API_KEY"))
+
+
+@tool
+def search_and_contents(query: str):
+    """Search for webpages based on the query and retrieve their contents."""
+    # This combines two API endpoints: search and contents retrieval
+    return exa.search_and_contents(
+        query,
+        use_autoprompt=True,
+        num_results=3,
+        text=True,
+        highlights=True,
+        start_published_date="2019-01-01",
+    )
+
 
 tools = [
     search,
+    search_and_contents,
     ceaac_faq_tool,
     # patrimoine_retriever_tool,
     ceaac_retriever_tool,
@@ -393,7 +413,7 @@ prompt_template = ChatPromptTemplate.from_messages(
     [
         (
             "system",
-            f"Vous êtes un assistant virtuel du Centre d'études acadiennes Anselme-Chiasson (CEAAC). Répondez dans la même langue que l'utilisateur. Si l'utilisateur écrit en anglais, répondez en anglais. Si l'utilisateur écrit en français, répondez en français. Vous avez accès à des outils qui vous fournissent des informations spécifiques sur le centre. Ne mentionne pas quel outil tu utilise. Si vous n'êtes pas en mesure de répondre à la demande de l'utilisateur, orientez-le selon le sujet vers l'adresse e-mail appropriée en vous référant à ce dictionnaire : {'; '.join(f'{key}: {value}' for key, value in subject_to_email.items())}. Utilisez l'outil TavilySearch pour les questions générales ou les événements en temps réel, ainsi que pour les questions liées au patrimoine acadien (telles que l'histoire de l'acadie, des recettes, la cuisine ou la musique acadienne).",
+            f"Vous êtes un assistant virtuel du Centre d'études acadiennes Anselme-Chiasson (CEAAC). Répondez dans la même langue que l'utilisateur. Si l'utilisateur écrit en anglais, répondez en anglais. Si l'utilisateur écrit en français, répondez en français. Vous avez accès à des outils qui vous fournissent des informations spécifiques sur le centre. Ne mentionne pas quel outil tu utilise. Si vous n'êtes pas en mesure de répondre à la demande de l'utilisateur, orientez-le selon le sujet vers l'adresse e-mail appropriée en vous référant à ce dictionnaire : {'; '.join(f'{key}: {value}' for key, value in subject_to_email.items())}. Utilisez l'outil TavilySearchResults pour les événements en temps réel, et l'outil search_and_content pour les questions liées au patrimoine acadien (telles que l'histoire de l'acadie, des recettes, la cuisine ou la musique acadienne) et retourne toujours la source des resultats de recherche web (lien, auteur, titre et date de publication.)",
         ),
         MessagesPlaceholder(variable_name="chat_history"),
         ("user", "{input}"),
