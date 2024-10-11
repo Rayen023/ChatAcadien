@@ -30,6 +30,7 @@ jobs:
           VOYAGE_API_KEY: ${{ secrets.VOYAGE_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           MONGO_URI: ${{ secrets.MONGO_URI }}
+          EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
         run: |
           ploomber-cloud deploy --watch-incremental
         # The --watch-incremental flag will print deployment status and deployment
