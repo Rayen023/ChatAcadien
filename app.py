@@ -23,6 +23,10 @@ from langchain_voyageai import VoyageAIEmbeddings
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 
+from exa_py import Exa
+from langchain_core.tools import tool
+import asyncio
+
 from datetime import datetime
 import logging
 import time
@@ -44,7 +48,7 @@ st.logo(
     "Images/avatarchat.png",  # Icon (displayed in sidebar)
     # link="https://streamlit.io/gallery",
     icon_image="Images/avatarchat.png",  # Alternate Icon if sidebar closed
-    size="large",
+    # size="large",
 )
 
 
@@ -148,10 +152,20 @@ else:
 
 subjects = sorted(subject_to_email.keys())
 
+sidebar_style = """
+<style>
+.sidebar-main {
+    padding-bottom: 19vmax ; /* Adjust this value based on your footer height */
+}
+.st-emotion-cache-1gwvy71 {
+    padding-bottom: 0vh !important;
+}
+</style>
+"""
+
+st.markdown(sidebar_style, unsafe_allow_html=True)
 
 with st.sidebar:
-
-    # st.title("Chat Acadien")
 
     st.button(
         shown_strings["new_chat"],
@@ -190,6 +204,16 @@ with st.sidebar:
         icon=":material/forward_to_inbox:",
     ):
         contact()
+    st.markdown(
+        "<h6 style='text-align: center; color: gray; font-size: 11px;'>ChatAcadien peut faire des erreurs. Verifiez les informations importantes.</h6>",
+        unsafe_allow_html=True,
+    )
+    st.markdown('<div class="sidebar-main"> </div>', unsafe_allow_html=True)
+
+    st.markdown(
+        "<h6 style='text-align: center; color: gray; font-size: 9px;'>© 2024 Rayen Ghali. Travail réalisé sous la supervision de Sid Ahmed Selouani. Ce projet a bénéficié du financement conjoint de Mitacs et du Service expérientiel de l'Université de Moncton, soutien administratif de Assomption. Tous droits réservés.</h6>",
+        unsafe_allow_html=True,
+    )
 
 
 prompt = st.chat_input("Message ChatAcadien...")
@@ -344,8 +368,7 @@ genealogie_retriever_tool = create_custom_retriever_tool(
 )
 
 search = TavilySearchResults(max_results=3)
-from exa_py import Exa
-from langchain_core.tools import tool
+
 
 exa = Exa(api_key=get_env_variable("EXA_API_KEY"))
 
@@ -459,8 +482,6 @@ if prompt:
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user", avatar="Images/avataruser.png"):
         st.write(prompt)
-
-import asyncio
 
 
 @st.fragment
