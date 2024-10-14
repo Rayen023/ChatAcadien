@@ -34,6 +34,8 @@ import re
 
 from os import environ
 
+DEBUGGING = False
+
 logging.basicConfig(
     filename="logs.log",
     encoding="UTF-8",
@@ -48,7 +50,7 @@ st.logo(
     "Images/avatarchat.png",  # Icon (displayed in sidebar)
     # link="https://streamlit.io/gallery",
     icon_image="Images/avatarchat.png",  # Alternate Icon if sidebar closed
-    # size="large",
+    size="large",
 )
 
 
@@ -219,11 +221,6 @@ with st.sidebar:
 prompt = st.chat_input("Message ChatAcadien...")
 
 
-# @st.fragment
-def rerun_last_question():
-    st.session_state["messages"].pop(-1)
-
-
 @st.fragment
 def save_chat_logs():
     try:
@@ -247,70 +244,6 @@ def save_chat_logs():
 
     except Exception as e:
         logger.error("An error occurred while logging the conversation: %s", str(e))
-
-
-@st.fragment
-def log_feedback():
-    st.toast(shown_strings["feedback"], icon=":material/thumbs_up_down:")
-
-
-@st.fragment
-def save_to_db(feedback_msg):
-    log_feedback()
-    try:
-        client = MongoClient(get_env_variable("MONGO_URI"), server_api=ServerApi("1"))
-        db = client["chatdb"]
-        collection = db["feedback_logs"]
-
-        if "messages" in st.session_state:
-            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            collection.insert_one(
-                {
-                    "timestamp": timestamp,
-                    "messages": st.session_state["messages"][-2:],
-                    "feedback_msg": str(feedback_msg) if feedback_msg else "",
-                },
-            )
-
-    except Exception as e:
-        logger.error("An error occurred while logging the conversation: %s", str(e))
-
-
-@st.fragment
-def n_feedback():
-    instr = shown_strings["feedback_placeholder"]
-    with st.form("feedback", clear_on_submit=True, border=False):
-        feedback_msg = st.text_input(
-            instr,
-            placeholder=instr,
-            label_visibility="collapsed",
-        )
-
-        if st.form_submit_button(
-            shown_strings["submit_feedback"], use_container_width=True
-        ):
-            save_to_db(feedback_msg)
-
-
-def feedback():
-    st.session_state["container"] = st.container(border=False)
-    container = st.empty()
-    with container:
-
-        cols_dimensions = [7, 7, 100]
-        col0, col1, col2 = st.session_state["container"].columns(
-            cols_dimensions, gap="medium"
-        )
-        col0.button(
-            ":material/autorenew:",
-            on_click=rerun_last_question,
-            key="rerun_last_question",
-        )
-        with col1.popover(":material/thumb_down:"):
-            n_feedback()
-    container.empty()
-
-    save_chat_logs()
 
 
 voyageai_embeddings = VoyageAIEmbeddings(model="voyage-3")
@@ -527,11 +460,9 @@ async def generate_response():
         print("Max retries reached. Could not complete the task.")
 
 
-debugging = False
-if debugging:
+if DEBUGGING:
 
-    @st.fragment
-    def generate_response():
+    if st.session_state.messages[-1]["role"] != "assistant":
         st_callback = StreamlitCallbackHandler(
             st.chat_message("assistant", avatar="Images/avatarchat.png"),
             expand_new_thoughts=True,
@@ -548,29 +479,97 @@ if debugging:
             modified_content = escape_dollar_signs(response["output"][0]["text"])
         except:
             modified_content = escape_dollar_signs(response["output"])
+
         st.write(modified_content)
+
         message = {"role": "assistant", "content": modified_content}
         st.session_state.messages.append(message)
-
-    if st.session_state.messages[-1]["role"] != "assistant":
-        with st.chat_message("assistant", avatar="Images/avatarchat.png"):
-            message_placeholder = st.empty()
-
+        message_placeholder = st.empty()
+        st.session_state["feedback_container"] = False
+        feedback_container = st.container()
 else:
     if st.session_state.messages[-1]["role"] != "assistant":
+
         with st.chat_message("assistant", avatar="Images/avatarchat.png"):
             message_placeholder = st.empty()
+            st.session_state["feedback_container"] = False
+            feedback_container = st.container()
+            feedback_container.empty()
         asyncio.run(generate_response())
         message = {"role": "assistant", "content": st.session_state["accumulated_text"]}
         st.session_state.messages.append(message)
 
+
+# @st.fragment
+def rerun_last_question():
+    st.session_state["messages"].pop(-1)
+
+
+@st.fragment
+def log_feedback():
+    st.toast(shown_strings["feedback"], icon=":material/thumbs_up_down:")
+
+
+@st.fragment
+def save_to_db(feedback_msg):
+    log_feedback()
+    try:
+        client = MongoClient(get_env_variable("MONGO_URI"), server_api=ServerApi("1"))
+        db = client["chatdb"]
+        collection = db["feedback_logs"]
+
+        if "messages" in st.session_state:
+            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            collection.insert_one(
+                {
+                    "timestamp": timestamp,
+                    "messages": st.session_state["messages"][-2:],
+                    "feedback_msg": str(feedback_msg) if feedback_msg else "",
+                },
+            )
+
+    except Exception as e:
+        logger.error("An error occurred while logging the conversation: %s", str(e))
+
+
+@st.fragment
+def n_feedback():
+    instr = shown_strings["feedback_placeholder"]
+    with st.form("feedback", clear_on_submit=True, border=False):
+        feedback_msg = st.text_input(
+            instr,
+            placeholder=instr,
+            label_visibility="collapsed",
+        )
+
+        if st.form_submit_button(
+            shown_strings["submit_feedback"], use_container_width=True
+        ):
+            save_to_db(feedback_msg)
+
+
+def feedback():
+    cols_dimensions = [7, 7, 100]
+    col0, col1, col2 = st.columns(cols_dimensions, gap="medium")
+    col0.button(
+        ":material/autorenew:",
+        on_click=rerun_last_question,
+        key="rerun_last_question",
+    )
+    with col1.popover(":material/thumb_down:"):
+        n_feedback()
+
+    save_chat_logs()
+
+
 if (
     len(st.session_state.messages) > 1
     and st.session_state.messages[-1]["role"] == "assistant"
+    and not st.session_state["feedback_container"]
 ):
-    feedback()
-else:
-    st.session_state["container"] = st.empty()
+    st.session_state["feedback_container"] = True
+    with feedback_container:
+        feedback()
 
 
 if ("disclaimer" not in st.session_state) and (len(st.session_state["messages"]) == 1):
