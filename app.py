@@ -47,7 +47,7 @@ logger = logging.getLogger(__name__)
 
 
 st.logo(
-    "Images/avatarchat.png",  # Icon (displayed in sidebar)
+    "Images/logo2.png",  # Icon (displayed in sidebar)
     # link="https://streamlit.io/gallery",
     icon_image="Images/avatarchat.png",  # Alternate Icon if sidebar closed
     size="large",
