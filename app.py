@@ -157,7 +157,7 @@ subjects = sorted(subject_to_email.keys())
 sidebar_style = """
 <style>
 .sidebar-main {
-    padding-bottom: 19vmax ; /* Adjust this value based on your footer height */
+    padding-bottom: 18vmax ; /* Adjust this value based on your footer height */
 }
 .st-emotion-cache-1gwvy71 {
     padding-bottom: 0vh !important;
@@ -183,6 +183,15 @@ with st.sidebar:
         label_visibility="collapsed",
     )
 
+    st.selectbox(
+        " ",
+        range(2024, 1900, -1),
+        index=None,
+        key="years_limit",
+        label_visibility="collapsed",
+        placeholder="Filtrer recherche web depuis :",
+    )
+
     @st.dialog(shown_strings["contact"], width="large")
     @st.fragment
     def contact():
@@ -206,6 +215,7 @@ with st.sidebar:
         icon=":material/forward_to_inbox:",
     ):
         contact()
+
     st.markdown(
         "<h6 style='text-align: center; color: gray; font-size: 11px;'>ChatAcadien peut faire des erreurs. Verifiez les informations importantes.</h6>",
         unsafe_allow_html=True,
@@ -217,33 +227,41 @@ with st.sidebar:
         unsafe_allow_html=True,
     )
 
-
 prompt = st.chat_input("Message ChatAcadien...")
 
+if DEBUGGING:
 
-@st.fragment
-def save_chat_logs():
-    try:
-        client = MongoClient(get_env_variable("MONGO_URI"), server_api=ServerApi("1"))
-        db = client["chatdb"]
-        collection = db["conversation_logs"]
+    @st.fragment
+    def save_chat_logs():
+        pass
 
-        if "messages" in st.session_state:
-            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            chat_id = st.session_state["chat_id"]
-            collection.update_one(
-                {"_id": chat_id},
-                {
-                    "$set": {
-                        "timestamp": timestamp,
-                        "messages": st.session_state["messages"],
-                    }
-                },
-                upsert=True,
+else:
+
+    @st.fragment
+    def save_chat_logs():
+        try:
+            client = MongoClient(
+                get_env_variable("MONGO_URI"), server_api=ServerApi("1")
             )
+            db = client["chatdb"]
+            collection = db["conversation_logs"]
 
-    except Exception as e:
-        logger.error("An error occurred while logging the conversation: %s", str(e))
+            if "messages" in st.session_state:
+                timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                chat_id = st.session_state["chat_id"]
+                collection.update_one(
+                    {"_id": chat_id},
+                    {
+                        "$set": {
+                            "timestamp": timestamp,
+                            "messages": st.session_state["messages"],
+                        }
+                    },
+                    upsert=True,
+                )
+
+        except Exception as e:
+            logger.error("An error occurred while logging the conversation: %s", str(e))
 
 
 voyageai_embeddings = VoyageAIEmbeddings(model="voyage-3")
@@ -300,33 +318,38 @@ genealogie_retriever_tool = create_custom_retriever_tool(
     embeddings_model=voyageai_embeddings,
 )
 
+
 search = TavilySearchResults(max_results=3)
 
+if st.session_state["years_limit"]:
+    exa = Exa(api_key=get_env_variable("EXA_API_KEY"))
 
-exa = Exa(api_key=get_env_variable("EXA_API_KEY"))
+    @tool
+    def search_and_contents(query: str):
+        """Search for webpages based on the query and retrieve their contents."""
+        # This combines two API endpoints: search and contents retrieval
+        return exa.search_and_contents(
+            query,
+            use_autoprompt=True,
+            num_results=3,
+            text=True,
+            highlights=True,
+            start_published_date=f"{st.session_state['years_limit']}-01-01",
+        )
 
-
-@tool
-def search_and_contents(query: str):
-    """Search for webpages based on the query and retrieve their contents."""
-    # This combines two API endpoints: search and contents retrieval
-    return exa.search_and_contents(
-        query,
-        use_autoprompt=True,
-        num_results=3,
-        text=True,
-        highlights=True,
-        start_published_date="2019-01-01",
-    )
-
-
-tools = [
-    # search,
-    search_and_contents,
-    ceaac_faq_tool,
-    ceaac_retriever_tool,
-    genealogie_retriever_tool,
-]
+    tools = [
+        search_and_contents,
+        ceaac_faq_tool,
+        ceaac_retriever_tool,
+        genealogie_retriever_tool,
+    ]
+else:
+    tools = [
+        search,
+        ceaac_faq_tool,
+        ceaac_retriever_tool,
+        genealogie_retriever_tool,
+    ]
 
 history = ChatMessageHistory()
 
@@ -360,7 +383,7 @@ prompt_template = ChatPromptTemplate.from_messages(
     [
         (
             "system",
-            f"Vous êtes un assistant virtuel du Centre d'études acadiennes Anselme-Chiasson (CEAAC). Répondez dans la même langue que l'utilisateur en anglais ou en français. Vos réponses doivent etre courtes et concises. Vous avez accès à des outils qui vous fournissent des informations spécifiques sur le centre. Pour les questions qui nécessitent un appel d'outil, effectuez toujours un appel simultané à l'outil ceaac-questions-frequemment-posees-index. Ne mentionnez pas quel outil vous utilisez. Si vous n'êtes pas en mesure de répondre à la demande de l'utilisateur, orientez-le selon le sujet vers l'adresse e-mail appropriée en vous référant à ce dictionnaire : {'; '.join(f'{key}: {value}' for key, value in subject_to_email.items())}. Utilisez l'outil search_and_content pour les questions liées au patrimoine acadien (telles que l'histoire de l'Acadie, des recettes, la cuisine ou la musique acadienne) et retournez toujours la source des résultats de recherche web (lien, auteur, titre et date de publication).",  # Utilisez l'outil TavilySearchResults pour les événements en temps réel.",
+            f"Vous êtes un assistant virtuel du Centre d'études acadiennes Anselme-Chiasson (CEAAC). Répondez dans la même langue que l'utilisateur en anglais ou en français. Vos réponses doivent etre courtes et concises. Vous avez accès à des outils qui vous fournissent des informations spécifiques sur le centre. Pour les questions qui nécessitent un appel d'outil, effectuez toujours un appel simultané à l'outil ceaac-questions-frequemment-posees-index. Ne mentionnez pas quel outil vous utilisez. Si vous n'êtes pas en mesure de répondre à la demande de l'utilisateur, orientez-le selon le sujet vers l'adresse e-mail appropriée en vous référant à ce dictionnaire : {'; '.join(f'{key}: {value}' for key, value in subject_to_email.items())}. Utilisez l'outil de recherche web pour les questions liées au patrimoine acadien (telles que l'histoire de l'Acadie, des recettes, la cuisine ou la musique acadienne). Retournez a l'utilisateur toujours tes sources (lien, auteur, titre et date de publication).",  # Utilisez l'outil TavilySearchResults pour les événements en temps réel.",
         ),
         MessagesPlaceholder(variable_name="chat_history"),
         ("user", "{input}"),
@@ -510,26 +533,37 @@ def log_feedback():
     st.toast(shown_strings["feedback"], icon=":material/thumbs_up_down:")
 
 
-@st.fragment
-def save_to_db(feedback_msg):
-    log_feedback()
-    try:
-        client = MongoClient(get_env_variable("MONGO_URI"), server_api=ServerApi("1"))
-        db = client["chatdb"]
-        collection = db["feedback_logs"]
+# TODO make it not save if DEBUGGING is True
+if DEBUGGING:
 
-        if "messages" in st.session_state:
-            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            collection.insert_one(
-                {
-                    "timestamp": timestamp,
-                    "messages": st.session_state["messages"][-2:],
-                    "feedback_msg": str(feedback_msg) if feedback_msg else "",
-                },
+    @st.fragment
+    def save_to_db(feedback_msg):
+        pass
+
+else:
+
+    @st.fragment
+    def save_to_db(feedback_msg):
+        log_feedback()
+        try:
+            client = MongoClient(
+                get_env_variable("MONGO_URI"), server_api=ServerApi("1")
             )
+            db = client["chatdb"]
+            collection = db["feedback_logs"]
 
-    except Exception as e:
-        logger.error("An error occurred while logging the conversation: %s", str(e))
+            if "messages" in st.session_state:
+                timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                collection.insert_one(
+                    {
+                        "timestamp": timestamp,
+                        "messages": st.session_state["messages"][-2:],
+                        "feedback_msg": str(feedback_msg) if feedback_msg else "",
+                    },
+                )
+
+        except Exception as e:
+            logger.error("An error occurred while logging the conversation: %s", str(e))
 
 
 @st.fragment
