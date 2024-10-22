@@ -12969,3 +12969,739 @@
 2024-10-17 15:54:03,379 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
 2024-10-17 15:54:03,379 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
 2024-10-17 15:54:03,379 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-17 15:55:58,937 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-17 15:55:58,937 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-17 15:55:58,937 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-17 15:55:58,937 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-17 15:55:58,946 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-17 15:55:58,947 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-17 15:55:58,950 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-17 15:55:58,951 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-17 15:55:58,951 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:43:28,981 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:43:28,983 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:43:29,058 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:43:29,930 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:43:29,932 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:43:29,932 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:43:30,663 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:43:30,664 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:43:30,664 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:43:49,163 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:43:49,163 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:43:49,163 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:43:49,163 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:43:49,171 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:43:49,172 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:43:49,173 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:43:49,175 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:43:49,175 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:45:08,353 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:45:08,355 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:45:08,404 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:45:09,300 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:45:09,301 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:45:09,302 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:45:10,049 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:45:10,051 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:45:10,051 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:45:12,018 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:45:12,018 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:45:12,020 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:45:12,020 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:45:12,021 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:45:12,021 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:45:12,022 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:45:12,022 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:45:15,657 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:45:15,659 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:45:15,659 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:45:15,661 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:45:15,662 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:45:15,662 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:45:15,664 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:45:15,664 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:45:15,664 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:45:15,679 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:45:15,680 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:45:15,681 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:45:15,682 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:45:15,683 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:45:15,683 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:45:15,683 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:45:15,683 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:45:24,620 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:45:24,622 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:45:24,622 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:45:24,624 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:45:24,625 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:45:24,626 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:45:24,627 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:45:24,628 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:45:24,628 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:45:24,638 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:45:24,638 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:45:24,639 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:45:24,640 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:45:24,641 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:45:24,641 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:45:24,641 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:45:24,642 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:45:28,010 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:45:28,014 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:45:28,014 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:45:28,016 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:45:28,018 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:45:28,018 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:45:28,020 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:45:28,020 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:45:28,021 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:45:28,035 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:45:28,035 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:45:28,036 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:45:28,036 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:45:28,037 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:45:28,037 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:45:28,038 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:45:28,038 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:46:38,542 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:46:38,545 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:46:38,545 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:46:38,546 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:46:38,548 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:46:38,548 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:46:38,549 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:46:38,551 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:46:38,552 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:46:38,565 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:46:38,565 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:46:38,566 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:46:38,566 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:46:38,567 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:46:38,567 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:46:38,568 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:46:38,569 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:46:41,847 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:46:41,849 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:46:41,849 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:46:41,850 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:46:41,851 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:46:41,852 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:46:41,852 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:46:41,853 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:46:41,853 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:46:41,864 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:46:41,864 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:46:41,865 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:46:41,866 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:46:41,867 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:46:41,867 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:46:41,868 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:46:41,868 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:49:25,155 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:49:25,156 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:49:25,156 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:49:25,158 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:49:25,160 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:49:25,160 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:49:25,162 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:49:25,163 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:49:25,164 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:49:25,173 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:49:25,173 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:49:25,174 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:49:25,174 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:49:25,175 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:49:25,175 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:49:25,176 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:49:25,177 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:49:28,561 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:49:28,563 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:49:28,564 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:49:28,565 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:49:28,567 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:49:28,567 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:49:28,567 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:49:28,569 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:49:28,569 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:49:28,579 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:49:28,579 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:49:28,580 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:49:28,581 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:49:28,582 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:49:28,586 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:49:28,593 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:49:28,593 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:49:28,628 - asyncio - ERROR - Exception in callback PollerCompletionQueue._handle_events(<_WindowsSele...e debug=False>)()
+handle: <Handle PollerCompletionQueue._handle_events(<_WindowsSele...e debug=False>)()>
+Traceback (most recent call last):
+  File "C:\Program Files\Python311\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "src\\python\\grpcio\\grpc\\_cython\\_cygrpc/aio/completion_queue.pyx.pxi", line 170, in grpc._cython.cygrpc.PollerCompletionQueue._handle_events
+  File "C:\Program Files\Python311\Lib\asyncio\base_events.py", line 807, in call_soon_threadsafe
+    self._check_closed()
+  File "C:\Program Files\Python311\Lib\asyncio\base_events.py", line 520, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2024-10-19 13:49:53,321 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:49:53,326 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:49:53,326 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:49:53,329 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:49:53,329 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:49:53,330 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:49:53,331 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:49:53,333 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:49:53,333 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:49:53,348 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:49:53,349 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:49:53,352 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:49:53,352 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:49:53,353 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:49:53,353 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:49:53,355 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:49:53,356 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:49:55,195 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:49:55,196 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:49:55,196 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:49:55,198 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:49:55,199 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:49:55,199 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:49:55,200 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:49:55,201 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:49:55,201 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:49:55,209 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:49:55,210 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:49:55,210 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:49:55,211 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:49:55,211 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:49:55,212 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:49:55,212 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:49:55,213 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:49:57,376 - asyncio - ERROR - Exception in callback PollerCompletionQueue._handle_events(<_WindowsSele...e debug=False>)()
+handle: <Handle PollerCompletionQueue._handle_events(<_WindowsSele...e debug=False>)()>
+Traceback (most recent call last):
+  File "C:\Program Files\Python311\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "src\\python\\grpcio\\grpc\\_cython\\_cygrpc/aio/completion_queue.pyx.pxi", line 170, in grpc._cython.cygrpc.PollerCompletionQueue._handle_events
+  File "C:\Program Files\Python311\Lib\asyncio\base_events.py", line 807, in call_soon_threadsafe
+    self._check_closed()
+  File "C:\Program Files\Python311\Lib\asyncio\base_events.py", line 520, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2024-10-19 13:53:22,747 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:53:22,749 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:53:22,749 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:53:22,751 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:53:22,752 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:53:22,752 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:53:22,755 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:53:22,756 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:53:22,756 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:53:22,769 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:53:22,769 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:53:22,770 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:53:22,770 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:53:22,771 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:53:22,771 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:53:22,772 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:53:22,772 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:53:26,180 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:53:26,181 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:53:26,181 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:53:26,183 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:53:26,184 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:53:26,184 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:53:26,185 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:53:26,187 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:53:26,187 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:53:26,200 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:53:26,201 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:53:26,202 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:53:26,203 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:53:26,204 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:53:26,204 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:53:26,205 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:53:26,205 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:53:26,241 - asyncio - ERROR - Exception in callback PollerCompletionQueue._handle_events(<_WindowsSele...e debug=False>)()
+handle: <Handle PollerCompletionQueue._handle_events(<_WindowsSele...e debug=False>)()>
+Traceback (most recent call last):
+  File "C:\Program Files\Python311\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "src\\python\\grpcio\\grpc\\_cython\\_cygrpc/aio/completion_queue.pyx.pxi", line 170, in grpc._cython.cygrpc.PollerCompletionQueue._handle_events
+  File "C:\Program Files\Python311\Lib\asyncio\base_events.py", line 807, in call_soon_threadsafe
+    self._check_closed()
+  File "C:\Program Files\Python311\Lib\asyncio\base_events.py", line 520, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2024-10-19 13:54:25,066 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:54:25,070 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:54:25,071 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:54:25,073 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:54:25,076 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:54:25,077 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:54:25,079 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:54:25,079 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:54:25,079 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:54:25,090 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:54:25,091 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:54:25,091 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:54:25,092 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:54:25,092 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:54:25,093 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:54:25,094 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:54:25,095 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:54:26,862 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:54:26,863 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:54:26,864 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:54:26,866 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:54:26,867 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:54:26,868 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:54:26,869 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:54:26,870 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:54:26,870 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:54:26,878 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:54:26,879 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:54:26,880 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:54:26,880 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:54:26,880 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:54:26,881 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:54:26,881 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:54:26,881 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:54:26,912 - asyncio - ERROR - Exception in callback PollerCompletionQueue._handle_events(<_WindowsSele...e debug=False>)()
+handle: <Handle PollerCompletionQueue._handle_events(<_WindowsSele...e debug=False>)()>
+Traceback (most recent call last):
+  File "C:\Program Files\Python311\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "src\\python\\grpcio\\grpc\\_cython\\_cygrpc/aio/completion_queue.pyx.pxi", line 170, in grpc._cython.cygrpc.PollerCompletionQueue._handle_events
+  File "C:\Program Files\Python311\Lib\asyncio\base_events.py", line 807, in call_soon_threadsafe
+    self._check_closed()
+  File "C:\Program Files\Python311\Lib\asyncio\base_events.py", line 520, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2024-10-19 13:55:09,091 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:55:09,094 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:55:09,094 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:55:09,096 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:55:09,097 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:55:09,098 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:55:09,099 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:55:09,101 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:55:09,101 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:55:09,113 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:09,114 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:09,114 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:09,115 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:09,116 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:09,116 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:09,117 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:09,118 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:11,431 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:55:11,432 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:55:11,433 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:55:11,434 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:55:11,435 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:55:11,436 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:55:11,437 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:55:11,438 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:55:11,438 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:55:11,447 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:11,447 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:11,448 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:11,448 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:11,449 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:11,449 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:11,450 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:11,450 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:11,486 - asyncio - ERROR - Exception in callback PollerCompletionQueue._handle_events(<_WindowsSele...e debug=False>)()
+handle: <Handle PollerCompletionQueue._handle_events(<_WindowsSele...e debug=False>)()>
+Traceback (most recent call last):
+  File "C:\Program Files\Python311\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "src\\python\\grpcio\\grpc\\_cython\\_cygrpc/aio/completion_queue.pyx.pxi", line 170, in grpc._cython.cygrpc.PollerCompletionQueue._handle_events
+  File "C:\Program Files\Python311\Lib\asyncio\base_events.py", line 807, in call_soon_threadsafe
+    self._check_closed()
+  File "C:\Program Files\Python311\Lib\asyncio\base_events.py", line 520, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+2024-10-19 13:55:18,363 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:55:18,365 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:55:18,365 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:55:18,367 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:55:18,369 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:55:18,369 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:55:18,370 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:55:18,371 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:55:18,371 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:55:18,388 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:18,388 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:18,389 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:18,389 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:18,390 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:18,390 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:18,390 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:18,391 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:29,161 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:55:29,162 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:55:29,163 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:55:29,164 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:55:29,166 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:55:29,166 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:55:29,167 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:55:29,168 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:55:29,168 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:55:29,191 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:29,191 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:29,193 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:29,193 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:29,194 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:29,195 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:29,196 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:29,196 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:55,365 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:55:55,367 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:55:55,367 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:55:55,368 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:55:55,369 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:55:55,369 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:55:55,370 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:55:55,370 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:55:55,370 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:55:55,395 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:55,395 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:55,397 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:55,397 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:55,398 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:55,398 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:55,399 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:55:55,399 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:56:07,198 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:56:07,200 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:56:07,200 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:56:07,204 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:56:07,205 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:56:07,205 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:56:07,207 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:56:07,207 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:56:07,207 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:56:07,238 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:56:07,238 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:56:07,240 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:56:07,240 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:56:07,241 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:56:07,241 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:56:07,242 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:56:07,242 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:56:10,222 - langchain_google_genai.chat_models - WARNING - Retrying langchain_google_genai.chat_models._achat_with_retry.<locals>._achat_with_retry in 2.0 seconds as it raised ResourceExhausted: 429 Resource has been exhausted (e.g. check quota)..
+2024-10-19 13:56:28,379 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:56:28,380 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:56:28,380 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:56:28,382 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:56:28,383 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:56:28,383 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:56:28,385 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:56:28,385 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:56:28,385 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:56:28,399 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:56:28,400 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:56:28,401 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:56:28,401 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:56:28,402 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:56:28,403 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:56:28,404 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:56:28,404 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-19 13:57:27,148 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:57:27,149 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:57:27,174 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:57:28,096 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:57:28,097 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:57:28,097 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:57:28,820 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:57:28,821 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:57:28,822 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:59:38,953 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:59:38,956 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:59:38,957 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:59:38,958 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:59:38,959 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:59:38,960 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 13:59:38,962 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 13:59:38,963 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 13:59:38,963 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:00:32,525 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:00:32,527 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:00:32,527 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:00:32,528 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:00:32,530 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:00:32,530 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:00:32,532 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:00:32,535 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:00:32,535 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:00:38,782 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: timed out
+2024-10-19 14:00:41,540 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:00:41,543 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:00:41,543 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:00:41,545 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:00:41,547 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:00:41,547 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:00:41,548 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:00:41,550 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:00:41,550 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:00:42,723 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: timed out
+2024-10-19 14:00:44,555 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: timed out
+2024-10-19 14:00:47,909 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: timed out
+2024-10-19 14:00:47,909 - google.auth._default - WARNING - Authentication failed using Compute Engine authentication due to unavailable metadata server.
+2024-10-19 14:00:48,633 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: timed out
+2024-10-19 14:00:53,634 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: timed out
+2024-10-19 14:00:53,634 - google.auth._default - WARNING - Authentication failed using Compute Engine authentication due to unavailable metadata server.
+2024-10-19 14:29:21,580 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:29:21,583 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:29:21,583 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:29:21,585 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:29:21,586 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:29:21,586 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:29:21,588 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:29:21,590 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:29:21,590 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:29:29,750 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:29:29,752 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:29:29,752 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:29:29,754 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:29:29,755 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:29:29,755 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:29:29,756 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:29:29,757 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:29:29,757 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:29:32,837 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: timed out
+2024-10-19 14:29:36,845 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: timed out
+2024-10-19 14:29:41,909 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: timed out
+2024-10-19 14:29:41,910 - google.auth._default - WARNING - Authentication failed using Compute Engine authentication due to unavailable metadata server.
+2024-10-19 14:29:45,950 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: timed out
+2024-10-19 14:29:49,928 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: timed out
+2024-10-19 14:29:54,806 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: timed out
+2024-10-19 14:29:54,806 - google.auth._default - WARNING - Authentication failed using Compute Engine authentication due to unavailable metadata server.
+2024-10-19 14:30:34,806 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:30:34,807 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:30:34,855 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:30:35,691 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:30:35,692 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:30:35,692 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:30:36,965 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:30:36,966 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:30:36,966 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:30:47,558 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:30:47,560 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:30:47,560 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:30:47,561 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:30:47,563 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:30:47,563 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:30:47,564 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:30:47,566 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:30:47,566 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:30:50,052 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:30:50,056 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:30:50,057 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:30:50,059 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:30:50,059 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:30:50,059 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:30:50,060 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:30:50,061 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:30:50,061 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:30:51,650 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:30:51,652 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:30:51,652 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:30:51,654 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:30:51,655 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:30:51,655 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:30:51,656 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:30:51,657 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:30:51,657 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:30:54,766 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: timed out
+2024-10-19 14:30:58,803 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: timed out
+2024-10-19 14:31:03,828 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: timed out
+2024-10-19 14:31:03,828 - google.auth._default - WARNING - Authentication failed using Compute Engine authentication due to unavailable metadata server.
+2024-10-19 14:31:07,867 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: timed out
+2024-10-19 14:31:11,788 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: timed out
+2024-10-19 14:31:16,956 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: timed out
+2024-10-19 14:31:16,956 - google.auth._default - WARNING - Authentication failed using Compute Engine authentication due to unavailable metadata server.
+2024-10-19 14:32:43,294 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:32:43,297 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:32:43,297 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:32:43,300 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:32:43,302 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:32:43,303 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:32:43,305 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:32:43,307 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:32:43,308 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:32:45,593 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:32:45,594 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:32:45,595 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:32:45,597 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:32:45,598 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:32:45,598 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:32:45,599 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:32:45,599 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:32:45,599 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:32:48,668 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: timed out
+2024-10-19 14:32:52,742 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: timed out
+2024-10-19 14:32:57,928 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: timed out
+2024-10-19 14:32:57,928 - google.auth._default - WARNING - Authentication failed using Compute Engine authentication due to unavailable metadata server.
+2024-10-19 14:33:01,980 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: timed out
+2024-10-19 14:33:05,933 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: timed out
+2024-10-19 14:33:11,037 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: timed out
+2024-10-19 14:33:11,038 - google.auth._default - WARNING - Authentication failed using Compute Engine authentication due to unavailable metadata server.
+2024-10-19 14:39:18,683 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:39:18,685 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:39:18,686 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:39:18,689 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:39:18,691 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:39:18,691 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:39:18,693 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:39:18,695 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:39:18,695 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:39:21,699 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:39:21,701 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:39:21,701 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:39:21,702 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:39:21,703 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:39:21,703 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:39:21,704 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:39:21,704 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:39:21,704 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:39:25,013 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: timed out
+2024-10-19 14:39:28,976 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: timed out
+2024-10-19 14:39:33,802 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: timed out
+2024-10-19 14:39:33,802 - google.auth._default - WARNING - Authentication failed using Compute Engine authentication due to unavailable metadata server.
+2024-10-19 14:39:37,858 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: timed out
+2024-10-19 14:39:41,919 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: timed out
+2024-10-19 14:39:47,026 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: timed out
+2024-10-19 14:39:47,026 - google.auth._default - WARNING - Authentication failed using Compute Engine authentication due to unavailable metadata server.
+2024-10-19 14:41:32,010 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:41:32,013 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:41:32,013 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:41:32,015 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:41:32,016 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:41:32,016 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:41:32,019 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:41:32,021 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:41:32,021 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:41:34,631 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:41:34,632 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:41:34,633 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:41:34,635 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:41:34,635 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:41:34,636 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:41:34,637 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:41:34,638 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:41:34,638 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:41:37,707 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: timed out
+2024-10-19 14:41:41,671 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: timed out
+2024-10-19 14:41:46,569 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: timed out
+2024-10-19 14:41:46,569 - google.auth._default - WARNING - Authentication failed using Compute Engine authentication due to unavailable metadata server.
+2024-10-19 14:41:50,622 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: timed out
+2024-10-19 14:41:54,714 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: timed out
+2024-10-19 14:41:59,674 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: timed out
+2024-10-19 14:41:59,674 - google.auth._default - WARNING - Authentication failed using Compute Engine authentication due to unavailable metadata server.
+2024-10-19 14:42:06,072 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:42:06,073 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:42:06,073 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:42:06,075 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:42:06,076 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:42:06,076 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:42:06,077 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:42:06,078 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:42:06,078 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:42:09,283 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:42:09,285 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:42:09,285 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:42:09,287 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:42:09,288 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:42:09,289 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:42:09,290 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:42:09,291 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:42:09,291 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:42:12,361 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: timed out
+2024-10-19 14:42:16,457 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: timed out
+2024-10-19 14:42:21,481 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: timed out
+2024-10-19 14:42:21,482 - google.auth._default - WARNING - Authentication failed using Compute Engine authentication due to unavailable metadata server.
+2024-10-19 14:42:25,537 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: timed out
+2024-10-19 14:42:29,505 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: timed out
+2024-10-19 14:42:34,620 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: timed out
+2024-10-19 14:42:34,620 - google.auth._default - WARNING - Authentication failed using Compute Engine authentication due to unavailable metadata server.
+2024-10-19 14:45:26,211 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:45:26,213 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:45:26,214 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:45:26,215 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:45:26,217 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:45:26,217 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:45:26,218 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:45:26,220 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:45:26,220 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:45:29,017 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:45:29,018 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:45:29,018 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:45:29,020 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:45:29,021 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:45:29,021 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:45:29,022 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:45:29,023 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:45:29,023 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:45:32,092 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: timed out
+2024-10-19 14:45:36,123 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: timed out
+2024-10-19 14:45:40,950 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: timed out
+2024-10-19 14:45:40,950 - google.auth._default - WARNING - Authentication failed using Compute Engine authentication due to unavailable metadata server.
+2024-10-19 14:45:44,999 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: timed out
+2024-10-19 14:45:48,921 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: timed out
+2024-10-19 14:45:54,067 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: timed out
+2024-10-19 14:45:54,067 - google.auth._default - WARNING - Authentication failed using Compute Engine authentication due to unavailable metadata server.
+2024-10-19 14:45:56,951 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:45:56,954 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:45:56,954 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:45:56,957 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:45:56,959 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:45:56,959 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:45:56,961 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:45:56,963 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:45:56,963 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:45:59,723 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:45:59,725 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:45:59,725 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:45:59,726 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:45:59,727 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:45:59,727 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:45:59,728 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:45:59,729 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:45:59,729 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:46:02,795 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: timed out
+2024-10-19 14:46:06,769 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: timed out
+2024-10-19 14:46:11,850 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: timed out
+2024-10-19 14:46:11,851 - google.auth._default - WARNING - Authentication failed using Compute Engine authentication due to unavailable metadata server.
+2024-10-19 14:46:15,909 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: timed out
+2024-10-19 14:46:19,932 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: timed out
+2024-10-19 14:46:24,763 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: timed out
+2024-10-19 14:46:24,763 - google.auth._default - WARNING - Authentication failed using Compute Engine authentication due to unavailable metadata server.
+2024-10-19 14:46:32,058 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:46:32,061 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:46:32,062 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:46:32,063 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:46:32,067 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:46:32,067 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:46:32,072 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:46:32,074 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:46:32,074 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:46:35,339 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:46:35,342 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:46:35,342 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:46:35,344 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:46:35,345 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:46:35,345 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:46:35,347 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-19 14:46:35,347 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-19 14:46:35,347 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-19 14:46:38,425 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: timed out
+2024-10-19 14:46:42,535 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: timed out
+2024-10-19 14:46:47,645 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: timed out
+2024-10-19 14:46:47,646 - google.auth._default - WARNING - Authentication failed using Compute Engine authentication due to unavailable metadata server.
+2024-10-19 14:46:51,706 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 1 of 3. Reason: timed out
+2024-10-19 14:46:55,660 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: timed out
+2024-10-19 14:47:00,836 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: timed out
+2024-10-19 14:47:00,836 - google.auth._default - WARNING - Authentication failed using Compute Engine authentication due to unavailable metadata server.
