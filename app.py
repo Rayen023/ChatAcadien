@@ -370,7 +370,7 @@ if "messages" not in st.session_state.keys():
 
 
 model = ChatAnthropic(
-    model="claude-3-5-sonnet-latest",
+    model="claude-3-5-sonnet-20240620",
     temperature=0,
     max_tokens=8096,
     timeout=None,
