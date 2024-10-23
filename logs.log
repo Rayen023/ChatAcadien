@@ -13705,3 +13705,694 @@ RuntimeError: Event loop is closed
 2024-10-19 14:46:55,660 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 2 of 3. Reason: timed out
 2024-10-19 14:47:00,836 - google.auth.compute_engine._metadata - WARNING - Compute Engine Metadata server unavailable on attempt 3 of 3. Reason: timed out
 2024-10-19 14:47:00,836 - google.auth._default - WARNING - Authentication failed using Compute Engine authentication due to unavailable metadata server.
+2024-10-23 12:20:32,424 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:20:32,426 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:20:32,505 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:20:33,380 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:20:33,381 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:20:33,381 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:20:34,153 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:20:34,154 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:20:34,154 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:21:18,043 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:21:18,043 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:21:18,049 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:21:18,052 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:21:18,052 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:21:18,052 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:21:18,052 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:21:18,052 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:21:18,052 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:21:20,847 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:21:20,851 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:21:20,851 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:21:20,853 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:21:20,854 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:21:20,854 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:21:20,856 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:21:20,856 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:21:20,856 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:21:23,469 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-23 12:21:23,488 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:23,491 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:23,492 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:23,492 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:23,569 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:23,662 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:23,736 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:23,826 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:23,907 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:23,988 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:24,052 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:24,086 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:24,171 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:24,187 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:24,251 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:24,290 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:24,318 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:24,389 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:24,471 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:24,487 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:24,520 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:24,621 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:24,671 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:24,690 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:24,756 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:24,813 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:24,888 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:24,938 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:25,001 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:25,061 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:25,137 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:25,187 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:25,227 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:25,289 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:25,363 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:25,411 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:25,434 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:25,506 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:25,590 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:25,671 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:25,766 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:25,840 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:25,881 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:25,957 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:26,043 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:26,123 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:26,210 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:26,294 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:26,373 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:26,460 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:26,545 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:21:26,625 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:22:47,681 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:22:47,682 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:22:47,683 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:22:47,684 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:22:47,686 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:22:47,686 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:22:47,687 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:22:47,687 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:22:47,689 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:22:50,073 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-23 12:22:50,074 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:22:50,074 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:22:50,102 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:22:50,164 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:22:50,205 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:22:50,237 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:22:50,279 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:22:50,819 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:22:50,821 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:22:51,501 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:22:51,502 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:22:51,508 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:22:51,509 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:22:51,513 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:22:51,525 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:22:51,525 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:22:52,286 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:22:52,287 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:22:52,288 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:22:52,288 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:22:52,288 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:22:52,289 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:22:52,289 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:22:52,289 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:22:52,290 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:22:52,290 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:22:52,864 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:22:52,866 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:22:52,867 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:22:52,868 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:22:55,134 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_agent_action callback: RuntimeError('Current LLMThought is unexpectedly None!')
+2024-10-23 12:22:55,135 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_tool_start callback: RuntimeError('Current LLMThought is unexpectedly None!')
+2024-10-23 12:22:57,449 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_tool_end callback: RuntimeError('Current LLMThought is unexpectedly None!')
+2024-10-23 12:22:57,450 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_agent_action callback: RuntimeError('Current LLMThought is unexpectedly None!')
+2024-10-23 12:22:57,450 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_tool_start callback: RuntimeError('Current LLMThought is unexpectedly None!')
+2024-10-23 12:22:59,423 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_tool_end callback: RuntimeError('Current LLMThought is unexpectedly None!')
+2024-10-23 12:23:01,155 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-23 12:23:01,156 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:01,156 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:01,157 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:01,189 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:01,268 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:01,290 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:01,362 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:01,424 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:01,440 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:01,473 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:01,495 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:01,550 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:01,568 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:01,648 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:01,670 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:01,708 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:01,727 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:01,768 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:01,799 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:01,885 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:01,912 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:01,940 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:01,985 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:02,055 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:02,113 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:02,138 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:02,170 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:02,237 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:02,282 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:02,312 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:02,352 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:02,402 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:02,513 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:02,549 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:02,582 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:02,616 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:02,698 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:02,732 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:02,789 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:02,826 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:02,899 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:02,964 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:03,009 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:03,081 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:03,160 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:03,190 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:03,301 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:03,345 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:03,394 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:03,429 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:03,505 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:03,550 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:03,581 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:03,637 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:03,678 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:03,759 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:03,795 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:03,833 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:04,067 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:04,248 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:04,273 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:04,307 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:04,335 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:04,412 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:04,449 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:04,491 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:04,550 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:04,644 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:04,688 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:04,783 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:04,856 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:04,969 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:05,003 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:05,050 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:05,157 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:05,196 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:05,238 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:05,277 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:05,307 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:05,405 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:05,423 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:05,484 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:05,527 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:05,590 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:05,623 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:05,658 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:05,713 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:05,829 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:05,830 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:05,887 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:06,028 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:06,131 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:06,159 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:06,195 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:06,300 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:06,340 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:06,372 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:06,458 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:06,512 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:06,574 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:06,719 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:06,827 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:06,877 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:06,927 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:06,984 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:07,034 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:07,125 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:07,269 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:07,323 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:07,372 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:07,439 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:07,471 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:07,512 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:07,548 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:07,617 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:07,667 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:08,155 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:08,156 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:08,156 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:08,157 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:08,157 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:08,158 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:08,158 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:08,158 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:08,158 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:08,159 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:08,352 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:08,352 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:08,353 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:08,353 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:08,375 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:08,421 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:08,441 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:08,480 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:08,551 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:08,573 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:08,604 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:08,646 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:08,712 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:23:08,774 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:39,916 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:24:39,917 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:24:39,917 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:24:39,919 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:24:39,920 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:24:39,920 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:24:39,920 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:24:39,921 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:24:39,921 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:24:42,009 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-23 12:24:42,010 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:42,011 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:42,054 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:42,111 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:42,151 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:42,236 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:42,276 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:42,315 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:42,399 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:42,469 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:42,504 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:42,544 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:42,593 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:42,670 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:42,718 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:42,830 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:42,830 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:42,870 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:42,908 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:42,983 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:43,014 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:43,092 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:43,124 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:43,172 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:43,204 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:43,257 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:43,354 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:43,496 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:43,497 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:43,497 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:43,540 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:43,597 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:43,641 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:43,707 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:43,781 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:43,823 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:43,865 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:44,004 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:44,076 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:44,101 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:44,146 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:44,169 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:44,231 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:44,268 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:44,304 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:44,343 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:44,416 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:44,447 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:44,479 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:44,516 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:44,585 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:44,641 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:44,680 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:44,721 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:44,807 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:44,858 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:44,872 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:44,918 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:44,992 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:45,039 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:45,079 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:45,113 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:45,214 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:45,261 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:45,317 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:45,415 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:45,561 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:45,611 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:45,671 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:45,773 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:45,778 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:45,811 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:45,845 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:45,905 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:45,972 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:24:46,014 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:04,995 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:25:04,996 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:25:04,997 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:25:04,998 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:25:04,999 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:25:04,999 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:25:05,000 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:25:05,000 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:25:05,000 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:25:08,403 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-23 12:25:08,405 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:08,426 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:08,439 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:08,543 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:08,592 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:08,684 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:08,812 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:08,853 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:08,901 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:09,570 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:09,571 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:10,047 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:10,048 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:10,048 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:10,049 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:10,049 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:10,050 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:10,050 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:13,606 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-23 12:25:13,609 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:13,625 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:13,684 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:13,716 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:13,753 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:13,785 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:13,862 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:13,915 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:13,928 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:14,046 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:14,095 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:14,128 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:14,208 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:14,238 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:14,268 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:14,312 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:14,375 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:14,427 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:14,458 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:14,542 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:14,606 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:14,632 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:14,673 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:14,768 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:14,833 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:14,870 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:14,923 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:15,010 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:15,062 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:15,141 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:15,182 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:15,264 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:15,290 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:15,351 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:15,438 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:15,478 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:15,539 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:15,583 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:15,643 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:15,675 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:15,711 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:15,745 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:15,832 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:15,879 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:15,941 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:16,014 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:16,109 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:16,117 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:16,165 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:16,238 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:16,281 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:16,347 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:16,389 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:16,564 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:16,602 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:16,713 - langchain_core.callbacks.manager - WARNING - Error in StreamlitCallbackHandler.on_llm_new_token callback: AttributeError("'list' object has no attribute 'replace'")
+2024-10-23 12:25:52,317 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:25:52,321 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:25:52,321 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:25:52,325 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:25:52,325 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:25:52,325 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:25:52,327 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:25:52,327 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:25:52,327 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:25:55,043 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:25:55,046 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:25:55,046 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:25:55,048 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:25:55,050 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:25:55,050 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:25:55,051 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:25:55,052 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:25:55,052 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:25:56,941 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:25:56,942 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:25:56,942 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:25:56,943 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:25:56,944 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:25:56,944 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:25:56,945 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:25:56,946 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:25:56,946 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:25:59,013 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-23 12:26:12,018 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:26:12,020 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:26:12,020 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:26:12,022 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:26:12,023 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:26:12,023 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:26:12,024 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:26:12,026 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:26:12,026 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:26:14,079 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-23 12:26:19,052 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-23 12:26:40,672 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:26:40,673 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:26:40,674 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:26:40,675 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:26:40,675 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:26:40,676 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:26:40,676 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:26:40,677 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:26:40,677 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:26:47,769 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:26:47,771 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:26:47,771 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:26:47,773 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:26:47,774 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:26:47,774 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:26:47,775 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:26:47,775 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:26:47,775 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:26:49,966 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-23 12:26:55,180 - voyage - INFO - message='Voyage API response' path=https://api.voyageai.com/v1/rerank processing_ms=None request_id=None response_code=200
+2024-10-23 12:26:55,477 - voyage - INFO - message='Voyage API response' path=https://api.voyageai.com/v1/rerank processing_ms=None request_id=None response_code=200
+2024-10-23 12:26:57,278 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-23 12:27:35,358 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:27:35,360 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:27:35,360 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:27:35,361 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:27:35,362 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:27:35,362 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:27:35,363 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:27:35,363 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:27:35,363 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:27:37,412 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:27:37,415 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:27:37,415 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:27:37,417 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:27:37,420 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:27:37,420 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:27:37,421 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:27:37,423 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:27:37,423 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:27:45,492 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:27:45,494 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:27:45,494 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:27:45,496 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:27:45,499 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:27:45,499 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:27:45,501 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:27:45,501 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:27:45,502 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:27:47,806 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-23 12:27:54,092 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:27:54,095 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:27:54,096 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:27:54,098 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:27:54,100 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:27:54,101 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:27:54,103 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:27:54,104 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:27:54,104 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:29:07,394 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:29:07,396 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:29:07,396 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:29:07,398 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:29:07,399 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:29:07,399 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:29:07,400 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:29:07,400 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:29:07,400 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:29:09,731 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-23 12:29:15,674 - voyage - INFO - message='Voyage API response' path=https://api.voyageai.com/v1/rerank processing_ms=None request_id=None response_code=200
+2024-10-23 12:29:15,998 - voyage - INFO - message='Voyage API response' path=https://api.voyageai.com/v1/rerank processing_ms=None request_id=None response_code=200
+2024-10-23 12:29:17,702 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-23 12:30:02,401 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:30:02,403 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:30:02,403 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:30:02,405 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:30:02,406 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:30:02,406 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:30:02,407 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:30:02,408 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:30:02,408 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:30:06,026 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:30:06,028 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:30:06,028 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:30:06,030 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:30:06,031 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:30:06,031 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:30:06,032 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:30:06,032 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:30:06,032 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:30:08,242 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-23 12:30:12,583 - voyage - INFO - message='Voyage API response' path=https://api.voyageai.com/v1/rerank processing_ms=None request_id=None response_code=200
+2024-10-23 12:30:12,904 - voyage - INFO - message='Voyage API response' path=https://api.voyageai.com/v1/rerank processing_ms=None request_id=None response_code=200
+2024-10-23 12:30:14,609 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-10-23 12:30:34,862 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:30:34,865 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:30:34,865 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:30:34,867 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:30:34,868 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:30:34,868 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:30:34,869 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:30:34,870 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:30:34,870 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:30:38,532 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:30:38,535 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:30:38,535 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:30:38,541 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:30:38,546 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:30:38,546 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 12:30:38,548 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 12:30:38,551 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 12:30:38,551 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 13:07:28,479 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 13:07:28,481 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 13:07:28,535 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 13:07:29,394 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 13:07:29,395 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 13:07:29,395 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 13:07:30,159 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 13:07:30,161 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 13:07:30,161 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 13:07:32,368 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 13:07:32,369 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 13:07:32,370 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 13:07:32,370 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 13:07:32,371 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 13:07:32,371 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 13:07:32,371 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 13:07:32,372 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 13:07:45,686 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 13:07:45,694 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 13:07:45,694 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 13:07:45,696 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 13:07:45,698 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 13:07:45,698 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 13:07:45,700 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 13:07:45,700 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 13:07:45,700 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 13:07:45,717 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 13:07:45,717 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 13:07:45,718 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 13:07:45,718 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 13:07:45,719 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 13:07:45,719 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 13:07:45,719 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 13:07:45,720 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 16:48:30,538 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 16:48:30,543 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 16:48:30,544 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 16:48:30,545 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 16:48:30,545 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 16:48:30,545 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 16:48:30,547 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 16:48:30,547 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 16:48:30,547 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 16:48:30,553 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 16:48:30,553 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 16:48:30,553 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 16:48:30,553 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 16:48:30,562 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 16:48:30,562 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 16:48:30,562 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 16:48:30,565 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 16:48:32,503 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 16:48:32,503 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 16:48:32,503 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 16:48:32,503 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 16:48:32,509 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 16:48:32,509 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 16:48:32,509 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 16:48:32,509 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 16:48:32,509 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 16:48:32,518 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 16:48:32,518 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 16:48:32,519 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 16:48:32,519 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 16:48:32,519 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 16:48:32,519 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 16:48:32,519 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 16:48:32,519 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 16:50:02,887 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 16:50:02,890 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 16:50:02,890 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 16:50:02,892 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 16:50:02,893 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 16:50:02,893 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 16:50:02,894 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 16:50:02,894 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 16:50:02,895 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 16:50:02,904 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 16:50:02,904 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 16:50:02,906 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 16:50:02,906 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 16:50:02,907 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 16:50:02,907 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 16:50:02,909 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 16:50:02,909 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 16:50:12,006 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 16:50:12,009 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 16:50:12,009 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 16:50:12,011 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 16:50:12,012 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 16:50:12,012 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 16:50:12,013 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\OneDrive\\Desktop\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-10-23 16:50:12,013 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-23 16:50:12,013 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-23 16:50:12,028 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 16:50:12,028 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 16:50:12,030 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 16:50:12,030 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 16:50:12,031 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 16:50:12,031 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 16:50:12,032 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-23 16:50:12,032 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
