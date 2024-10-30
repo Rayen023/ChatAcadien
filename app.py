@@ -223,7 +223,8 @@ with st.sidebar:
     st.markdown('<div class="sidebar-main"> </div>', unsafe_allow_html=True)
 
     st.markdown(
-        "<h6 style='text-align: center; color: gray; font-size: 9px;'>© 2024 Rayen Ghali. Travail réalisé sous la supervision de Sid Ahmed Selouani. Ce projet a bénéficié du financement conjoint de Mitacs et du Service expérientiel de l'Université de Moncton, soutien administratif de Assomption. Tous droits réservés.</h6>",
+        "<h6 style='text-align: center; color: gray; font-size: 9px;'>© 2024 Rayen Ghali et Sid Ahmed Selouani. Tous droits réservés. Ce projet a bénéficié du soutien technique du Centre Anselme Chiasson de la bibliothèque Champlain de l'Université de Moncton, d'un financement conjoint de Mitacs et du Service expérientiel de l'Université de Moncton et d'un soutien administratif de Assomption. </h6>",
+        # "<h6 style='text-align: center; color: gray; font-size: 9px;'>© 2024 Rayen Ghali. Travail réalisé sous la supervision de Sid Ahmed Selouani. Ce projet a bénéficié du financement conjoint de Mitacs et du Service expérientiel de l'Université de Moncton, soutien administratif de Assomption. Tous droits réservés.</h6>",
         unsafe_allow_html=True,
     )
 

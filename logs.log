@@ -14396,3 +14396,12 @@ RuntimeError: Event loop is closed
 2024-10-23 16:50:12,031 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
 2024-10-23 16:50:12,032 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
 2024-10-23 16:50:12,032 - langchain_google_genai._function_utils - WARNING - Key 'title' is not supported in schema, ignoring
+2024-10-30 17:07:50,701 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/ENV/lib/python3.10/site-packages/pinecone_plugins'])
+2024-10-30 17:07:50,702 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-30 17:07:50,710 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-30 17:07:50,975 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/ENV/lib/python3.10/site-packages/pinecone_plugins'])
+2024-10-30 17:07:50,975 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-30 17:07:50,975 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-10-30 17:07:51,260 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/ENV/lib/python3.10/site-packages/pinecone_plugins'])
+2024-10-30 17:07:51,261 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-10-30 17:07:51,262 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
