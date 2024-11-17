@@ -3,7 +3,6 @@ from streamlit.runtime import get_instance
 from streamlit.runtime.scriptrunner import get_script_run_ctx
 
 from langchain_community.chat_message_histories import ChatMessageHistory
-from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.memory import ConversationBufferMemory
@@ -24,6 +23,9 @@ from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 
 from exa_py import Exa
+from langchain_community.tools.tavily_search import TavilySearchResults
+from langchain_community.tools import BraveSearch
+
 from langchain_core.tools import tool
 import asyncio
 
@@ -323,34 +325,28 @@ genealogie_retriever_tool = create_custom_retriever_tool(
 search = TavilySearchResults(max_results=3)
 
 if st.session_state["years_limit"]:
-    exa = Exa(api_key=get_env_variable("EXA_API_KEY"))
+    start_year = st.session_state["years_limit"]
+    start_date = f"{start_year}-01-01"
+    end_date = datetime.now().strftime("%Y-%m-%d")  # Current date
+    freshness_param = f"{start_date}to{end_date}"
+    search_kwargs = {
+        "count": 3,
+        "summary": True,
+        "country": "CA",
+        "freshness": freshness_param,
+    }
 
-    @tool
-    def search_and_contents(query: str):
-        """Search for webpages based on the query and retrieve their contents."""
-        # This combines two API endpoints: search and contents retrieval
-        return exa.search_and_contents(
-            query,
-            use_autoprompt=True,
-            num_results=3,
-            text=True,
-            highlights=True,
-            start_published_date=f"{st.session_state['years_limit']}-01-01",
-        )
+    search = BraveSearch.from_api_key(
+        api_key=get_env_variable("BRAVE_API_KEY"),
+        search_kwargs=search_kwargs,
+    )
 
-    tools = [
-        search_and_contents,
-        ceaac_faq_tool,
-        ceaac_retriever_tool,
-        genealogie_retriever_tool,
-    ]
-else:
-    tools = [
-        search,
-        ceaac_faq_tool,
-        ceaac_retriever_tool,
-        genealogie_retriever_tool,
-    ]
+tools = [
+    search,
+    ceaac_faq_tool,
+    ceaac_retriever_tool,
+    genealogie_retriever_tool,
+]
 
 history = ChatMessageHistory()
 
