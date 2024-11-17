@@ -321,8 +321,16 @@ genealogie_retriever_tool = create_custom_retriever_tool(
     embeddings_model=voyageai_embeddings,
 )
 
-
-search = TavilySearchResults(max_results=3)
+search_kwargs = {
+    "count": 3,
+    "summary": True,
+    "country": "CA",
+}
+search = BraveSearch.from_api_key(
+    api_key=get_env_variable("BRAVE_API_KEY"),
+    search_kwargs=search_kwargs,
+)
+# search = TavilySearchResults(max_results=3)
 
 if st.session_state["years_limit"]:
     start_year = st.session_state["years_limit"]
