@@ -296,6 +296,7 @@ def gen_create_custom_retriever_tool(index_name, top_n, description, embeddings_
             " ",
             ".",
             ",",
+            "\n---\n",
         ],
         chunk_overlap=20,
         length_function=len,
@@ -304,14 +305,14 @@ def gen_create_custom_retriever_tool(index_name, top_n, description, embeddings_
         chunk_size=7000, separators=["\n---\n"], chunk_overlap=2000, length_function=len
     )
 
-    fs = LocalFileStore("./store_location")
+    fs = LocalFileStore("./store_location_c")
     store = create_kv_docstore(fs)
     # store = InMemoryStore()
     retriever = ParentDocumentRetriever(
         vectorstore=vectorstore,
         docstore=store,
         child_splitter=child_splitter,
-        parent_splitter=parent_splitter,
+        # parent_splitter=parent_splitter,
     )
 
     compressor = VoyageAIRerank(model="rerank-2", top_k=top_n)
@@ -386,7 +387,8 @@ ceaac_faq_tool = create_custom_retriever_tool(
 
 genealogie_retriever_tool = gen_create_custom_retriever_tool(
     # index_name="genealogie-acadienne-index",
-    index_name="temporaire-index",
+    # index_name="genealogie-acadienne-index-cwp", #with parents at 7000 chars
+    index_name="genealogie-acadienne-index-c",
     top_n=4,
     description="Pour les questions relatives à la généalogie et aux familles acadiennes, vous devez utiliser cet outil. Les informations étant sensibles, assurez-vous de vérifier l'exactitude des noms, sachant que différentes personnes peuvent avoir le même nom. Demandez, si nécessaire, la possibilité d'obtenir plus d'informations. Ne répondez pas sans justification.",
     embeddings_model=voyageai_embeddings,
