@@ -389,7 +389,7 @@ genealogie_retriever_tool = gen_create_custom_retriever_tool(
     # index_name="genealogie-acadienne-index",
     # index_name="genealogie-acadienne-index-cwp", #with parents at 7000 chars
     index_name="genealogie-acadienne-index-c",
-    top_n=4,
+    top_n=3,
     description="Pour les questions relatives à la généalogie et aux familles acadiennes, vous devez utiliser cet outil. Les informations étant sensibles, assurez-vous de vérifier l'exactitude des noms, sachant que différentes personnes peuvent avoir le même nom. Demandez, si nécessaire, la possibilité d'obtenir plus d'informations. Ne répondez pas sans justification.",
     embeddings_model=voyageai_embeddings,
 )
