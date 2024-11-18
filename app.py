@@ -280,25 +280,40 @@ voyageai_embeddings = VoyageAIEmbeddings(model="voyage-3")
 
 
 # _filter = LLMListwiseRerank.from_llm(llm, top_n=2)
-def gen_create_custom_retriever_tool(
-    index_name, k, top_n, description, embeddings_model
-):
-    from langchain.storage import InMemoryStore
+def gen_create_custom_retriever_tool(index_name, top_n, description, embeddings_model):
+    from langchain.storage import LocalFileStore
     from langchain_text_splitters import RecursiveCharacterTextSplitter
     from langchain.retrievers import ParentDocumentRetriever
+    from langchain.storage._lc_store import create_kv_docstore
 
     vectorstore = PineconeVectorStore(index_name=index_name, embedding=embeddings_model)
 
-    parent_splitter = RecursiveCharacterTextSplitter(chunk_size=2000)
-    child_splitter = RecursiveCharacterTextSplitter(chunk_size=400)
+    child_splitter = RecursiveCharacterTextSplitter(
+        chunk_size=1024,
+        separators=[
+            "\n\n",
+            "\n",
+            " ",
+            ".",
+            ",",
+        ],
+        chunk_overlap=20,
+        length_function=len,
+    )
+    parent_splitter = RecursiveCharacterTextSplitter(
+        chunk_size=7000, separators=["\n---\n"], chunk_overlap=2000, length_function=len
+    )
 
-    store = InMemoryStore()
+    fs = LocalFileStore("./store_location")
+    store = create_kv_docstore(fs)
+    # store = InMemoryStore()
     retriever = ParentDocumentRetriever(
         vectorstore=vectorstore,
         docstore=store,
         child_splitter=child_splitter,
         parent_splitter=parent_splitter,
     )
+
     compressor = VoyageAIRerank(model="rerank-2", top_k=top_n)
     pipeline_compressor = DocumentCompressorPipeline(
         transformers=[
@@ -353,8 +368,8 @@ def create_custom_retriever_tool(index_name, k, top_n, description, embeddings_m
 # Utilisation pour CEAAC
 ceaac_retriever_tool = create_custom_retriever_tool(
     index_name="ceaac-general-info-index",
-    k=12,
-    top_n=3,
+    k=3,
+    top_n=2,
     description="Pour les questions relatives à la ceaac (tarifs, Horaires, consultation des archives et des livres), vous devez utiliser cet outil.",
     embeddings_model=voyageai_embeddings,
 )
@@ -362,16 +377,16 @@ ceaac_retriever_tool = create_custom_retriever_tool(
 
 ceaac_faq_tool = create_custom_retriever_tool(
     index_name="ceaac-questions-frequemment-posees-index",
-    k=15,
-    top_n=4,
+    k=12,
+    top_n=3,
     description="Cet outil contient des questions fréquemment posées avec les réponses suggérées par le centre CEAAC. Utilisez cet outil en parallèle avec les autres outils.",
     embeddings_model=voyageai_embeddings,
 )
 
 
 genealogie_retriever_tool = gen_create_custom_retriever_tool(
-    index_name="genealogie-acadienne-index-1",
-    k=24,
+    # index_name="genealogie-acadienne-index",
+    index_name="temporaire-index",
     top_n=4,
     description="Pour les questions relatives à la généalogie et aux familles acadiennes, vous devez utiliser cet outil. Les informations étant sensibles, assurez-vous de vérifier l'exactitude des noms, sachant que différentes personnes peuvent avoir le même nom. Demandez, si nécessaire, la possibilité d'obtenir plus d'informations. Ne répondez pas sans justification.",
     embeddings_model=voyageai_embeddings,
