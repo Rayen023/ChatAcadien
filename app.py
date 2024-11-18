@@ -14,6 +14,8 @@ from langchain.tools.retriever import create_retriever_tool
 from langchain_anthropic import ChatAnthropic
 from langchain.agents import AgentExecutor, create_tool_calling_agent
 from langchain_core.prompts import ChatPromptTemplate
+    from langchain.retrievers.document_compressors import DocumentCompressorPipeline
+
 
 # from langchain_cohere import CohereRerank
 from langchain_voyageai import VoyageAIRerank
@@ -270,6 +272,53 @@ else:
 voyageai_embeddings = VoyageAIEmbeddings(model="voyage-3")
 
 
+# from langchain.retrievers.document_compressors import LLMListwiseRerank
+
+# from langchain_openai import ChatOpenAI
+
+# llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
+
+
+# _filter = LLMListwiseRerank.from_llm(llm, top_n=2)
+def gen_create_custom_retriever_tool(
+    index_name, k, top_n, description, embeddings_model
+):
+    from langchain.storage import InMemoryStore
+    from langchain_text_splitters import RecursiveCharacterTextSplitter
+    from langchain.retrievers import ParentDocumentRetriever
+
+    vectorstore = PineconeVectorStore(index_name=index_name, embedding=embeddings_model)
+
+    parent_splitter = RecursiveCharacterTextSplitter(chunk_size=2000)
+    child_splitter = RecursiveCharacterTextSplitter(chunk_size=400)
+
+    store = InMemoryStore()
+    retriever = ParentDocumentRetriever(
+        vectorstore=vectorstore,
+        docstore=store,
+        child_splitter=child_splitter,
+        parent_splitter=parent_splitter,
+    )
+    compressor = VoyageAIRerank(model="rerank-2", top_k=top_n)
+    pipeline_compressor = DocumentCompressorPipeline(
+        transformers=[
+            compressor,
+            # _filter
+        ]
+    )
+    compression_retriever = ContextualCompressionRetriever(
+        base_compressor=pipeline_compressor, base_retriever=retriever
+    )
+
+    retriever_tool = create_retriever_tool(
+        compression_retriever,
+        index_name,
+        description,
+    )
+
+    return retriever_tool
+
+
 def create_custom_retriever_tool(index_name, k, top_n, description, embeddings_model):
     vectorstore = PineconeVectorStore(index_name=index_name, embedding=embeddings_model)
 
@@ -281,8 +330,15 @@ def create_custom_retriever_tool(index_name, k, top_n, description, embeddings_m
     compressor = VoyageAIRerank(model="rerank-2", top_k=top_n)
     # compressor = CohereRerank(model="rerank-multilingual-v3.0", top_n=top_n)
 
+    pipeline_compressor = DocumentCompressorPipeline(
+        transformers=[
+            compressor,
+            # _filter
+        ]
+    )
+
     compression_retriever = ContextualCompressionRetriever(
-        base_compressor=compressor, base_retriever=retriever
+        base_compressor=pipeline_compressor, base_retriever=retriever
     )
 
     retriever_tool = create_retriever_tool(
@@ -313,8 +369,8 @@ ceaac_faq_tool = create_custom_retriever_tool(
 )
 
 
-genealogie_retriever_tool = create_custom_retriever_tool(
-    index_name="genealogie-acadienne-index",
+genealogie_retriever_tool = gen_create_custom_retriever_tool(
+    index_name="genealogie-acadienne-index-1",
     k=24,
     top_n=4,
     description="Pour les questions relatives à la généalogie et aux familles acadiennes, vous devez utiliser cet outil. Les informations étant sensibles, assurez-vous de vérifier l'exactitude des noms, sachant que différentes personnes peuvent avoir le même nom. Demandez, si nécessaire, la possibilité d'obtenir plus d'informations. Ne répondez pas sans justification.",

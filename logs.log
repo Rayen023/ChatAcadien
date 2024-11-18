@@ -14675,3 +14675,242 @@ RuntimeError: Event loop is closed
 2024-11-17 01:39:25,061 - voyage - INFO - message='Voyage API response' path=https://api.voyageai.com/v1/rerank processing_ms=None request_id=None response_code=200
 2024-11-17 01:39:25,308 - voyage - INFO - message='Voyage API response' path=https://api.voyageai.com/v1/rerank processing_ms=None request_id=None response_code=200
 2024-11-17 01:39:26,671 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-11-17 19:50:19,676 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 19:50:19,677 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 19:50:19,732 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 19:50:20,571 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 19:50:20,572 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 19:50:20,572 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 19:50:21,404 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 19:50:21,404 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 19:50:21,405 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:11:18,541 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:11:18,541 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:11:18,542 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:11:18,543 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:11:18,543 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:11:18,543 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:11:18,544 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:11:18,545 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:11:18,545 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:11:27,745 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:11:27,747 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:11:27,747 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:11:27,749 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:11:27,750 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:11:27,750 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:11:27,751 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:11:27,751 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:11:27,751 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:11:30,151 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-11-17 20:11:34,302 - voyage - INFO - message='Voyage API response' path=https://api.voyageai.com/v1/rerank processing_ms=None request_id=None response_code=200
+2024-11-17 20:11:34,924 - voyage - INFO - message='Voyage API response' path=https://api.voyageai.com/v1/rerank processing_ms=None request_id=None response_code=200
+2024-11-17 20:11:35,209 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-17 20:11:35,460 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-17 20:11:36,325 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-11-17 20:11:40,003 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-11-17 20:14:52,204 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:14:52,205 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:14:52,206 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:14:52,207 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:14:52,208 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:14:52,208 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:14:52,209 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:14:52,210 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:14:52,210 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:15:19,599 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:15:19,600 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:15:19,601 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:15:19,602 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:15:19,602 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:15:19,603 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:15:19,604 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:15:19,604 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:15:19,604 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:15:21,675 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-11-17 20:15:26,130 - voyage - INFO - message='Voyage API response' path=https://api.voyageai.com/v1/rerank processing_ms=None request_id=None response_code=200
+2024-11-17 20:15:26,509 - voyage - INFO - message='Voyage API response' path=https://api.voyageai.com/v1/rerank processing_ms=None request_id=None response_code=200
+2024-11-17 20:15:26,677 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-17 20:15:27,297 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-17 20:15:28,240 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-11-17 20:17:48,564 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:17:48,566 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:17:48,612 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:17:49,500 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:17:49,501 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:17:49,501 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:17:51,753 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:17:51,754 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:17:51,754 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:17:55,963 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:17:55,965 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:17:55,965 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:17:55,966 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:17:55,966 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:17:55,966 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:17:55,967 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:17:55,967 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:17:55,967 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:17:58,005 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-11-17 20:18:02,264 - voyage - INFO - message='Voyage API response' path=https://api.voyageai.com/v1/rerank processing_ms=None request_id=None response_code=200
+2024-11-17 20:18:02,516 - voyage - INFO - message='Voyage API response' path=https://api.voyageai.com/v1/rerank processing_ms=None request_id=None response_code=200
+2024-11-17 20:18:02,771 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-17 20:18:03,465 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-17 20:18:05,042 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-11-17 20:20:27,583 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:20:27,585 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:20:27,585 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:20:27,586 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:20:27,587 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:20:27,587 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:20:27,588 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:20:27,588 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:20:27,589 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:20:29,460 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-11-17 20:20:34,422 - voyage - INFO - message='Voyage API response' path=https://api.voyageai.com/v1/rerank processing_ms=None request_id=None response_code=200
+2024-11-17 20:20:34,786 - voyage - INFO - message='Voyage API response' path=https://api.voyageai.com/v1/rerank processing_ms=None request_id=None response_code=200
+2024-11-17 20:20:34,945 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-17 20:20:35,476 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-11-17 20:20:36,578 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-11-17 20:21:33,327 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:21:33,341 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:21:33,341 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:21:33,343 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:21:33,345 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:21:33,345 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:21:33,347 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:21:33,349 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:21:33,349 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:21:36,725 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:21:36,725 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:21:36,725 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:21:36,725 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:21:36,725 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:21:36,725 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:21:36,725 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:21:36,725 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:21:36,725 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:21:38,836 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-11-17 20:21:44,078 - voyage - INFO - message='Voyage API response' path=https://api.voyageai.com/v1/rerank processing_ms=None request_id=None response_code=200
+2024-11-17 20:21:44,408 - voyage - INFO - message='Voyage API response' path=https://api.voyageai.com/v1/rerank processing_ms=None request_id=None response_code=200
+2024-11-17 20:21:45,997 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-11-17 20:21:53,501 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:21:53,505 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:21:53,505 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:21:53,507 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:21:53,507 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:21:53,507 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:21:53,508 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:21:53,508 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:21:53,508 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:23:27,640 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:23:27,641 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:23:27,642 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:23:27,644 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:23:27,645 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:23:27,646 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:23:27,646 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:23:27,647 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:23:27,647 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:23:29,929 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-11-17 20:24:53,177 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:24:53,178 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:24:53,229 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:24:54,142 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:24:54,144 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:24:54,144 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:24:54,973 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:24:54,973 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:24:54,973 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:24:57,600 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:24:57,602 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:24:57,602 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:24:57,605 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:24:57,606 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:24:57,606 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:24:57,608 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:24:57,608 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:24:57,609 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:25:00,085 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-11-17 20:26:30,157 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:26:30,160 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:26:30,160 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:26:30,163 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:26:30,164 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:26:30,164 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:26:30,165 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:26:30,166 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:26:30,166 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:26:37,869 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:26:37,871 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:26:37,871 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:26:37,873 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:26:37,875 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:26:37,875 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:26:37,875 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:26:37,878 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:26:37,878 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:26:40,688 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-11-17 20:29:01,674 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:29:01,691 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:29:01,692 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:29:01,694 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:29:01,696 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:29:01,696 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:29:01,697 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:29:01,699 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:29:01,699 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:29:03,831 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:29:03,833 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:29:03,834 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:29:03,836 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:29:03,838 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:29:03,838 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:29:03,839 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:29:03,839 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:29:03,839 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:29:05,961 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-11-17 20:42:04,429 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:42:04,429 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:42:04,429 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:42:04,436 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:42:04,443 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:42:04,443 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:42:04,445 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:42:04,445 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:42:04,445 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:42:29,775 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:42:29,778 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:42:29,778 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:42:29,780 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:42:29,781 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:42:29,781 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:42:29,783 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:42:29,785 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:42:29,786 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:44:58,515 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:44:58,517 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:44:58,517 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:44:58,519 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:44:58,521 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:44:58,521 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:44:58,523 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:44:58,524 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:44:58,524 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:45:00,669 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-11-17 20:45:05,581 - voyage - INFO - message='Voyage API response' path=https://api.voyageai.com/v1/rerank processing_ms=None request_id=None response_code=200
+2024-11-17 20:45:06,846 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-11-17 20:45:10,338 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-11-17 20:45:36,049 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:45:36,051 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:45:36,052 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:45:36,054 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:45:36,056 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:45:36,056 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:45:36,056 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\ChatAcadien\\ENV\\Lib\\site-packages\\pinecone_plugins'])
+2024-11-17 20:45:36,058 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-11-17 20:45:36,058 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-11-17 20:45:38,035 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-11-17 20:45:41,959 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2024-11-17 20:45:44,749 - voyage - INFO - message='Voyage API response' path=https://api.voyageai.com/v1/rerank processing_ms=None request_id=None response_code=200
+2024-11-17 20:45:45,651 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
