@@ -7,7 +7,7 @@ from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.memory import ConversationBufferMemory
 
-# from langchain_openai import ChatOpenAI
+from langchain_openai import ChatOpenAI
 from langchain_pinecone import PineconeVectorStore
 from langchain.retrievers import ContextualCompressionRetriever
 from langchain.tools.retriever import create_retriever_tool
@@ -17,15 +17,12 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain.retrievers.document_compressors import DocumentCompressorPipeline
 
 
-# from langchain_cohere import CohereRerank
 from langchain_voyageai import VoyageAIRerank
 from langchain_voyageai import VoyageAIEmbeddings
 
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 
-# from exa_py import Exa
-# from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain_community.tools import BraveSearch
 
 # from langchain_core.tools import tool
@@ -72,6 +69,13 @@ st.set_page_config(
     # initial_sidebar_state="collapsed",
 )
 
+# Set default model in Streamlit session state
+if "DEFAULT_MODEL_NAME" not in st.session_state:
+    st.session_state["DEFAULT_MODEL_NAME"] = (
+        # "claude-3-5-sonnet-latest"
+        "openai/gpt-4o"
+    )
+
 
 def get_env_variable(var_name):
     try:
@@ -114,6 +118,30 @@ subject_to_email_english = {
     "Folklore, Ethnology, Tale, Legend, Music, Tradition, Folklore facts": "robert.richard@umoncton.ca",
     "Facebook, Social media, Events": "erika.basque@umoncton.ca",
 }
+
+
+def show_chatacadien_docs():
+    with st.expander("Documents ChatAcadien", expanded=False):
+        # First section: CEAAC Documents
+        st.markdown("### Documents Centre d'études acadiennes Anselme-Chiasson (CEAAC)")
+        st.markdown(
+            """
+        - Politique accès 2020
+        - Infos-Site-Web
+        - Grille tarifaire
+        """
+        )
+
+        # Second section: Genealogical Documents
+        st.markdown("### Registres généalogiques historiques (1700-1900)")
+
+        # Join family names with commas for a more compact display
+        families = "Allain, Arsenault, Babin, Babineau, Bastarache, Belliveau, Bordage, Boucher, Boudreau, Bourgeois, Bourque, Caissie, Collette, Cormier, Daigle, Devarennes, Doiron, Gaudet, Gautreau, Girouard, Goguen, Gosselin, Hache, Landry, Leblanc, Leger, Maillet, Martin, Melanson, Petitpas, Poirier, Richard, Robichaud, Savoie, Surette, Thibodeau, Vautour"
+
+        st.markdown("**Noms de familles :** " + families)
+        st.markdown(
+            "*Source : La généalogie des trente-sept familles hôtesses des « Retrouvailles 94 »*"
+        )
 
 
 def clear_chat_history():
@@ -202,6 +230,8 @@ with st.sidebar:
         label_visibility="collapsed",
         placeholder="Filtrer recherche web depuis :",
     )
+
+    show_chatacadien_docs()
 
     @st.dialog(shown_strings["contact"], width="large")
     @st.fragment
@@ -370,7 +400,7 @@ ceaac_retriever_tool = create_custom_retriever_tool(
     index_name="ceaac-general-info-index",
     k=3,
     top_n=2,
-    description="Pour les questions relatives à la ceaac (tarifs, Horaires, consultation des archives et des livres), vous devez utiliser cet outil.",
+    description="Pour les questions relatives à la ceaac (tarifs, Horaires, politiques de consultation des archives), vous devez utiliser cet outil.",
     embeddings_model=voyageai_embeddings,
 )
 
@@ -388,7 +418,7 @@ genealogie_retriever_tool = gen_create_custom_retriever_tool(
     # index_name="genealogie-acadienne-index",
     # index_name="genealogie-acadienne-index-cwp", #with parents at 7000 chars
     index_name="genealogie-acadienne-index-c",
-    top_n=3,
+    top_n=2,
     description="Pour les questions relatives à la généalogie et aux familles acadiennes, vous devez utiliser cet outil. Les informations étant sensibles, assurez-vous de vérifier l'exactitude des noms, sachant que différentes personnes peuvent avoir le même nom. Demandez, si nécessaire, la possibilité d'obtenir plus d'informations. Ne répondez pas sans justification.",
     embeddings_model=voyageai_embeddings,
 )
@@ -396,7 +426,7 @@ genealogie_retriever_tool = gen_create_custom_retriever_tool(
 search_kwargs = {
     "count": 3,
     "summary": True,
-    "country": "CA",
+    # "country": "CA",
 }
 search = BraveSearch.from_api_key(
     api_key=get_env_variable("BRAVE_API_KEY"),
@@ -412,7 +442,7 @@ if st.session_state["years_limit"]:
     search_kwargs = {
         "count": 3,
         "summary": True,
-        "country": "CA",
+        # "country": "CA",
         "freshness": freshness_param,
     }
 
@@ -420,6 +450,8 @@ if st.session_state["years_limit"]:
         api_key=get_env_variable("BRAVE_API_KEY"),
         search_kwargs=search_kwargs,
     )
+
+search.description = "Un moteur de recherche web utile pour répondre à des questions sur des événements actuels ou des sujets spécifiques, comme le patrimoine acadien (histoire de l'Acadie, recettes, cuisine ou musique acadienne...). L'entrée doit être une requête de recherche."
 
 tools = [
     search,
@@ -439,28 +471,11 @@ if "messages" not in st.session_state.keys():
     ]
 
 
-# model = ChatOpenAI(
-#     model="gpt-4o",
-#     temperature=0,
-#     streaming=True,
-# )
-
-
-model = ChatAnthropic(
-    model="claude-3-5-sonnet-latest",
-    temperature=0,
-    max_tokens=8096,
-    timeout=None,
-    max_retries=2,
-    streaming=True,
-)
-
-
 prompt_template = ChatPromptTemplate.from_messages(
     [
         (
             "system",
-            f"Vous êtes un assistant virtuel du Centre d'études acadiennes Anselme-Chiasson (CEAAC). Répondez dans la même langue que l'utilisateur en anglais ou en français. Vos réponses doivent etre courtes et concises. Vous avez accès à des outils qui vous fournissent des informations spécifiques sur le centre. Pour les questions qui nécessitent un appel d'outil, effectuez toujours un appel simultané à l'outil ceaac-questions-frequemment-posees-index. Ne mentionnez pas quel outil vous utilisez. Si vous n'êtes pas en mesure de répondre à la demande de l'utilisateur, orientez-le selon le sujet vers l'adresse e-mail appropriée en vous référant à ce dictionnaire : {'; '.join(f'{key}: {value}' for key, value in subject_to_email.items())}. Utilisez l'outil de recherche web pour les questions liées au patrimoine acadien (telles que l'histoire de l'Acadie, des recettes, la cuisine ou la musique acadienne). Retournez a l'utilisateur toujours tes sources (lien, auteur, titre et date de publication).",  # Utilisez l'outil TavilySearchResults pour les événements en temps réel.",
+            f"Vous êtes un assistant virtuel du Centre d'études acadiennes Anselme-Chiasson (CEAAC). Répondez dans la même langue que l'utilisateur en anglais ou en français. Vos réponses doivent etre courtes et concises. Vous avez accès à des outils qui vous fournissent des informations spécifiques sur le centre. Pour les questions qui nécessitent un appel d'outil, effectuez toujours un appel simultané à l'outil ceaac-questions-frequemment-posees-index. Ne mentionnez pas quel outil vous utilisez. Si vous n'êtes pas en mesure de répondre à la demande de l'utilisateur, orientez-le selon le sujet vers l'adresse e-mail appropriée en vous référant à ce dictionnaire : {'; '.join(f'{key}: {value}' for key, value in subject_to_email.items())}. Retournez toujours à l'utilisateur vos sources, incluant le lien, l'auteur, le titre et la date de publication.",
         ),
         MessagesPlaceholder(variable_name="chat_history"),
         ("user", "{input}"),
@@ -502,14 +517,6 @@ memory = ConversationBufferMemory(
     return_messages=True, memory_key="chat_history", chat_memory=history
 )
 
-agent = create_tool_calling_agent(model, tools, prompt_template)
-agent_executor = AgentExecutor(
-    agent=agent,
-    tools=tools,
-    verbose=True,
-    memory=memory,
-    return_intermediate_steps=False,
-)
 
 if prompt:
     st.session_state.messages.append({"role": "user", "content": prompt})
@@ -518,17 +525,55 @@ if prompt:
 
 
 @st.fragment
-async def process_events():
+async def process_events(model_name=None):
+    # Use passed model_name or default from session state
+    current_model = model_name or st.session_state.get(
+        "DEFAULT_MODEL_NAME", "claude-3-5-sonnet-latest"
+    )
+
+    if "claude" in current_model.lower():
+        model = ChatAnthropic(
+            model=current_model,
+            temperature=0,
+            max_tokens=8096,
+            timeout=None,
+            max_retries=2,
+            streaming=True,
+        )
+    else:
+        model = ChatOpenAI(
+            openai_api_key=get_env_variable("OPENROUTER_API_KEY"),
+            openai_api_base=get_env_variable("OPENROUTER_BASE_URL"),
+            model_name=current_model,
+            temperature=0,
+            max_tokens=8096,
+            timeout=None,
+            max_retries=2,
+            streaming=True,
+        )
+
+    agent = create_tool_calling_agent(model, tools, prompt_template)
+    agent_executor = AgentExecutor(
+        agent=agent,
+        tools=tools,
+        verbose=True,
+        memory=memory,
+        return_intermediate_steps=False,
+    )
+
     accumulated_text = ""
     placeholder = st.empty()
     async for event in agent_executor.astream_events(
         {"input": st.session_state.messages[-1]["content"]}, version="v2"
     ):
-        # st.write(event)
         if event["event"] == "on_chat_model_stream":
             content = event["data"]["chunk"].content
             if content:
-                text = content[0].get("text", "")
+                if "openai" in current_model.lower():
+                    text = content
+                else:
+                    text = content[0].get("text", "")
+
                 if text:
                     accumulated_text += escape_dollar_signs(text)
                     message_placeholder.empty()
@@ -547,17 +592,33 @@ async def generate_response():
     max_retries = 2
     retry_count = 0
 
+    # Define model fallback order
+    models = [
+        st.session_state.get("DEFAULT_MODEL_NAME", "claude-3-5-sonnet-latest"),
+        (
+            "openai/gpt-4o"
+            if st.session_state.get("DEFAULT_MODEL_NAME") == "claude-3-5-sonnet-latest"
+            else "claude-3-5-sonnet-latest"
+        ),
+    ]
+    # print(f"Attempting with models: {models}")
+
     while retry_count < max_retries:
         try:
-            await process_events()
+            current_model = models[retry_count]
+            print(f"Attempting with model: {current_model}")
+            await process_events(model_name=current_model)
             break  # Exit loop if successful
         except Exception as e:
             retry_count += 1
-            print(f"Error: {e}. Retrying {retry_count}/{max_retries}...")
-            await asyncio.sleep(1)  # Optional delay between retries
+            print(
+                f"Error with {current_model}: {e}. Retrying {retry_count}/{max_retries}..."
+            )
+            if retry_count < max_retries:
+                await asyncio.sleep(1)  # Optional delay between retries
 
     if retry_count == max_retries:
-        print("Max retries reached. Could not complete the task.")
+        print("Max retries reached. Could not complete the task with any model.")
 
 
 if DEBUGGING:
@@ -569,7 +630,7 @@ if DEBUGGING:
             collapse_completed_thoughts=False,
             max_thought_containers=4,
         )
-        response = agent_executor.invoke(
+        response = agent_executor.invoke(  # TODO since definition of agent is now inside funtion need to redefine it also here
             {"input": st.session_state.messages[-1]["content"]},
             {
                 "callbacks": [st_callback],
