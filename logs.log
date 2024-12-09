@@ -16658,3 +16658,12 @@ RuntimeError: Event loop is closed
 2024-12-09 16:42:39,343 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
 2024-12-09 16:42:39,344 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
 2024-12-09 16:42:39,779 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-09 16:51:50,568 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/ENV/lib/python3.10/site-packages/pinecone_plugins'])
+2024-12-09 16:51:50,569 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-12-09 16:51:50,569 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-12-09 16:51:50,570 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/ENV/lib/python3.10/site-packages/pinecone_plugins'])
+2024-12-09 16:51:50,570 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-12-09 16:51:50,570 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2024-12-09 16:51:50,572 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/ENV/lib/python3.10/site-packages/pinecone_plugins'])
+2024-12-09 16:51:50,572 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2024-12-09 16:51:50,572 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone

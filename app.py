@@ -133,7 +133,7 @@ def show_chatacadien_docs():
         )
 
         # Second section: Genealogical Documents
-        st.markdown("### Registres généalogiques historiques (1700-1900)")
+        st.markdown("### Registres généalogiques (1700-1900)")
 
         # Join family names with commas for a more compact display
         families = "Allain, Arsenault, Babin, Babineau, Bastarache, Belliveau, Bordage, Boucher, Boudreau, Bourgeois, Bourque, Caissie, Collette, Cormier, Daigle, Devarennes, Doiron, Gaudet, Gautreau, Girouard, Goguen, Gosselin, Hache, Landry, Leblanc, Leger, Maillet, Martin, Melanson, Petitpas, Poirier, Richard, Robichaud, Savoie, Surette, Thibodeau, Vautour"
