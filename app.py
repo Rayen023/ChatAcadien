@@ -24,11 +24,18 @@ from langchain_voyageai import VoyageAIEmbeddings
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 
-from exa_py import Exa
-from langchain_community.tools.tavily_search import TavilySearchResults
+# from exa_py import Exa
+# from langchain_community.tools.tavily_search import TavilySearchResults
 from langchain_community.tools import BraveSearch
 
-from langchain_core.tools import tool
+# from langchain_core.tools import tool
+# from langchain.retrievers.document_compressors import LLMListwiseRerank
+
+from langchain.storage import LocalFileStore
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain.retrievers import ParentDocumentRetriever
+from langchain.storage._lc_store import create_kv_docstore
+
 import asyncio
 
 from datetime import datetime
@@ -272,19 +279,11 @@ else:
 voyageai_embeddings = VoyageAIEmbeddings(model="voyage-3")
 
 
-# from langchain.retrievers.document_compressors import LLMListwiseRerank
-
-# from langchain_openai import ChatOpenAI
-
 # llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
 
 
 # _filter = LLMListwiseRerank.from_llm(llm, top_n=2)
 def gen_create_custom_retriever_tool(index_name, top_n, description, embeddings_model):
-    from langchain.storage import LocalFileStore
-    from langchain_text_splitters import RecursiveCharacterTextSplitter
-    from langchain.retrievers import ParentDocumentRetriever
-    from langchain.storage._lc_store import create_kv_docstore
 
     vectorstore = PineconeVectorStore(index_name=index_name, embedding=embeddings_model)
 
