@@ -72,8 +72,8 @@ st.set_page_config(
 # Set default model in Streamlit session state
 if "DEFAULT_MODEL_NAME" not in st.session_state:
     st.session_state["DEFAULT_MODEL_NAME"] = (
-        # "claude-3-5-sonnet-latest"
-        "openai/gpt-4o"
+        "claude-3-5-sonnet-latest"
+        # "openai/gpt-4o"
     )
 
 
