@@ -1,3 +1,4 @@
+#Add new api keys to github sectres then to ploomber json and yaml files
 streamlit==1.40.0
 langchain==0.3.4
 langchain-anthropic==0.2.3
