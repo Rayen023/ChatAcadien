@@ -542,7 +542,7 @@ async def process_events(model_name=None):
     )
 
     accumulated_text = ""
-    placeholder = st.empty()
+    #placeholder = st.empty()
     async for event in agent_executor.astream_events(
         {"input": st.session_state.messages[-1]["content"]}, version="v2"
     ):
@@ -620,15 +620,15 @@ if DEBUGGING:
         feedback_container = st.container()
 else:
     if st.session_state.messages[-1]["role"] != "assistant":
-
         with st.chat_message("assistant", avatar="Images/avatarchat.png"):
-            message_placeholder = st.empty()
-            st.session_state["feedback_container"] = False
-            feedback_container = st.container()
-            feedback_container.empty()
-        asyncio.run(generate_response())
-        message = {"role": "assistant", "content": st.session_state["accumulated_text"]}
-        st.session_state.messages.append(message)
+            with st.spinner(shown_strings["thinking"]):
+                message_placeholder = st.empty()
+                st.session_state["feedback_container"] = False
+                feedback_container = st.container()
+                feedback_container.empty()
+                asyncio.run(generate_response())
+                message = {"role": "assistant", "content": st.session_state["accumulated_text"]}
+                st.session_state.messages.append(message)
 
 
 # @st.fragment
