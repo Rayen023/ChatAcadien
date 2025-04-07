@@ -33,6 +33,10 @@ from streamlit.runtime.scriptrunner import get_script_run_ctx
 
 DEBUGGING = False
 
+# Define default models
+DEFAULT_MODEL = "anthropic/claude-3.7-sonnet"#"google/gemini-2.5-pro-preview-03-25"#"google/gemini-2.0-flash-001" # "google/gemini-2.5-pro-preview-03-25"
+FALLBACK_MODEL = "google/gemini-2.0-flash-001"#"openai/o3-mini"
+
 logging.basicConfig(
     filename="logs.log",
     encoding="UTF-8",
@@ -60,10 +64,7 @@ st.set_page_config(
 
 # Set default model in Streamlit session state
 if "DEFAULT_MODEL_NAME" not in st.session_state:
-    st.session_state["DEFAULT_MODEL_NAME"] = (
-        "claude-3-7-sonnet-latest"
-        # "openai/gpt-4o"
-    )
+    st.session_state["DEFAULT_MODEL_NAME"] = DEFAULT_MODEL
 
 
 def get_env_variable(var_name):
@@ -517,29 +518,19 @@ if prompt:
 async def process_events(model_name=None):
     # Use passed model_name or default from session state
     current_model = model_name or st.session_state.get(
-        "DEFAULT_MODEL_NAME", "claude-3-7-sonnet-latest"
+        "DEFAULT_MODEL_NAME", DEFAULT_MODEL
     )
 
-    if "claude" in current_model.lower():
-        model = ChatAnthropic(
-            model=current_model,
-            temperature=0,
-            max_tokens=8096,
-            timeout=None,
-            max_retries=2,
-            streaming=True,
-        )
-    else:
-        model = ChatOpenAI(
-            openai_api_key=get_env_variable("OPENROUTER_API_KEY"),
-            openai_api_base=get_env_variable("OPENROUTER_BASE_URL"),
-            model_name=current_model,
-            temperature=0,
-            max_tokens=8096,
-            timeout=None,
-            max_retries=2,
-            streaming=True,
-        )
+    model = ChatOpenAI(
+        openai_api_key=get_env_variable("OPENROUTER_API_KEY"),
+        openai_api_base=get_env_variable("OPENROUTER_BASE_URL"),
+        model_name=current_model,
+        temperature=0,
+        max_tokens=8096,
+        timeout=None,
+        max_retries=2,
+        streaming=True,
+    )
 
     agent = create_tool_calling_agent(model, tools, prompt_template)
     agent_executor = AgentExecutor(
@@ -558,18 +549,12 @@ async def process_events(model_name=None):
         if event["event"] == "on_chat_model_stream":
             content = event["data"]["chunk"].content
             if content:
-                if "openai" in current_model.lower():
-                    text = content
-                else:
-                    text = content[0].get("text", "")
-
-                if text:
-                    accumulated_text += escape_dollar_signs(text)
-                    message_placeholder.empty()
-                    message_placeholder.write(accumulated_text)
-                    st.session_state["accumulated_text"] = escape_dollar_signs(
-                        accumulated_text
-                    )
+                accumulated_text += escape_dollar_signs(content)
+                message_placeholder.empty()
+                message_placeholder.write(accumulated_text)
+                st.session_state["accumulated_text"] = escape_dollar_signs(
+                    accumulated_text
+                )
         if event["event"] == "on_tool_end":
             st.session_state["accumulated_text"] = ""
             accumulated_text = ""
@@ -583,12 +568,8 @@ async def generate_response():
 
     # Define model fallback order
     models = [
-        st.session_state.get("DEFAULT_MODEL_NAME", "claude-3-7-sonnet-latest"),
-        (
-            "openai/gpt-4o"
-            if st.session_state.get("DEFAULT_MODEL_NAME") == "claude-3-7-sonnet-latest"
-            else "claude-3-7-sonnet-latest"
-        ),
+        st.session_state.get("DEFAULT_MODEL_NAME", DEFAULT_MODEL),
+        FALLBACK_MODEL,           
     ]
     # print(f"Attempting with models: {models}")
 
