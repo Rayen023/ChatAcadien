@@ -61,7 +61,7 @@ st.set_page_config(
 # Set default model in Streamlit session state
 if "DEFAULT_MODEL_NAME" not in st.session_state:
     st.session_state["DEFAULT_MODEL_NAME"] = (
-        "claude-3-5-sonnet-latest"
+        "claude-3-7-sonnet-latest"
         # "openai/gpt-4o"
     )
 
@@ -517,7 +517,7 @@ if prompt:
 async def process_events(model_name=None):
     # Use passed model_name or default from session state
     current_model = model_name or st.session_state.get(
-        "DEFAULT_MODEL_NAME", "claude-3-5-sonnet-latest"
+        "DEFAULT_MODEL_NAME", "claude-3-7-sonnet-latest"
     )
 
     if "claude" in current_model.lower():
@@ -583,11 +583,11 @@ async def generate_response():
 
     # Define model fallback order
     models = [
-        st.session_state.get("DEFAULT_MODEL_NAME", "claude-3-5-sonnet-latest"),
+        st.session_state.get("DEFAULT_MODEL_NAME", "claude-3-7-sonnet-latest"),
         (
             "openai/gpt-4o"
-            if st.session_state.get("DEFAULT_MODEL_NAME") == "claude-3-5-sonnet-latest"
-            else "claude-3-5-sonnet-latest"
+            if st.session_state.get("DEFAULT_MODEL_NAME") == "claude-3-7-sonnet-latest"
+            else "claude-3-7-sonnet-latest"
         ),
     ]
     # print(f"Attempting with models: {models}")
