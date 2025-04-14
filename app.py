@@ -34,8 +34,9 @@ from streamlit.runtime.scriptrunner import get_script_run_ctx
 DEBUGGING = False
 
 # Define default models
-DEFAULT_MODEL = "anthropic/claude-3.7-sonnet"#"google/gemini-2.5-pro-preview-03-25"#"google/gemini-2.0-flash-001" # "google/gemini-2.5-pro-preview-03-25"
-FALLBACK_MODEL = "google/gemini-2.0-flash-001"#"openai/o3-mini"
+
+DEFAULT_MODEL = "openai/gpt-4.1"#"anthropic/claude-3.7-sonnet"#"google/gemini-2.5-pro-preview-03-25"#"google/gemini-2.0-flash-001" # "google/gemini-2.5-pro-preview-03-25"
+FALLBACK_MODEL = "anthropic/claude-3.7-sonnet"#"openai/gpt-4.1"#"openai/o3-mini"
 
 logging.basicConfig(
     filename="logs.log",
