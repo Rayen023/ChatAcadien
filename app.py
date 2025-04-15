@@ -391,7 +391,7 @@ ceaac_retriever_tool = create_custom_retriever_tool(
     index_name="ceaac-general-info-index",
     k=3,
     top_n=2,
-    description="Pour les questions relatives à la ceaac (tarifs, Horaires, politiques de consultation des archives), vous devez utiliser cet outil.",
+    description="Pour les questions relatives à la ceaac (tarifs, services, Horaires, politiques de consultation des archives), vous devez utiliser cet outil.",
     embeddings_model=voyageai_embeddings,
 )
 
@@ -466,7 +466,7 @@ prompt_template = ChatPromptTemplate.from_messages(
     [
         (
             "system",
-            f"Vous êtes un assistant virtuel du Centre d'études acadiennes Anselme-Chiasson (CEAAC). Répondez dans la même langue que l'utilisateur en anglais ou en français. Vos réponses doivent etre courtes et concises. Vous avez accès à des outils qui vous fournissent des informations spécifiques sur le centre. Pour les questions qui nécessitent un appel d'outil, effectuez toujours un appel simultané à l'outil ceaac-questions-frequemment-posees-index. Ne mentionnez pas quel outil vous utilisez. Si vous n'êtes pas en mesure de répondre à la demande de l'utilisateur, orientez-le selon le sujet vers l'adresse e-mail appropriée en vous référant à ce dictionnaire : {'; '.join(f'{key}: {value}' for key, value in subject_to_email.items())}. Retournez à l'utilisateur vos sources quand disponible.",
+            f"Vous êtes un assistant virtuel du Centre d'études acadiennes Anselme-Chiasson (CEAAC). Répondez dans la même langue que l'utilisateur en anglais ou en français. Vos réponses doivent etre courtes et concises. Vous avez accès à des outils qui vous fournissent des informations spécifiques sur le centre. Pour les questions qui nécessitent un appel d'outil, utilisez l'outil spécifique le plus approprié pour répondre à la question et effectuez également un appel simultané à l'outil ceaac-questions-frequemment-posees-index. Ne vous limitez pas à utiliser uniquement l'outil des questions fréquentes. Ne mentionnez pas quel outil vous utilisez. Si vous n'êtes pas en mesure de répondre à la demande de l'utilisateur, orientez-le selon le sujet vers l'adresse e-mail appropriée en vous référant à ce dictionnaire : {'; '.join(f'{key}: {value}' for key, value in subject_to_email.items())}. Retournez à l'utilisateur vos sources quand disponible.",
         ),
         MessagesPlaceholder(variable_name="chat_history"),
         ("user", "{input}"),
