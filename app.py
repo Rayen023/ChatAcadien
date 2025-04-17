@@ -35,8 +35,8 @@ DEBUGGING = False
 
 # Define default models
 
-DEFAULT_MODEL = "openai/gpt-4.1"#"anthropic/claude-3.7-sonnet"#"google/gemini-2.5-pro-preview-03-25"#"google/gemini-2.0-flash-001" # "google/gemini-2.5-pro-preview-03-25"
-FALLBACK_MODEL = "anthropic/claude-3.7-sonnet"#"openai/gpt-4.1"#"openai/o3-mini"
+DEFAULT_MODEL = "openai/gpt-4.1"  # "anthropic/claude-3.7-sonnet"#"google/gemini-2.5-pro-preview-03-25"#"google/gemini-2.0-flash-001" # "google/gemini-2.5-pro-preview-03-25"
+FALLBACK_MODEL = "anthropic/claude-3.7-sonnet"  # "openai/gpt-4.1"#"openai/o3-mini"
 
 logging.basicConfig(
     filename="logs.log",
@@ -543,7 +543,7 @@ async def process_events(model_name=None):
     )
 
     accumulated_text = ""
-    #placeholder = st.empty()
+    # placeholder = st.empty()
     async for event in agent_executor.astream_events(
         {"input": st.session_state.messages[-1]["content"]}, version="v2"
     ):
@@ -570,7 +570,7 @@ async def generate_response():
     # Define model fallback order
     models = [
         st.session_state.get("DEFAULT_MODEL_NAME", DEFAULT_MODEL),
-        FALLBACK_MODEL,           
+        FALLBACK_MODEL,
     ]
     # print(f"Attempting with models: {models}")
 
@@ -628,7 +628,10 @@ else:
                 feedback_container = st.container()
                 feedback_container.empty()
                 asyncio.run(generate_response())
-                message = {"role": "assistant", "content": st.session_state["accumulated_text"]}
+                message = {
+                    "role": "assistant",
+                    "content": st.session_state["accumulated_text"],
+                }
                 st.session_state.messages.append(message)
 
 
