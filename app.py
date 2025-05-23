@@ -13,6 +13,7 @@ from langchain.retrievers.document_compressors import DocumentCompressorPipeline
 from langchain.storage import LocalFileStore
 from langchain.storage._lc_store import create_kv_docstore
 from langchain.tools.retriever import create_retriever_tool
+from langchain_anthropic import ChatAnthropic
 from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
 from langchain_community.chat_message_histories import ChatMessageHistory
 from langchain_community.tools import BraveSearch
@@ -31,6 +32,11 @@ from streamlit.runtime.scriptrunner import get_script_run_ctx
 
 
 DEBUGGING = False
+
+# Define default models
+
+DEFAULT_MODEL = "openai/gpt-4.1"  # "anthropic/claude-3.7-sonnet"#"google/gemini-2.5-pro-preview-03-25"#"google/gemini-2.0-flash-001" # "google/gemini-2.5-pro-preview-03-25"
+FALLBACK_MODEL = "anthropic/claude-3.7-sonnet"  # "openai/gpt-4.1"#"openai/o3-mini"
 
 logging.basicConfig(
     filename="logs.log",
@@ -59,7 +65,7 @@ st.set_page_config(
 
 # Set default model in Streamlit session state
 if "DEFAULT_MODEL_NAME" not in st.session_state:
-    st.session_state["DEFAULT_MODEL_NAME"] = "google/gemini-2.5-flash-preview-05-20"
+    st.session_state["DEFAULT_MODEL_NAME"] = DEFAULT_MODEL
 
 
 def get_env_variable(var_name):
@@ -385,7 +391,7 @@ ceaac_retriever_tool = create_custom_retriever_tool(
     index_name="ceaac-general-info-index",
     k=3,
     top_n=2,
-    description="Pour les questions relatives à la ceaac (tarifs, Horaires, politiques de consultation des archives), vous devez utiliser cet outil.",
+    description="Pour les questions relatives à la ceaac (tarifs, services, Horaires, politiques de consultation des archives), vous devez utiliser cet outil.",
     embeddings_model=voyageai_embeddings,
 )
 
@@ -460,7 +466,7 @@ prompt_template = ChatPromptTemplate.from_messages(
     [
         (
             "system",
-            f"Vous êtes un assistant virtuel du Centre d'études acadiennes Anselme-Chiasson (CEAAC). Répondez dans la même langue que l'utilisateur en anglais ou en français. Vos réponses doivent etre courtes et concises. Vous avez accès à des outils qui vous fournissent des informations spécifiques sur le centre. Pour les questions qui nécessitent un appel d'outil, effectuez toujours un appel simultané à l'outil ceaac-questions-frequemment-posees-index. Ne mentionnez pas quel outil vous utilisez. Si vous n'êtes pas en mesure de répondre à la demande de l'utilisateur, orientez-le selon le sujet vers l'adresse e-mail appropriée en vous référant à ce dictionnaire : {'; '.join(f'{key}: {value}' for key, value in subject_to_email.items())}. Retournez toujours à l'utilisateur vos sources, incluant le lien, l'auteur, le titre et la date de publication.",
+            f"Vous êtes un assistant virtuel du Centre d'études acadiennes Anselme-Chiasson (CEAAC). Répondez dans la même langue que l'utilisateur en anglais ou en français. Vos réponses doivent etre courtes et concises. Vous avez accès à des outils qui vous fournissent des informations spécifiques sur le centre. Pour les questions qui nécessitent un appel d'outil, utilisez l'outil spécifique le plus approprié pour répondre à la question et effectuez également un appel simultané à l'outil ceaac-questions-frequemment-posees-index. Ne vous limitez pas à utiliser uniquement l'outil des questions fréquentes. Ne mentionnez pas quel outil vous utilisez. Si vous n'êtes pas en mesure de répondre à la demande de l'utilisateur, orientez-le selon le sujet vers l'adresse e-mail appropriée en vous référant à ce dictionnaire : {'; '.join(f'{key}: {value}' for key, value in subject_to_email.items())}. Retournez à l'utilisateur vos sources quand disponible.",
         ),
         MessagesPlaceholder(variable_name="chat_history"),
         ("user", "{input}"),
@@ -513,10 +519,9 @@ if prompt:
 async def process_events(model_name=None):
     # Use passed model_name or default from session state
     current_model = model_name or st.session_state.get(
-        "DEFAULT_MODEL_NAME", "google/gemini-2.5-flash-preview-05-20"
+        "DEFAULT_MODEL_NAME", DEFAULT_MODEL
     )
 
-    # Always use ChatOpenAI with OpenRouter for all models
     model = ChatOpenAI(
         openai_api_key=get_env_variable("OPENROUTER_API_KEY"),
         openai_api_base=get_env_variable("OPENROUTER_BASE_URL"),
@@ -538,24 +543,19 @@ async def process_events(model_name=None):
     )
 
     accumulated_text = ""
-    placeholder = st.empty()
-
+    # placeholder = st.empty()
     async for event in agent_executor.astream_events(
         {"input": st.session_state.messages[-1]["content"]}, version="v2"
     ):
         if event["event"] == "on_chat_model_stream":
             content = event["data"]["chunk"].content
             if content:
-                # Handle content for all models through OpenRouter
-                text = content
-
-                if text:
-                    accumulated_text += escape_dollar_signs(text)
-                    message_placeholder.empty()
-                    message_placeholder.write(accumulated_text)
-                    st.session_state["accumulated_text"] = escape_dollar_signs(
-                        accumulated_text
-                    )
+                accumulated_text += escape_dollar_signs(content)
+                message_placeholder.empty()
+                message_placeholder.write(accumulated_text)
+                st.session_state["accumulated_text"] = escape_dollar_signs(
+                    accumulated_text
+                )
         if event["event"] == "on_tool_end":
             st.session_state["accumulated_text"] = ""
             accumulated_text = ""
@@ -569,10 +569,8 @@ async def generate_response():
 
     # Define model fallback order
     models = [
-        st.session_state.get(
-            "DEFAULT_MODEL_NAME", "google/gemini-2.5-flash-preview-05-20"
-        ),
-        "anthropic/claude-sonnet-4",
+        st.session_state.get("DEFAULT_MODEL_NAME", DEFAULT_MODEL),
+        FALLBACK_MODEL,
     ]
     # print(f"Attempting with models: {models}")
 
@@ -597,37 +595,13 @@ async def generate_response():
 if DEBUGGING:
 
     if st.session_state.messages[-1]["role"] != "assistant":
-        # Create model for debugging mode
-        current_model = st.session_state.get(
-            "DEFAULT_MODEL_NAME", "google/gemini-2.5-flash-preview-05-20"
-        )
-        model = ChatOpenAI(
-            openai_api_key=get_env_variable("OPENROUTER_API_KEY"),
-            openai_api_base=get_env_variable("OPENROUTER_BASE_URL"),
-            model_name=current_model,
-            temperature=0,
-            max_tokens=8096,
-            timeout=None,
-            max_retries=2,
-            streaming=True,
-        )
-
-        agent = create_tool_calling_agent(model, tools, prompt_template)
-        agent_executor = AgentExecutor(
-            agent=agent,
-            tools=tools,
-            verbose=True,
-            memory=memory,
-            return_intermediate_steps=False,
-        )
-
         st_callback = StreamlitCallbackHandler(
             st.chat_message("assistant", avatar="Images/avatarchat.png"),
             expand_new_thoughts=True,
             collapse_completed_thoughts=False,
             max_thought_containers=4,
         )
-        response = agent_executor.invoke(
+        response = agent_executor.invoke(  # TODO since definition of agent is now inside funtion need to redefine it also here
             {"input": st.session_state.messages[-1]["content"]},
             {
                 "callbacks": [st_callback],
@@ -647,15 +621,18 @@ if DEBUGGING:
         feedback_container = st.container()
 else:
     if st.session_state.messages[-1]["role"] != "assistant":
-
         with st.chat_message("assistant", avatar="Images/avatarchat.png"):
-            message_placeholder = st.empty()
-            st.session_state["feedback_container"] = False
-            feedback_container = st.container()
-            feedback_container.empty()
-        asyncio.run(generate_response())
-        message = {"role": "assistant", "content": st.session_state["accumulated_text"]}
-        st.session_state.messages.append(message)
+            with st.spinner(shown_strings["thinking"]):
+                message_placeholder = st.empty()
+                st.session_state["feedback_container"] = False
+                feedback_container = st.container()
+                feedback_container.empty()
+                asyncio.run(generate_response())
+                message = {
+                    "role": "assistant",
+                    "content": st.session_state["accumulated_text"],
+                }
+                st.session_state.messages.append(message)
 
 
 # @st.fragment

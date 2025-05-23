@@ -1,4 +1,3 @@
-#Add new api keys to github sectres then to ploomber json and yaml files
 aiolimiter==1.1.0
 aiosignal==1.3.1
 altair==5.4.1
@@ -40,7 +39,6 @@ greenlet==3.1.1
 grpc-google-iam-v1==0.13.1
 grpcio==1.68.1
 grpcio-status==1.68.1
-h11==0.14.0
 httpcore==1.0.6
 httpx==0.27.2
 httpx-sse==0.4.0
@@ -122,4 +120,3 @@ urllib3==2.2.3
 voyageai==0.2.4
 watchdog==5.0.3
 yarl==1.17.0
-#langchain-core-0.3.19 langchain-openai-0.2.8
