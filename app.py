@@ -13,7 +13,6 @@ from langchain.retrievers.document_compressors import DocumentCompressorPipeline
 from langchain.storage import LocalFileStore
 from langchain.storage._lc_store import create_kv_docstore
 from langchain.tools.retriever import create_retriever_tool
-from langchain_anthropic import ChatAnthropic
 from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
 from langchain_community.chat_message_histories import ChatMessageHistory
 from langchain_community.tools import BraveSearch
@@ -60,10 +59,7 @@ st.set_page_config(
 
 # Set default model in Streamlit session state
 if "DEFAULT_MODEL_NAME" not in st.session_state:
-    st.session_state["DEFAULT_MODEL_NAME"] = (
-        "claude-3-5-sonnet-latest"
-        # "openai/gpt-4o"
-    )
+    st.session_state["DEFAULT_MODEL_NAME"] = "google/gemini-2.5-flash-preview-05-20"
 
 
 def get_env_variable(var_name):
@@ -517,29 +513,20 @@ if prompt:
 async def process_events(model_name=None):
     # Use passed model_name or default from session state
     current_model = model_name or st.session_state.get(
-        "DEFAULT_MODEL_NAME", "claude-3-5-sonnet-latest"
+        "DEFAULT_MODEL_NAME", "google/gemini-2.5-flash-preview-05-20"
     )
 
-    if "claude" in current_model.lower():
-        model = ChatAnthropic(
-            model=current_model,
-            temperature=0,
-            max_tokens=8096,
-            timeout=None,
-            max_retries=2,
-            streaming=True,
-        )
-    else:
-        model = ChatOpenAI(
-            openai_api_key=get_env_variable("OPENROUTER_API_KEY"),
-            openai_api_base=get_env_variable("OPENROUTER_BASE_URL"),
-            model_name=current_model,
-            temperature=0,
-            max_tokens=8096,
-            timeout=None,
-            max_retries=2,
-            streaming=True,
-        )
+    # Always use ChatOpenAI with OpenRouter for all models
+    model = ChatOpenAI(
+        openai_api_key=get_env_variable("OPENROUTER_API_KEY"),
+        openai_api_base=get_env_variable("OPENROUTER_BASE_URL"),
+        model_name=current_model,
+        temperature=0,
+        max_tokens=8096,
+        timeout=None,
+        max_retries=2,
+        streaming=True,
+    )
 
     agent = create_tool_calling_agent(model, tools, prompt_template)
     agent_executor = AgentExecutor(
@@ -552,16 +539,15 @@ async def process_events(model_name=None):
 
     accumulated_text = ""
     placeholder = st.empty()
+
     async for event in agent_executor.astream_events(
         {"input": st.session_state.messages[-1]["content"]}, version="v2"
     ):
         if event["event"] == "on_chat_model_stream":
             content = event["data"]["chunk"].content
             if content:
-                if "openai" in current_model.lower():
-                    text = content
-                else:
-                    text = content[0].get("text", "")
+                # Handle content for all models through OpenRouter
+                text = content
 
                 if text:
                     accumulated_text += escape_dollar_signs(text)
@@ -583,12 +569,10 @@ async def generate_response():
 
     # Define model fallback order
     models = [
-        st.session_state.get("DEFAULT_MODEL_NAME", "claude-3-5-sonnet-latest"),
-        (
-            "openai/gpt-4o"
-            if st.session_state.get("DEFAULT_MODEL_NAME") == "claude-3-5-sonnet-latest"
-            else "claude-3-5-sonnet-latest"
+        st.session_state.get(
+            "DEFAULT_MODEL_NAME", "google/gemini-2.5-flash-preview-05-20"
         ),
+        "anthropic/claude-sonnet-4",
     ]
     # print(f"Attempting with models: {models}")
 
@@ -613,13 +597,37 @@ async def generate_response():
 if DEBUGGING:
 
     if st.session_state.messages[-1]["role"] != "assistant":
+        # Create model for debugging mode
+        current_model = st.session_state.get(
+            "DEFAULT_MODEL_NAME", "google/gemini-2.5-flash-preview-05-20"
+        )
+        model = ChatOpenAI(
+            openai_api_key=get_env_variable("OPENROUTER_API_KEY"),
+            openai_api_base=get_env_variable("OPENROUTER_BASE_URL"),
+            model_name=current_model,
+            temperature=0,
+            max_tokens=8096,
+            timeout=None,
+            max_retries=2,
+            streaming=True,
+        )
+
+        agent = create_tool_calling_agent(model, tools, prompt_template)
+        agent_executor = AgentExecutor(
+            agent=agent,
+            tools=tools,
+            verbose=True,
+            memory=memory,
+            return_intermediate_steps=False,
+        )
+
         st_callback = StreamlitCallbackHandler(
             st.chat_message("assistant", avatar="Images/avatarchat.png"),
             expand_new_thoughts=True,
             collapse_completed_thoughts=False,
             max_thought_containers=4,
         )
-        response = agent_executor.invoke(  # TODO since definition of agent is now inside funtion need to redefine it also here
+        response = agent_executor.invoke(
             {"input": st.session_state.messages[-1]["content"]},
             {
                 "callbacks": [st_callback],
