@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 
 .streamlit/secrets.toml
-
+logs.log
 # C extensions
 *.so
 
