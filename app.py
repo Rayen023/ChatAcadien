@@ -187,10 +187,21 @@ subjects = sorted(subject_to_email.keys())
 sidebar_style = """
 <style>
 .sidebar-main {
-    padding-bottom: 18vmax ; /* Adjust this value based on your footer height */
+    padding-bottom: min(18vmax, 400px); /* Responsive padding with max limit */
+    min-height: 20px; /* Minimum height to ensure visibility */
 }
 .st-emotion-cache-1gwvy71 {
     padding-bottom: 0vh !important;
+}
+@media (max-height: 600px) {
+    .sidebar-main {
+        padding-bottom: min(10vmax, 100px); /* Smaller padding on short screens */
+    }
+}
+@media (max-height: 400px) {
+    .sidebar-main {
+        padding-bottom: min(5vmax, 50px); /* Even smaller on very short screens */
+    }
 }
 </style>
 """
