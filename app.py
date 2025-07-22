@@ -253,11 +253,78 @@ with st.sidebar:
     # --- Acadian Chat Links Block (Magic/Minimal) ---
 
     with st.expander("🔗 Autres chatbots acadiens", expanded=False):
-            """[ChatPatrimoine](https://chatpatrimoine.streamlit.app/) : Agent pour explorer des images historiques acadiennes."""
-            """[ChatCapitalHumain](https://chatcapitalhumain.streamlit.app/) : Agent pour analyser les données d'enquêtes étudiantes."""
-
+        st.html("""
+        <style>
+            .chatbot-link {
+                display: block;
+                text-decoration: none;
+                color: inherit;
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+            .chatbot-link:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                text-decoration: none;
+                color: inherit;
+            }
+            .chatbot-card {
+                margin-bottom: 12px;
+                padding: 12px;
+                border-radius: 8px;
+                transition: all 0.3s ease;
+                position: relative;
+            }
+            .chatbot-card::after {
+                content: "→";
+                position: absolute;
+                right: 12px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 1.2em;
+                opacity: 0.6;
+                transition: all 0.3s ease;
+            }
+            .chatbot-link:hover .chatbot-card::after {
+                transform: translateY(-50%) translateX(4px);
+                opacity: 1;
+            }
+            .patrimoine-card {
+                border-left: 3px solid #ff6b6b;
+                background: linear-gradient(135deg, rgba(255, 107, 107, 0.05) 0%, rgba(255, 107, 107, 0.02) 100%);
+            }
+            .capital-card {
+                border-left: 3px solid #4ecdc4;
+                background: linear-gradient(135deg, rgba(78, 205, 196, 0.05) 0%, rgba(78, 205, 196, 0.02) 100%);
+            }
+            .chatbot-title {
+                font-weight: bold;
+                margin-bottom: 4px;
+                color: #333;
+            }
+            .chatbot-description {
+                color: #666;
+                font-size: 0.9em;
+                line-height: 1.3;
+            }
+        </style>
+        <div style="padding: 10px 0;">
+            <a href="https://chatpatrimoine.streamlit.app/" target="_blank" class="chatbot-link">
+                <div class="chatbot-card patrimoine-card">
+                    <div class="chatbot-title">📷 ChatPatrimoine</div>
+                    <div class="chatbot-description">Agent pour explorer des images historiques acadiennes</div>
+                </div>
+            </a>
+            <a href="https://chatcapitalhumain.streamlit.app/" target="_blank" class="chatbot-link">
+                <div class="chatbot-card capital-card">
+                    <div class="chatbot-title">📊 ChatCapitalHumain</div>
+                    <div class="chatbot-description">Agent pour analyser les données d'enquêtes étudiantes</div>
+                </div>
+            </a>
+        </div>
+        """)
     st.markdown(
-        "<h6 style='text-align: center; color: gray; font-size: 11px;'>ChatAcadien peut faire des erreurs. Verifiez les informations importantes.</h6>",
+        "<h6 style='text-align: center; color: gray; font-size: 13px;'>⚠️ ChatAcadien peut faire des erreurs. Vérifiez les informations importantes.</h6>",
         unsafe_allow_html=True,
     )
     st.markdown('<div class="sidebar-main"> </div>', unsafe_allow_html=True)
