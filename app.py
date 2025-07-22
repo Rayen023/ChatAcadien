@@ -224,6 +224,8 @@ with st.sidebar:
 
     show_chatacadien_docs()
 
+    # --- Acadian Chat Links Block ---
+
     @st.dialog(shown_strings["contact"], width="large")
     @st.fragment
     def contact():
@@ -247,6 +249,12 @@ with st.sidebar:
         icon=":material/forward_to_inbox:",
     ):
         contact()
+    
+    # --- Acadian Chat Links Block (Magic/Minimal) ---
+
+    with st.expander("🔗 Autres chatbots acadiens", expanded=False):
+            """[ChatPatrimoine](https://chatpatrimoine.streamlit.app/) : Agent pour explorer des images historiques acadiennes."""
+            """[ChatCapitalHumain](https://chatcapitalhumain.streamlit.app/) : Agent pour analyser les données d'enquêtes étudiantes."""
 
     st.markdown(
         "<h6 style='text-align: center; color: gray; font-size: 11px;'>ChatAcadien peut faire des erreurs. Verifiez les informations importantes.</h6>",
