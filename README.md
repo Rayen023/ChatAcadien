@@ -6,6 +6,8 @@ ChatAcadien is an LLM-based conversational agent designed to provide interactive
 
 ChatAcadien serves as a specialized knowledge base assistant for researchers and individuals interested in Acadian genealogy and history. The system provides access to genealogical records, historical information, and institutional documentation from the Centre d'études acadiennes Anselme-Chiasson (CEAAC) at the University of Moncton.
 
+streamlit run app.py --server.port 8080
+
 ## Technical Architecture
 
 ### Language Models
