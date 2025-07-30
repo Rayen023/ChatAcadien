@@ -320,13 +320,13 @@ with st.sidebar:
             }
         </style>
         <div style="padding: 10px 0;">
-            <a href="https://chatpatrimoine.streamlit.app/" target="_blank" class="chatbot-link">
+            <a href="https://chatpatrimoineacadien.ca/" target="_blank" class="chatbot-link">
                 <div class="chatbot-card patrimoine-card">
                     <div class="chatbot-title">📷 ChatPatrimoine</div>
                     <div class="chatbot-description">Agent pour explorer des images historiques acadiennes</div>
                 </div>
             </a>
-            <a href="https://chatcapitalhumain.streamlit.app/" target="_blank" class="chatbot-link">
+            <a href="https://chatcapitalhumain.ca/" target="_blank" class="chatbot-link">
                 <div class="chatbot-card capital-card">
                     <div class="chatbot-title">📊 ChatCapitalHumain</div>
                     <div class="chatbot-description">Agent pour analyser les données d'enquêtes étudiantes</div>
