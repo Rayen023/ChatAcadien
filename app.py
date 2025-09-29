@@ -34,8 +34,8 @@ DEBUGGING = False
 
 # Define default models
 
-FALLBACK_MODEL = "openai/gpt-5"  # "anthropic/claude-3.7-sonnet"#"google/gemini-2.5-pro-preview-03-25"#"google/gemini-2.0-flash-001" # "google/gemini-2.5-pro-preview-03-25"
-DEFAULT_MODEL = "anthropic/claude-sonnet-4"  # "openai/gpt-4.1"#"openai/o3-mini"
+DEFAULT_MODEL = "openai/gpt-5"  # "anthropic/claude-3.7-sonnet"#"google/gemini-2.5-pro-preview-03-25"#"google/gemini-2.0-flash-001" # "google/gemini-2.5-pro-preview-03-25"
+FALLBACK_MODEL = "anthropic/claude-sonnet-4"  # "openai/gpt-4.1"#"openai/o3-mini"
 
 logging.basicConfig(
     filename="logs.log",
