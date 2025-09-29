@@ -13,7 +13,6 @@ from langchain.retrievers.document_compressors import DocumentCompressorPipeline
 from langchain.storage import LocalFileStore
 from langchain.storage._lc_store import create_kv_docstore
 from langchain.tools.retriever import create_retriever_tool
-from langchain_anthropic import ChatAnthropic
 from langchain_community.callbacks.streamlit import StreamlitCallbackHandler
 from langchain_community.chat_message_histories import ChatMessageHistory
 from langchain_community.tools import BraveSearch
@@ -35,8 +34,8 @@ DEBUGGING = False
 
 # Define default models
 
-DEFAULT_MODEL = "openai/gpt-4.1"  # "anthropic/claude-3.7-sonnet"#"google/gemini-2.5-pro-preview-03-25"#"google/gemini-2.0-flash-001" # "google/gemini-2.5-pro-preview-03-25"
-FALLBACK_MODEL = "anthropic/claude-4-sonnet"  # "openai/gpt-4.1"#"openai/o3-mini"
+DEFAULT_MODEL = "openai/gpt-5"  # "anthropic/claude-3.7-sonnet"#"google/gemini-2.5-pro-preview-03-25"#"google/gemini-2.0-flash-001" # "google/gemini-2.5-pro-preview-03-25"
+FALLBACK_MODEL = "anthropic/claude-sonnet-4"  # "openai/gpt-4.1"#"openai/o3-mini"
 
 logging.basicConfig(
     filename="logs.log",
