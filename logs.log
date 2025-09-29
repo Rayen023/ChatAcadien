@@ -16759,3 +16759,23 @@ RuntimeError: Event loop is closed
 2025-08-01 01:08:28,765 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\Projects\\ChatAcadien\\.venv\\Lib\\site-packages\\pinecone_plugins'])
 2025-08-01 01:08:28,766 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
 2025-08-01 01:08:28,766 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-09-29 00:46:58,826 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\Projects\\ChatAcadien\\.venv\\Lib\\site-packages\\pinecone_plugins'])
+2025-09-29 00:46:58,828 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-09-29 00:46:58,903 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-09-29 00:47:01,339 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\Projects\\ChatAcadien\\.venv\\Lib\\site-packages\\pinecone_plugins'])
+2025-09-29 00:47:01,339 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-09-29 00:47:01,339 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-09-29 00:47:04,628 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\Projects\\ChatAcadien\\.venv\\Lib\\site-packages\\pinecone_plugins'])
+2025-09-29 00:47:04,629 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-09-29 00:47:04,629 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-09-29 00:47:13,548 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\Projects\\ChatAcadien\\.venv\\Lib\\site-packages\\pinecone_plugins'])
+2025-09-29 00:47:13,549 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-09-29 00:47:13,549 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-09-29 00:47:13,550 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\Projects\\ChatAcadien\\.venv\\Lib\\site-packages\\pinecone_plugins'])
+2025-09-29 00:47:13,551 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-09-29 00:47:13,551 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-09-29 00:47:13,552 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['C:\\Users\\rayen\\Documents\\Projects\\ChatAcadien\\.venv\\Lib\\site-packages\\pinecone_plugins'])
+2025-09-29 00:47:13,553 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-09-29 00:47:13,553 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-09-29 00:47:15,809 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-29 00:47:23,988 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 400 Bad Request"
