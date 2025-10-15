@@ -496,8 +496,21 @@ genealogie_retriever_tool = gen_create_custom_retriever_tool(
     # index_name="genealogie-acadienne-index",
     # index_name="genealogie-acadienne-index-cwp", #with parents split to 7000 chars each, -c is the full parents (from one paragraph until the next para)
     index_name="genealogie-acadienne-index-c",
-    top_n=4,
-    description="Pour les questions relatives à la généalogie et aux familles acadiennes, vous devez utiliser cet outil. Les informations étant sensibles, assurez-vous de vérifier l'exactitude des noms, sachant que différentes personnes peuvent avoir le même nom. Demandez, si nécessaire, la possibilité d'obtenir plus d'informations. Ne répondez pas sans justification.",
+    top_n=5,  # Augmenté pour plus de contexte et détecter les contradictions
+    description="""Outil pour les questions de généalogie et familles acadiennes. 
+
+RÈGLES STRICTES D'UTILISATION:
+1. ANALYSEZ TOUS les documents récupérés avant de répondre
+2. VÉRIFIEZ la cohérence entre les sources - noms, dates, relations familiales
+3. Si vous trouvez des CONTRADICTIONS (ex: enfants différents pour mêmes parents, dates incohérentes, mariages différents):
+   - NE DITES JAMAIS 'oui' ou 'non' directement
+   - Commencez par "D'après les sources, il y a confusion/contradictions..."
+   - LISTEZ toutes les versions contradictoires trouvées
+   - RECOMMANDEZ de contacter nadine.morin@umoncton.ca
+4. Les informations généalogiques sont sensibles - plusieurs personnes peuvent avoir le même nom
+5. Ne répondez JAMAIS sans justification claire et cohérente des sources
+6. En cas de doute, préférez admettre l'incertitude plutôt que d'affirmer avec confiance
+7. Demandez à l'utilisateur, si nécessaire, la possibilité d'obtenir plus d'informations pour préciser sa recherche (dates, lieux, prénoms des parents, etc.)""",
     embeddings_model=voyageai_embeddings,
 )
 
@@ -553,7 +566,7 @@ prompt_template = ChatPromptTemplate.from_messages(
     [
         (
             "system",
-            f"Vous êtes un assistant virtuel du Centre d'études acadiennes Anselme-Chiasson (CEAAC). Répondez dans la même langue que l'utilisateur en anglais ou en français. Vos réponses doivent etre courtes et concises. Vous avez accès à des outils qui vous fournissent des informations spécifiques sur le centre. Pour les questions qui nécessitent un appel d'outil, utilisez l'outil spécifique le plus approprié pour répondre à la question et effectuez également un appel simultané à l'outil ceaac-questions-frequemment-posees-index. Ne vous limitez pas à utiliser uniquement l'outil des questions fréquentes. Ne mentionnez pas quel outil vous utilisez. Si vous n'êtes pas en mesure de répondre à la demande de l'utilisateur, orientez-le selon le sujet vers l'adresse e-mail appropriée en vous référant à ce dictionnaire : {'; '.join(f'{key}: {value}' for key, value in subject_to_email.items())}. Retournez à l'utilisateur vos sources quand disponible.",
+            f"Vous êtes un assistant virtuel du Centre d'études acadiennes Anselme-Chiasson (CEAAC). Répondez dans la même langue que l'utilisateur en anglais ou en français. Vos réponses doivent etre courtes et concises. Vous avez accès à des outils qui vous fournissent des informations spécifiques sur le centre. Pour les questions qui nécessitent un appel d'outil, utilisez l'outil spécifique le plus approprié pour répondre à la question et effectuez également un appel simultané à l'outil ceaac-questions-frequemment-posees-index. Ne vous limitez pas à utiliser uniquement l'outil des questions fréquentes. Ne mentionnez pas quel outil vous utilisez. Si vous n'êtes pas en mesure de répondre à la demande de l'utilisateur, orientez-le selon le sujet vers l'adresse e-mail appropriée en vous référant à ce dictionnaire : {'; '.join(f'{key}: {value}' for key, value in subject_to_email.items())}. Retournez à l'utilisateur vos sources quand disponible. Vous pouvez utiliser les outils fournies PLUS D'UNE FOIS si les résultats extraits sont insuffisants. Dans ce cas, REFORMULEZ votre requête avec des termes différents ou des détails supplémentaires (dates, lieux, prénoms des parents, etc.) pour obtenir différemment des informations.\n-\n\nRÈGLES CRITIQUES POUR LA GÉNÉALOGIE:\n- Ne JAMAIS répondre par 'oui' ou 'non' de manière catégorique aux questions généalogiques sans analyse approfondie.\n- TOUJOURS analyser TOUTES les sources récupérées avant de formuler une réponse.\n- Si les sources contiennent des CONTRADICTIONS, des INCOHÉRENCES, ou des informations AMBIGUËS, vous DEVEZ:\n  1. NE PAS affirmer une réponse avec confiance\n  2. Commencer par 'D'après les sources disponibles, il y a une confusion/des contradictions...'\n  3. Présenter les DIFFÉRENTES versions trouvées dans les sources\n  4. Terminer en recommandant de contacter le centre pour clarification \n- Pour les questions généalogiques, privilégiez une réponse nuancée et prudente plutôt qu'une affirmation directe.",
         ),
         MessagesPlaceholder(variable_name="chat_history"),
         ("user", "{input}"),
@@ -613,7 +626,7 @@ async def process_events(model_name=None):
         openai_api_key=get_env_variable("OPENROUTER_API_KEY"),
         openai_api_base=get_env_variable("OPENROUTER_BASE_URL"),
         model_name=current_model,
-        temperature=0,
+        temperature=0.1,  # Légèrement augmenté pour plus de nuance dans les réponses généalogiques
         max_tokens=8096,
         timeout=None,
         max_retries=2,
