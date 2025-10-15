@@ -1,0 +1,53 @@
+# Docker ignore file for chatacadien
+# Ignore unnecessary files to reduce Docker context size
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Backup files
+backup/
+
+# Docker files (don't copy other docker artifacts)
+Dockerfile*
+docker-compose*.yml
+*.dockerignore
+
+# Shell scripts (they're for host machine)
+*.sh
+
+# Documentation that's not needed in container
+README.md
+setup_commands.md
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
