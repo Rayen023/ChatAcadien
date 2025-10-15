@@ -80,10 +80,10 @@ jobs:
             -e OPENROUTER_API_KEY="${{ secrets.OPENROUTER_API_KEY }}" \
             -e OPENROUTER_BASE_URL="${{ secrets.OPENROUTER_BASE_URL }}" \
             -e BRAVE_API_KEY="${{ secrets.BRAVE_API_KEY }}" \
-            -e LANGSMITH_TRACING="${{ secrets.LANGSMITH_TRACING }}" \
-            -e LANGSMITH_ENDPOINT="${{ secrets.LANGSMITH_ENDPOINT }}" \
-            -e LANGSMITH_API_KEY="${{ secrets.LANGSMITH_API_KEY }}" \
-            -e LANGSMITH_PROJECT="${{ secrets.LANGSMITH_PROJECT }}" \
+            -e LANGCHAIN_TRACING_V2="${{ secrets.LANGCHAIN_TRACING_V2 }}" \
+            -e LANGCHAIN_ENDPOINT="${{ secrets.LANGCHAIN_ENDPOINT }}" \
+            -e LANGCHAIN_API_KEY="${{ secrets.LANGCHAIN_API_KEY }}" \
+            -e LANGCHAIN_PROJECT="${{ secrets.LANGCHAIN_PROJECT }}" \
             -e MONGO_URI="${{ secrets.MONGO_URI }}" \
             --name ${{ env.CONTAINER_NAME }} \
             ${{ env.DOCKER_IMAGE }}:latest
