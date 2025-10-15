@@ -28,6 +28,8 @@ from streamlit.runtime.scriptrunner import get_script_run_ctx
 
 # from langchain_core.tools import tool
 # from langchain.retrievers.document_compressors import LLMListwiseRerank
+from dotenv import load_dotenv
+load_dotenv() 
 
 
 DEBUGGING = False
