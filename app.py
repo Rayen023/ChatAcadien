@@ -35,9 +35,9 @@ load_dotenv()
 DEBUGGING = False
 
 # Define default models
-
-DEFAULT_MODEL = "anthropic/claude-haiku-4.5"  # "anthropic/claude-3.7-sonnet"#"google/gemini-2.5-pro-preview-03-25"#"google/gemini-2.0-flash-001" # "google/gemini-2.5-pro-preview-03-25"
-FALLBACK_MODEL = "anthropic/claude-sonnet-4.5"  # "openai/gpt-4.1"#"openai/o3-mini"
+#openai/gpt-5
+DEFAULT_MODEL = "anthropic/claude-sonnet-4.5"  # "anthropic/claude-3.7-sonnet"#"google/gemini-2.5-pro-preview-03-25"#"google/gemini-2.0-flash-001" # "google/gemini-2.5-pro-preview-03-25"
+FALLBACK_MODEL = "anthropic/claude-haiku-4.5"  # "openai/gpt-4.1"#"openai/o3-mini"
 
 logging.basicConfig(
     filename="logs.log",
@@ -496,7 +496,7 @@ genealogie_retriever_tool = gen_create_custom_retriever_tool(
     # index_name="genealogie-acadienne-index",
     # index_name="genealogie-acadienne-index-cwp", #with parents split to 7000 chars each, -c is the full parents (from one paragraph until the next para)
     index_name="genealogie-acadienne-index-c",
-    top_n=2,
+    top_n=4,
     description="Pour les questions relatives à la généalogie et aux familles acadiennes, vous devez utiliser cet outil. Les informations étant sensibles, assurez-vous de vérifier l'exactitude des noms, sachant que différentes personnes peuvent avoir le même nom. Demandez, si nécessaire, la possibilité d'obtenir plus d'informations. Ne répondez pas sans justification.",
     embeddings_model=voyageai_embeddings,
 )

@@ -16913,3 +16913,166 @@ RuntimeError: Event loop is closed
 2025-10-15 17:39:42,201 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
 2025-10-15 17:39:43,000 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
 2025-10-15 17:39:49,169 - langchain_core.callbacks.manager - WARNING - Error in LangChainTracer.on_chain_error callback: TracerException('No indexed run ID 26256fc3-3cc0-4371-a99b-573bd5e87bb2.')
+2025-10-15 19:09:35,868 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:09:35,868 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:09:35,868 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:09:35,869 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:09:35,869 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:09:35,869 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:09:35,869 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:09:35,870 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:09:35,870 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:09:37,871 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:09:37,871 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:09:37,871 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:09:37,872 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:09:37,909 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:09:37,910 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:09:37,910 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:09:37,911 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:09:37,911 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:09:38,907 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-15 19:09:40,339 - voyage - INFO - message='Voyage API response' path=https://api.voyageai.com/v1/rerank processing_ms=None request_id=None response_code=200
+2025-10-15 19:09:40,580 - voyage - INFO - message='Voyage API response' path=https://api.voyageai.com/v1/rerank processing_ms=None request_id=None response_code=200
+2025-10-15 19:09:41,691 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-15 19:09:55,686 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:09:55,687 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:09:55,687 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:09:55,687 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:09:55,687 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:09:55,688 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:09:55,689 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:09:55,689 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:09:55,689 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:09:57,301 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:09:57,301 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:09:57,301 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:09:57,302 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:09:57,302 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:09:57,302 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:09:57,303 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:09:57,303 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:09:57,303 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:09:58,821 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-15 19:10:01,134 - voyage - INFO - message='Voyage API response' path=https://api.voyageai.com/v1/rerank processing_ms=None request_id=None response_code=200
+2025-10-15 19:10:01,311 - voyage - INFO - message='Voyage API response' path=https://api.voyageai.com/v1/rerank processing_ms=None request_id=None response_code=200
+2025-10-15 19:10:02,917 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-15 19:10:12,235 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:10:12,235 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:10:12,235 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:10:12,236 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:10:12,236 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:10:12,236 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:10:12,236 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:10:12,237 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:10:12,237 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:10:14,108 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:10:14,108 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:10:14,108 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:10:14,108 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:10:14,108 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:10:14,108 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:10:14,109 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:10:14,109 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:10:14,109 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:10:15,758 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-15 19:10:17,952 - voyage - INFO - message='Voyage API response' path=https://api.voyageai.com/v1/rerank processing_ms=None request_id=None response_code=200
+2025-10-15 19:10:18,038 - voyage - INFO - message='Voyage API response' path=https://api.voyageai.com/v1/rerank processing_ms=None request_id=None response_code=200
+2025-10-15 19:10:19,719 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-15 19:10:53,330 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:10:53,331 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:10:53,331 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:10:53,331 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:10:53,332 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:10:53,332 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:10:53,332 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:10:53,332 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:10:53,332 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:11:08,992 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:11:08,993 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:11:08,993 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:11:08,993 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:11:08,994 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:11:08,994 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:11:08,994 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:11:08,994 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:11:08,995 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:11:16,977 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:11:16,977 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:11:16,977 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:11:16,978 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:11:16,979 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:11:16,979 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:11:16,979 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:11:16,980 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:11:16,980 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:11:17,645 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-15 19:11:35,082 - voyage - INFO - message='Voyage API response' path=https://api.voyageai.com/v1/rerank processing_ms=None request_id=None response_code=200
+2025-10-15 19:11:35,517 - voyage - INFO - message='Voyage API response' path=https://api.voyageai.com/v1/rerank processing_ms=None request_id=None response_code=200
+2025-10-15 19:11:36,334 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-15 19:13:03,002 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:13:03,002 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:13:03,002 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:13:03,002 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:13:03,002 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:13:03,002 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:13:03,003 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:13:03,003 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:13:03,003 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:13:04,565 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:13:04,566 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:13:04,566 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:13:04,566 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:13:04,567 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:13:04,567 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:13:04,567 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:13:04,567 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:13:04,567 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:13:07,155 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-15 19:13:09,068 - voyage - INFO - message='Voyage API response' path=https://api.voyageai.com/v1/rerank processing_ms=None request_id=None response_code=200
+2025-10-15 19:13:09,371 - voyage - INFO - message='Voyage API response' path=https://api.voyageai.com/v1/rerank processing_ms=None request_id=None response_code=200
+2025-10-15 19:13:11,567 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-15 19:15:35,295 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:15:35,296 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:15:35,296 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:15:35,296 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:15:35,296 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:15:35,296 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:15:35,297 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:15:35,297 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:15:35,297 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:15:37,155 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:15:37,155 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:15:37,155 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:15:37,156 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:15:37,156 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:15:37,156 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:15:37,156 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:15:37,156 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:15:37,156 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:15:39,725 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-15 19:15:42,366 - voyage - INFO - message='Voyage API response' path=https://api.voyageai.com/v1/rerank processing_ms=None request_id=None response_code=200
+2025-10-15 19:15:42,528 - voyage - INFO - message='Voyage API response' path=https://api.voyageai.com/v1/rerank processing_ms=None request_id=None response_code=200
+2025-10-15 19:15:50,190 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-15 19:16:31,912 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:16:31,912 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:16:31,912 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:16:31,913 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:16:31,913 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:16:31,913 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:16:31,914 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:16:31,914 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:16:31,914 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:16:34,498 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:16:34,498 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:16:34,499 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:16:34,499 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:16:34,499 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:16:34,499 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:16:34,500 - pinecone_plugin_interface.logging - INFO - Discovering subpackages in _NamespacePath(['/home/recherche-a/OneDrive_recherche_a/Linux_onedrive/Projects_linux/LLMs/ChatAcadien/.venv/lib/python3.12/site-packages/pinecone_plugins'])
+2025-10-15 19:16:34,500 - pinecone_plugin_interface.logging - INFO - Looking for plugins in pinecone_plugins.inference
+2025-10-15 19:16:34,500 - pinecone_plugin_interface.logging - INFO - Installing plugin inference into Pinecone
+2025-10-15 19:16:35,718 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-10-15 19:16:37,990 - voyage - INFO - message='Voyage API response' path=https://api.voyageai.com/v1/rerank processing_ms=None request_id=None response_code=200
+2025-10-15 19:16:38,026 - voyage - INFO - message='Voyage API response' path=https://api.voyageai.com/v1/rerank processing_ms=None request_id=None response_code=200
+2025-10-15 19:16:39,995 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
