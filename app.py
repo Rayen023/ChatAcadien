@@ -40,7 +40,7 @@ DEFAULT_MODEL = "anthropic/claude-sonnet-4.5"  # "anthropic/claude-3.7-sonnet"#"
 FALLBACK_MODEL = "anthropic/claude-haiku-4.5"  # "openai/gpt-4.1"#"openai/o3-mini" 
 
 logging.basicConfig(
-    filename="logs.log",
+    filename="logging.log",
     encoding="UTF-8",
     level=logging.INFO,
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
