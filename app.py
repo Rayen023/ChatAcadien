@@ -26,18 +26,14 @@ from pymongo.server_api import ServerApi
 from streamlit.runtime import get_instance
 from streamlit.runtime.scriptrunner import get_script_run_ctx
 
-# from langchain_core.tools import tool
-# from langchain.retrievers.document_compressors import LLMListwiseRerank
 from dotenv import load_dotenv
 load_dotenv() 
 
 
 DEBUGGING = False
 
-# Define default models
-#openai/gpt-5
-DEFAULT_MODEL = "anthropic/claude-sonnet-4.5"  # "anthropic/claude-3.7-sonnet"#"google/gemini-2.5-pro-preview-03-25"#"google/gemini-2.0-flash-001" # "google/gemini-2.5-pro-preview-03-25"
-FALLBACK_MODEL = "anthropic/claude-haiku-4.5"  # "openai/gpt-4.1"#"openai/o3-mini" 
+DEFAULT_MODEL = "google/gemini-3-flash-preview"
+FALLBACK_MODEL = "anthropic/claude-sonnet-4.6"
 
 logging.basicConfig(
     filename="logging.log",
@@ -50,9 +46,8 @@ logger = logging.getLogger(__name__)
 
 
 st.logo(
-    "Images/logo2.png",  # Icon (displayed in sidebar)
-    # link="https://streamlit.io/gallery",
-    icon_image="Images/avatarchat.png",  # Alternate Icon if sidebar closed
+    "Images/logo2.png",  
+    icon_image="Images/avatarchat.png", 
     size="large",
 )
 
@@ -61,10 +56,8 @@ st.logo(
 st.set_page_config(
     page_title="ChatAcadien",
     page_icon="Images/avatarchat.png",
-    # initial_sidebar_state="collapsed",
 )
 
-# Set default model in Streamlit session state
 if "DEFAULT_MODEL_NAME" not in st.session_state:
     st.session_state["DEFAULT_MODEL_NAME"] = DEFAULT_MODEL
 
@@ -114,7 +107,6 @@ subject_to_email_english = {
 
 def show_chatacadien_docs():
     with st.expander("Documents ChatAcadien", expanded=False):
-        # First section: CEAAC Documents
         st.markdown("### Documents Centre d'études acadiennes Anselme-Chiasson (CEAAC)")
         st.markdown(
             """
@@ -124,10 +116,8 @@ def show_chatacadien_docs():
         """
         )
 
-        # Second section: Genealogical Documents
         st.markdown("### Registres généalogiques (1700-1900)")
 
-        # Join family names with commas for a more compact display
         families = "Allain, Arsenault, Babin, Babineau, Bastarache, Belliveau, Bordage, Boucher, Boudreau, Bourgeois, Bourque, Caissie, Collette, Cormier, Daigle, Devarennes, Doiron, Gaudet, Gautreau, Girouard, Goguen, Gosselin, Hache, Landry, Leblanc, Leger, Maillet, Martin, Melanson, Petitpas, Poirier, Richard, Robichaud, Savoie, Surette, Thibodeau, Vautour"
 
         st.markdown("**Noms de familles :** " + families)
@@ -236,7 +226,6 @@ with st.sidebar:
 
     show_chatacadien_docs()
 
-    # --- Acadian Chat Links Block ---
 
     @st.dialog(shown_strings["contact"], width="large")
     @st.fragment
@@ -262,8 +251,6 @@ with st.sidebar:
     ):
         contact()
     
-    # --- Acadian Chat Links Block (Magic/Minimal) ---
-
     with st.expander("🔗 Autres chatbots acadiens", expanded=False):
         st.html("""
         <style>
@@ -321,13 +308,13 @@ with st.sidebar:
             }
         </style>
         <div style="padding: 10px 0;">
-            <a href="https://chatpatrimoineacadien.ca/" target="_blank" class="chatbot-link">
+            <a href="https://images.chatacadien.ca/" target="_blank" class="chatbot-link">
                 <div class="chatbot-card patrimoine-card">
                     <div class="chatbot-title">📷 ChatPatrimoine</div>
                     <div class="chatbot-description">Agent pour explorer des images historiques acadiennes</div>
                 </div>
             </a>
-            <a href="https://chatcapitalhumain.ca/" target="_blank" class="chatbot-link">
+            <a href="https://capital.chatacadien.ca/" target="_blank" class="chatbot-link">
                 <div class="chatbot-card capital-card">
                     <div class="chatbot-title">📊 ChatCapitalHumain</div>
                     <div class="chatbot-description">Agent pour analyser les données d'enquêtes étudiantes</div>
@@ -343,7 +330,6 @@ with st.sidebar:
 
     st.markdown(
         "<h6 style='text-align: center; color: gray; font-size: 9px;'>© 2024 Rayen Ghali et Sid Ahmed Selouani. Tous droits réservés. Ce projet a bénéficié du soutien technique du Centre Anselme Chiasson de la bibliothèque Champlain de l'Université de Moncton, d'un financement conjoint de Mitacs et du Service expérientiel de l'Université de Moncton et d'un soutien administratif de Assomption. </h6>",
-        # "<h6 style='text-align: center; color: gray; font-size: 9px;'>© 2024 Rayen Ghali. Travail réalisé sous la supervision de Sid Ahmed Selouani. Ce projet a bénéficié du financement conjoint de Mitacs et du Service expérientiel de l'Université de Moncton, soutien administratif de Assomption. Tous droits réservés.</h6>",
         unsafe_allow_html=True,
     )
 
@@ -386,11 +372,6 @@ else:
 
 voyageai_embeddings = VoyageAIEmbeddings(model="voyage-3")
 
-
-# llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
-
-
-# _filter = LLMListwiseRerank.from_llm(llm, top_n=2)
 def gen_create_custom_retriever_tool(index_name, top_n, description, embeddings_model):
 
     vectorstore = PineconeVectorStore(index_name=index_name, embedding=embeddings_model)
@@ -414,19 +395,16 @@ def gen_create_custom_retriever_tool(index_name, top_n, description, embeddings_
 
     fs = LocalFileStore("./store_location_c")
     store = create_kv_docstore(fs)
-    # store = InMemoryStore()
     retriever = ParentDocumentRetriever(
         vectorstore=vectorstore,
         docstore=store,
         child_splitter=child_splitter,
-        # parent_splitter=parent_splitter,
     )
 
     compressor = VoyageAIRerank(model="rerank-2", top_k=top_n)
     pipeline_compressor = DocumentCompressorPipeline(
         transformers=[
             compressor,
-            # _filter
         ]
     )
     compression_retriever = ContextualCompressionRetriever(
@@ -451,12 +429,10 @@ def create_custom_retriever_tool(index_name, k, top_n, description, embeddings_m
     )
 
     compressor = VoyageAIRerank(model="rerank-2", top_k=top_n)
-    # compressor = CohereRerank(model="rerank-multilingual-v3.0", top_n=top_n)
 
     pipeline_compressor = DocumentCompressorPipeline(
         transformers=[
             compressor,
-            # _filter
         ]
     )
 
@@ -473,7 +449,6 @@ def create_custom_retriever_tool(index_name, k, top_n, description, embeddings_m
     return retriever_tool
 
 
-# Utilisation pour CEAAC
 ceaac_retriever_tool = create_custom_retriever_tool(
     index_name="ceaac-general-info-index",
     k=3,
@@ -493,10 +468,8 @@ ceaac_faq_tool = create_custom_retriever_tool(
 
 
 genealogie_retriever_tool = gen_create_custom_retriever_tool(
-    # index_name="genealogie-acadienne-index",
-    # index_name="genealogie-acadienne-index-cwp", #with parents split to 7000 chars each, -c is the full parents (from one paragraph until the next para)
     index_name="genealogie-acadienne-index-c",
-    top_n=5,  # Augmenté pour plus de contexte et détecter les contradictions
+    top_n=5, 
     description="""Outil pour les questions de généalogie et familles acadiennes. 
 
 RÈGLES STRICTES D'UTILISATION:
@@ -523,12 +496,11 @@ search = BraveSearch.from_api_key(
     api_key=get_env_variable("BRAVE_API_KEY"),
     search_kwargs=search_kwargs,
 )
-# search = TavilySearchResults(max_results=3)
 
 if st.session_state["years_limit"]:
     start_year = st.session_state["years_limit"]
     start_date = f"{start_year}-01-01"
-    end_date = datetime.now().strftime("%Y-%m-%d")  # Current date
+    end_date = datetime.now().strftime("%Y-%m-%d") 
     freshness_param = f"{start_date}to{end_date}"
     search_kwargs = {
         "count": 3,
@@ -591,7 +563,6 @@ def escape_dollar_signs(input_text):
 
 for message in st.session_state.messages:
     if message["role"] == "assistant":
-        # Check and modify the content if it has a number followed by a dollar sign
         modified_content = escape_dollar_signs(message["content"])
 
         with st.chat_message(message["role"], avatar="Images/avatarchat.png"):
@@ -617,7 +588,6 @@ if prompt:
 
 @st.fragment
 async def process_events(model_name=None):
-    # Use passed model_name or default from session state
     current_model = model_name or st.session_state.get(
         "DEFAULT_MODEL_NAME", DEFAULT_MODEL
     )
@@ -626,7 +596,7 @@ async def process_events(model_name=None):
         openai_api_key=get_env_variable("OPENROUTER_API_KEY"),
         openai_api_base=get_env_variable("OPENROUTER_BASE_URL"),
         model_name=current_model,
-        temperature=0.1,  # Légèrement augmenté pour plus de nuance dans les réponses généalogiques
+        temperature=0.1, 
         max_tokens=8096,
         timeout=None,
         max_retries=2,
@@ -643,7 +613,6 @@ async def process_events(model_name=None):
     )
 
     accumulated_text = ""
-    # placeholder = st.empty()
     async for event in agent_executor.astream_events(
         {"input": st.session_state.messages[-1]["content"]}, version="v2"
     ):
@@ -667,26 +636,24 @@ async def generate_response():
     max_retries = 2
     retry_count = 0
 
-    # Define model fallback order
     models = [
         st.session_state.get("DEFAULT_MODEL_NAME", DEFAULT_MODEL),
         FALLBACK_MODEL,
     ]
-    # print(f"Attempting with models: {models}")
 
     while retry_count < max_retries:
         try:
             current_model = models[retry_count]
             print(f"Attempting with model: {current_model}")
             await process_events(model_name=current_model)
-            break  # Exit loop if successful
+            break 
         except Exception as e:
             retry_count += 1
             print(
                 f"Error with {current_model}: {e}. Retrying {retry_count}/{max_retries}..."
             )
             if retry_count < max_retries:
-                await asyncio.sleep(1)  # Optional delay between retries
+                await asyncio.sleep(1)
 
     if retry_count == max_retries:
         print("Max retries reached. Could not complete the task with any model.")
@@ -701,7 +668,7 @@ if DEBUGGING:
             collapse_completed_thoughts=False,
             max_thought_containers=4,
         )
-        response = agent_executor.invoke(  # TODO since definition of agent is now inside funtion need to redefine it also here
+        response = agent_executor.invoke( 
             {"input": st.session_state.messages[-1]["content"]},
             {
                 "callbacks": [st_callback],
@@ -735,7 +702,6 @@ else:
                 st.session_state.messages.append(message)
 
 
-# @st.fragment
 def rerun_last_question():
     st.session_state["messages"].pop(-1)
 
@@ -745,7 +711,6 @@ def log_feedback():
     st.toast(shown_strings["feedback"], icon=":material/thumbs_up_down:")
 
 
-# TODO make it not save if DEBUGGING is True
 if DEBUGGING:
 
     @st.fragment
